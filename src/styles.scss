@@ -1,0 +1,72 @@
+$bgc-viola: #960e3b;
+
+@import '~video-react/styles/scss/video-react';
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  margin: 0;
+  padding: 0.375em 2em;
+  width: 100%;
+  background-color: #2d2d2d;
+  color: white;
+  font-weight: 200;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+
+    li {
+      a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+
+        &:hover {
+          color: lightblue
+        }
+      }
+    }
+  }
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+
+  .hero {
+    padding: 1em;
+  }
+}
+
+.footer {
+  background-color: $bgc-viola;
+  color: white;
+  padding: .75em 2em;
+}
+
+// img
+
+img.wide-img {
+  margin: 0.325em 0;
+  width: 100%;
+  max-height: 16em;
+  overflow: hidden;
+  object-fit: cover;
+}
