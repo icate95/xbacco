@@ -1,0 +1,201 @@
+// GENERATOR//
+
+$bgc-viola: #960e3b;
+$bgc-blue: #5f7e83;
+
+$e: #c1c2d2;
+$u: #690023;
+$d: #b8d586;
+$l: #efc1b0;
+$t: #5b0005;
+$o: #808aa3;
+$n: #76a497;
+$p: #e9912b;
+$r: #52596c;
+$c: #d85452;
+$w: #d0c7d8;
+$v: #22394a;
+$x: #fb2c2b;
+$a: #31324d;
+$b: #d82e19;
+$g: #efc0b0;
+$f: #330020;
+$q: #b8d588;
+$m: #2b7c59;
+$z: #320020;
+$k: #163f3e;
+$i: #fec72c;
+$y: #896d4d;
+$j: #0b1e26;
+$s: #282e12;
+$h: #215b4d;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0;
+  padding: 2em;
+  background-color: $bgc-blue;
+
+  .gruppo-svg {
+    // height: 50vh;
+    margin: 0 auto;
+    width: 50vh;
+
+    svg {
+      // height: 80vh;
+      width: auto;
+      visibility: hidden;
+      animation-name: rotate-random;
+      animation-duration: 2sa;
+      animation-iteration-count: 1;
+      height: 50vh;
+      text-align: center;
+    }
+  }
+
+  input {
+    border: 0;
+    border-bottom: 1px solid white;
+    font-size: 1.5em;
+    text-align: center;
+    letter-spacing: 0.8em;
+    margin: 0 0.4em;
+    margin-left: 1em;
+    width: 90%;
+    text-transform: uppercase;
+    background-color: $bgc-blue;
+    color: white
+  }
+}
+
+svg {
+  #e path {
+    fill: $e;
+  }
+
+  #u path {
+    fill: $u;
+  }
+
+  #d rect {
+    fill: $d;
+  }
+
+  #l rect {
+    fill: $l;
+  }
+
+  #t path {
+    fill: $t;
+  }
+
+  #o path {
+    fill: $o;
+  }
+
+  #n {
+    fill: $n;
+  }
+
+  #p polygon {
+    fill: $p;
+  }
+
+  #r path {
+    fill: $r;
+  }
+
+  #c path {
+    fill: $c;
+  }
+
+  #w path {
+    fill: $w;
+  }
+
+  #v path {
+    fill: $v;
+  }
+
+  #x path {
+    fill: $x;
+  }
+
+  #a path {
+    fill: $a;
+  }
+
+  #b rect {
+    fill: $b;
+  }
+
+  #g circle {
+    fill: $g;
+  }
+
+  #f path {
+    fill: $f;
+  }
+
+  #q path {
+    fill: $q;
+  }
+
+  #m circle,
+  #m rect {
+    fill: $m;
+  }
+
+  #z circle {
+    fill: $z;
+  }
+
+  #k circle {
+    fill: $k;
+  }
+
+  #i path {
+    fill: $i;
+  }
+
+  #y circle {
+    fill: $y;
+  }
+
+  #j circle {
+    fill: $j;
+  }
+
+  #s path {
+    fill: $s;
+  }
+
+  #h rect {
+    fill: $h;
+  }
+}
+
+@keyframes rotate-random {
+  100% {
+    // transform: rotate(150deg);
+    transform: random($limit: 150);
+  }
+  0% {
+    transform: rotate(0);
+  }
+}
+
+
+.content-info-generator p {
+  margin: 1.5em 4em;
+  text-align: center;
+}
+
+.content-generator {
+  display: grid;
+
+}
