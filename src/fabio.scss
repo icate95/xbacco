@@ -15,15 +15,50 @@
     height: 100%;
 }
 
-input[type="text"] {
-    font-size: 1em;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #2d2d2d;
-    line-height: 2.5em;
+    .center-input {
+        margin-top: 1em;
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #2d2d2d;
+        line-height: 2.5em;
+        background-color: #fff;
+        color: $bgc-verde;
+        font-family: 'Comfortaa', cursive;
 
-    font-family: 'Comfortaa', cursive;
-}
+        &::placeholder {
+            opacity: 0;
+            color: $bgc-verde;
+        }
+
+        &:focus~label,
+        &:not(:placeholder-shown)~label {
+            top: -55px;
+            left: auto;
+            font-size: 0.5rem;
+            transform: translateY(0);
+        }
+
+        &:focus::placeholder {
+            opacity: 1;
+            transition: opacity 300ms 2000ms;
+        }
+
+        &:focus {
+            outline: 0;
+            font-size: 1.1em;
+        }
+    }
+
+    .center-label {
+        position: relative;
+        top: -30px;
+        left: calc(0.5rem + 5px);
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+        color: $bgc-verde;
+    }
+
 
 .cover {
     height: 20em;
@@ -109,6 +144,47 @@ nav {
     p {
         padding: .375em 2em;
         color: #2d2d2d;
+        line-height: 1.5em;
+    }
+    a {
+        margin: 4em;
+        color: black;
+        &:hover {
+            color: darken($color: $bgc-verde, $amount: 10)
+        }
+    }
+}
+.text-area-big {
+    padding: 4em;
+    color: #000;
+
+    h1,
+    p {
+        padding: 1.375em 2em 2.5em;
+        color: #2d2d2d;
+        line-height: 1.5em;
+    }
+    h1, h2, h3 {
+        color: $bgc-verde;
+    }
+    a {
+        // margin: 4em;
+        color: $bgc-verde;
+        &:hover {
+            color: darken($color: $bgc-verde, $amount: 10);
+            animation: moving-arrow  1s ease infinite ;
+        }
+    }
+}
+@keyframes moving-arrow {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
     }
 }
 
@@ -119,11 +195,6 @@ section a {
 #tre {
     background-image: url(./img/1fotogenerale.png);
     background-size: cover;
-}
-
-#quattro p {
-    margin-top: 10px;
-    color: #000;
 }
 
 #bottiglie {
@@ -151,38 +222,55 @@ section a {
     // height: 100vh;
     text-align: left;
     position: relative;
+    transition: all .2s ease-in-out;
 
-    p {
-        visibility: hidden;
+    p,
+    a {
+        // visibility: hidden;
         position: absolute;
-        top: 50%;
+        top: 75%;
+        text-align: center;
+        line-height: 1.5;
+        opacity: 0;
+        animation: all 1s ease;
+    }
+
+    a {
+        padding: 2em;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &:hover {
+        // transform: scale(1.05);
+
         &:before {
             content: '';
             width: 100%;
             height: 100%;
-            //  background-color: rgba($bgc-viola, .5em);
             position: absolute;
             right: 0;
         }
-
 
         h2 {
             color: white;
         }
 
-        p {
-            visibility: visible;
+        p,
+        a {
             position: absolute;
-            top: 75%;
+            top: 45%;
             padding: 0 2em;
-            animation: top 2s ease;
-            animation-delay: 1s;
         }
 
-        ;
+        p {
+            animation: upto45 .5s ease .1s 1 forwards;
+        }
+
+        a {
+            top: 65%;
+            animation: upto65 .5s ease .3s 1 forwards;
+        }
     }
 
     &.viola {
@@ -201,8 +289,6 @@ section a {
         }
     }
 
-
-
     img {
         width: 100%;
         height: 100%;
@@ -212,9 +298,35 @@ section a {
     h2 {
         padding: 2em;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        font-size: 2em;
+    }
+
+}
+
+@keyframes upto45 {
+    0% {
+        // opacity: 0;
+        top: 50%
+    }
+
+    100% {
+        opacity: 1;
+        top: 45%;
+    }
+}
+
+@keyframes upto65 {
+    0% {
+        // opacity: 0;
+        top: 70%
+    }
+
+    100% {
+        opacity: 1;
+        top: 65%;
     }
 }
 
@@ -292,8 +404,8 @@ section a {
 }
 
 #footer li,
-p,
-a {
+#footer p,
+#footer a {
     margin: 10px auto;
     color: #fff;
 }
