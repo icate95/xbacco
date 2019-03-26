@@ -1,0 +1,299 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    height: 100%;
+}
+
+input[type="text"] {
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #2d2d2d;
+    line-height: 2.5em;
+
+    font-family: 'Comfortaa', cursive;
+}
+
+.cover {
+    height: 20em;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* menu navigazione */
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+
+    a {
+        margin: 0;
+    }
+
+    img {
+        height: auto;
+        width: 100px;
+    }
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    // background-color: rgba(255, 255, 255, .5);
+
+
+    .menu-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        list-style: none;
+
+
+        .menu-item {
+            text-decoration: none;
+            color: #fff;
+            padding: 1.375em .4em;
+            font-size: .8em;
+        }
+    }
+}
+
+.immagini {
+    max-width: 100%;
+    height: auto;
+}
+
+/* index.html */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+#uno {
+    background-image: url(./img/sfondo.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#uno h1 {
+    padding: 8em 2em;
+}
+
+.text-area {
+    padding: 4em;
+    color: #000;
+
+    h1,
+    p {
+        padding: .375em 2em;
+        color: #2d2d2d;
+    }
+}
+
+section a {
+    text-decoration: none;
+}
+
+#tre {
+    background-image: url(./img/1fotogenerale.png);
+    background-size: cover;
+}
+
+#quattro p {
+    margin-top: 10px;
+    color: #000;
+}
+
+#bottiglie {
+    background-image: url(./img/bottigliehomeechisiamo.png);
+    background-size: cover;
+}
+
+#pattern {
+    background-image: url(./img/pattern-sfondo.png);
+    background-size: cover;
+}
+
+.bottone {
+    background-color: #00ff00;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.half {
+    width: 50%;
+    // height: 100vh;
+    text-align: left;
+    position: relative;
+
+    p {
+        visibility: hidden;
+        position: absolute;
+        top: 50%;
+    }
+
+    &:hover {
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            //  background-color: rgba($bgc-viola, .5em);
+            position: absolute;
+            right: 0;
+        }
+
+
+        h2 {
+            color: white;
+        }
+
+        p {
+            visibility: visible;
+            position: absolute;
+            top: 75%;
+            padding: 0 2em;
+            animation: top 2s ease;
+            animation-delay: 1s;
+        }
+
+        ;
+    }
+
+    &.viola {
+        &:hover {
+            &:before {
+                background-color: rgba($bgc-viola, .5em);
+            }
+        }
+    }
+
+    &.verde {
+        &:hover {
+            &:before {
+                background-color: rgba($bgc-verde, .5em);
+            }
+        }
+    }
+
+
+
+    img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    h2 {
+        padding: 2em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#blu {
+    background-color: #0000ff;
+}
+
+#rosso {
+    background-color: #ff0000;
+}
+
+#sei {
+    background-image: url(./img/jessy-smith-496883-unsplash.jpg);
+    background-size: cover;
+}
+
+/* chi siamo html */
+.banda {
+    background-color: #2E5767;
+}
+
+#sfondo {
+    background-image: url(./img/jessy-smith-496883-unsplash.jpg);
+    background-size: cover;
+    height: 80vh;
+}
+
+.nero {
+    color: #000;
+}
+
+.margine {
+    padding: 40px 0;
+}
+
+.margine h5 {
+    line-height: 30px;
+}
+
+// /* fine chi siamo */
+/* esperienze */
+.quarto {
+    width: 25%;
+    height: 100vh;
+}
+
+// /* fine esperienze */
+/* punti vendita */
+.orizzontale {
+    width: 100%;
+    height: 25vh;
+}
+
+.centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* fine punti vendita */
+/* footer */
+#footer {
+    height: 50vh;
+    background: #2E5767;
+    display: flex;
+}
+
+#footer div {
+    width: 50%;
+    text-align: left;
+}
+
+#footer ul li {
+    list-style: none;
+}
+
+#footer li,
+p,
+a {
+    margin: 10px auto;
+    color: #fff;
+}

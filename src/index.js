@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import './styles.scss';
 
+import ImgLogo from '../src/img/logo1.png';
+
 import Home from "./pages/Home";
 import ChiSiamo from './pages/ChiSiamo';
 import PuntiVendita from './pages/PuntiVendita';
@@ -18,29 +20,33 @@ class App extends React.Component {
     return (
       <Router>
         <div>
+         
           <nav>
+          <div className="logo">
+          <Link to="/"><img src={ImgLogo} alt="xbacco"/></Link>
+          </div>
           
-            <ul>
+            <ul className='menu-container'> 
+              {/* <li>
+                Home
+              </li> */}
               <li>
-                <Link to="/">Home</Link>
+                <Link className='menu-item' to="/ChiSiamo">Chi siamo</Link>
               </li>
               <li>
-                <Link to="/ChiSiamo">Chi siamo</Link>
-              </li>
-              <li>
-                <Link to="/puntivendita">Punti vendita</Link>
-              </li>
-
-              <li>
-                <Link to="/esperienze">Esperienze</Link>
+                <Link className='menu-item' to="/puntivendita">Punti vendita</Link>
               </li>
 
               <li>
-                <Link to="/areapersonale">Area personale</Link>
+                <Link  className='menu-item' to="/esperienze">Esperienze</Link>
               </li>
 
               <li>
-                <Link to="/pagegenerator">Generator</Link>
+                <Link className='menu-item' to="/areapersonale">Area personale</Link>
+              </li>
+
+              <li>
+                <Link className='menu-item' to="/pagegenerator">Generator</Link>
               </li>
             </ul>
 
