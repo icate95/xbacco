@@ -329,18 +329,14 @@ section a {
         top: 65%;
     }
 }
-
-#blu {
-    background-color: #0000ff;
-}
-
-#rosso {
-    background-color: #ff0000;
-}
-
-#sei {
-    background-image: url(./img/jessy-smith-496883-unsplash.jpg);
-    background-size: cover;
+.bottiglie {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 2em 2em;
+    img {
+        max-height: 200px ;
+    }
 }
 
 /* chi siamo html */
@@ -390,22 +386,41 @@ section a {
 /* footer */
 #footer {
     height: 50vh;
-    background: #2E5767;
+    background-image: url(./img/sfondo.jpg);
+    background-position: center center;
+    background-size: cover;
     display: flex;
+    align-items: center;
+    padding: 1.357em 10%;
 }
 
 #footer div {
-    width: 50%;
-    text-align: left;
+    flex-grow: 1;
+    &:first-child {
+        text-align: left;
+    }
+    text-align: right;
 }
 
 #footer ul li {
     list-style: none;
 }
+.social {
+    display: flex;
+    justify-content: flex-start;
+    li {
+        margin: 1em .5em;
+        width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    }
+    
+}
 
 #footer li,
 #footer p,
 #footer a {
-    margin: 10px auto;
+    line-height: 2em;
     color: #fff;
 }

@@ -7,6 +7,11 @@ import bgcUno from "../img/1fotogenerale.png";
 import bgcDue from "../img/bottigliehomeechisiamo.png";
 import esperienza from "../img/esperienza.jpg";
 import genera from "../img/genera.jpg";
+import bottigliaAD from "../img/bottiglia_ARTE E DESIGN.png";
+import bottigliaC from "../img/bottiglia_CULTURA DEL VINO.png";
+import bottigliaR from "../img/bottiglia_RELAX.png";
+import bottigliaRI from "../img/bottiglia_RISTORAZIONE.png";
+import bottigliaX from "../img/bottiglia_XBACCO.png";
 
 class Home extends React.Component {
   render() {
@@ -94,7 +99,13 @@ class Home extends React.Component {
             <a href="" className='hover-effect'>
               <i class="fas fa-chevron-right fa-2x" />
             </a>
-            
+          </div>
+          <div className="bottiglie">
+          <img src={bottigliaX} alt=""/> 
+          <img src={bottigliaAD} alt=""/> 
+          <img src={bottigliaC} alt=""/> 
+          <img src={bottigliaR} alt=""/> 
+          <img src={bottigliaRI} alt=""/> 
           </div>
         </section>
       </>

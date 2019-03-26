@@ -1,5 +1,7 @@
 import React from "react";
 
+import ImgLogo from '../../img/logo_trasparente.png';
+
 class Footer extends React.Component {
   render() {
     return (
@@ -12,10 +14,21 @@ class Footer extends React.Component {
                         <li><a href="etichetta.html">Genera la tua etichetta</a></li>
                         <li><a href="cantine.html">Punti vendita</a></li>
                     </ul>
+                    <ul className='social'>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                </div>
+                <div className='logo'>
+                  <img src={ImgLogo} alt=""/>
                 </div>
                 <div className="contatti">
-                    <p>xbacco&#64;gmail.com Verona (VR) 37121 Via xxv Aprile, 7</p>
+                    <p>xbacco&#64;gmail.com <br/> Verona (VR) 37121 <br/> Via xxv Aprile, 7</p>
+                    
+                    <input type="text" className='center-input'/>
                 </div>
+
             </section> 
     );
   }
