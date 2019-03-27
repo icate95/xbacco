@@ -6,6 +6,7 @@ import bgcDue from "../img/cantinachisiamo.png";
 import logoColore from "../img/logo1.png";
 import esperienza from "../img/esperienza.jpg";
 import genera from "../img/genera.jpg";
+import bottigliaX from "../img/bottiglia_XBACCO.png";
 
 class ChiSiamo extends React.Component {
   render() {
@@ -18,15 +19,14 @@ class ChiSiamo extends React.Component {
           </div>
           <div className="half text-area tac">
             <p>
-              XBACCO è una cantina 2.0, nata dalla passione 
-              di cinque giovani rivoluzionari che hanno 
-              saputo unire l’esperienza del consumo del 
-              vino al design. Da questo binomio nasce difatti 
-              un prodotto unico nel suo genere, un vino 
-              personalizzato da condividere.
+              XBACCO è una cantina 2.0, nata dalla passione di cinque giovani
+              rivoluzionari che hanno saputo unire l’esperienza del consumo del
+              vino al design. Da questo binomio nasce difatti un prodotto unico
+              nel suo genere, un vino personalizzato da condividere.
             </p>
-            <p>"Non sai come esprimere la tua gratitudine?"  Esprimila con
-              XBacco e i suoi colori  e forme sorprendenti!
+            <p>
+              "Non sai come esprimere la tua gratitudine?" Esprimila con XBacco
+              e i suoi colori e forme sorprendenti!
             </p>
             <button>Vieni a trovarci!</button>
           </div>
@@ -34,67 +34,69 @@ class ChiSiamo extends React.Component {
         <div className="cover">
           <img src={bgcDue} alt="cover 1" />
         </div>
-        <section className="flex">
-          <div className="half nero">
-            <div className="margine">
-              <h5>
-                Vino XBACCO è il nome del vino che nasce 
-                dalle uve coltivate dalla nostra azienda con 
-                unità agricola in Sellero (BS) a circa 500 m.s.l.m. 
-                È il risultato dell’intuizione di rivalorizzare, con 
-                tecniche e metodologie avanzate, i terreni 
-                coltivati tradizionalmente nel passato. 
-                Si presenta di colore giallo lucente, con aroma 
-                fruttato, dall’espressione elegante, con gusto 
-                armonico e pieno
-              </h5>
-            </div>
+        <section className="flex info-bot">
+          <div className="half tac text-area">
+            <img src={logoColore} alt="logo" className="w-100" />
+            <h2>vino xbacco</h2>
+            <p>
+              Vino XBACCO è il nome del vino che nasce dalle uve coltivate dalla
+              nostra azienda con unità agricola in Sellero (BS) a circa 500
+              m.s.l.m. È il risultato dell’intuizione di rivalorizzare, con
+              tecniche e metodologie avanzate, i terreni coltivati
+              tradizionalmente nel passato. Si presenta di colore giallo
+              lucente, con aroma fruttato, dall’espressione elegante, con gusto
+              armonico e pieno
+            </p>
           </div>
-          <div className="half nero centro">
-            <div className="margine">
+          
+          <div className="half text-area bgc-blue">
+          <div className="bottiglia-centro">
+            <img src={bottigliaX} alt="" />
+          </div>
+            
               <h2>scheda tecnica</h2>
-              <h5>
+              < p>
                 <strong>Formato bottiglia: </strong>0,75l
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>Vitigni: </strong>rossese
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>Vigneto d'origine: </strong>Vigneti di Verona
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>periodo di vendemmia: </strong>prima meta' di settembre
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>Metodo di raccolta: </strong>Manuale
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>Vinificazione: </strong>Tradizionale con vasche in
                 acciaio, una breve macerazione di 18 ore, lieviti selezionati e
                 attenti ai controlli analitici
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>Zuccheri residui: </strong>2,0 g/l
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>Titolo alcolometrico volumico: </strong>12,5%
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>Temperatura di servizio: </strong>10˚C
-              </h5>
+              </ p>
               <h2>Degustazione:</h2>
-              <h5>
+              < p>
                 <strong>Colore: </strong>Rosso granato
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>profumo: </strong>intenso e netto con sentori floreali
-              </h5>
-              <h5>
+              </ p>
+              < p>
                 <strong>Gusto: </strong> Delicato ma di carattere, dal sapore
                 vellutato, armonico e avvolgente
-              </h5>
+              </ p>
             </div>
-          </div>
+         
         </section>
         <section className="flex">
           <div className="half-hover viola">

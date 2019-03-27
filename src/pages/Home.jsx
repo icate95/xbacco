@@ -49,7 +49,7 @@ class Home extends React.Component {
           <img src={bgcUno} alt="cover 1" />
         </div>
 
-        <section id="quattro" className="text-area">
+        <section id="quattro" className="text-area tac">
           <p>
             Ad ogni occasione, con XBACCO hai la possibilità di acquistare il
             nostro vino generare il proprio logo e dedicare un messaggio
@@ -99,7 +99,7 @@ class Home extends React.Component {
         </section>
 
         <section>
-          <div className="text-area-big">
+          <div className="text-area-big tac">
             <h2>Vini xbacco</h2>
             <p>
               L’eleganza e la ricercatezza nei dettagli ed il sapore esclusivo,
