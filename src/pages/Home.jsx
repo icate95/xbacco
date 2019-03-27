@@ -13,11 +13,14 @@ import bottigliaR from "../img/bottiglia_RELAX.png";
 import bottigliaRI from "../img/bottiglia_RISTORAZIONE.png";
 import bottigliaX from "../img/bottiglia_XBACCO.png";
 
+import logoColore from "../img/logo1.png";
+
 class Home extends React.Component {
   render() {
     return (
       <>
         <section id="uno">
+          <img src={logoColore} className='logo-home' alt=""/>
           <h1>Animazione</h1>
         </section>
         <section id="due" className="text-area">
@@ -63,7 +66,7 @@ class Home extends React.Component {
           <img src={bgcDue} alt="cover 1" />
         </div>
         <section className="flex">
-          <div className="half viola">
+          <div className="half-hover viola">
             <img src={esperienza} width="100%" alt="esperienza" />
             <h2>Esperienze</h2>
             <p>
@@ -74,7 +77,7 @@ class Home extends React.Component {
               <i className="fas fa-chevron-right fa-2x" />
             </a>
           </div>
-          <div className="half verde immagini">
+          <div className="half-hover verde immagini">
             <img src={genera} width="100%" alt="genera" />
             <h2>Genera</h2>
             <p>

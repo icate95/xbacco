@@ -18,62 +18,80 @@ $bgc-arte: #667384;
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
     font-weight: lighter;
-    text-align: center;
+    // text-align: center;
     height: 100%;
 }
-h1, h2{
+
+h1,
+h2 {
 
     text-transform: uppercase;
 }
+.bgc-blue {
+    background-color: $bgc-blue;
+}
+.tac {
+    text-align: center;
+}
 
-    .center-input {
-        margin-top: 1em;
-        font-size: 1em;
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #2d2d2d;
-        line-height: 2.5em;
-        background-color: #fff;
-        color: $bgc-blue;
-        font-family: 'Comfortaa', cursive;
+.center-input {
+    margin-top: 1em;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #2d2d2d;
+    line-height: 2.5em;
+    background-color: #fff;
+    color: $bgc-blue;
+    font-family: 'Comfortaa', cursive;
 
-        &::placeholder {
-            opacity: 0;
-            color: $bgc-blue;
-        }
-
-        &:focus~label,
-        &:not(:placeholder-shown)~label {
-            top: -55px;
-            left: auto;
-            font-size: 0.5rem;
-            transform: translateY(0);
-        }
-
-        &:focus::placeholder {
-            opacity: 1;
-            transition: opacity 300ms 2000ms;
-        }
-
-        &:focus {
-            outline: 0;
-            font-size: 1.1em;
-        }
-    }
-
-    .center-label {
-        position: relative;
-        top: -30px;
-        left: calc(0.5rem + 5px);
-        transform: translateY(-50%);
-        transition: all 0.3s ease;
+    &::placeholder {
+        opacity: 0;
         color: $bgc-blue;
     }
+
+    &:focus~label,
+    &:not(:placeholder-shown)~label {
+        top: -55px;
+        left: auto;
+        font-size: 0.5rem;
+        transform: translateY(0);
+    }
+
+    &:focus::placeholder {
+        opacity: 1;
+        transition: opacity 300ms 2000ms;
+    }
+
+    &:focus {
+        outline: 0;
+        font-size: 1.1em;
+    }
+}
+
+.center-label {
+    position: relative;
+    top: -30px;
+    left: calc(0.5rem + 5px);
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    color: $bgc-blue;
+}
 
 
 .cover {
     height: 20em;
     overflow: hidden;
+
+    &.x2-height {
+        height: 80vh;
+
+        img {
+            width: 100%;
+            max-height: auto;
+            overflow: hidden;
+        }
+    }
 
     img {
         width: 100%;
@@ -82,7 +100,8 @@ h1, h2{
 }
 
 /* menu navigazione */
-.logo, li {
+.logo,
+li {
     display: flex;
     justify-content: center;
     height: 100px;
@@ -98,6 +117,7 @@ h1, h2{
 }
 
 nav {
+    z-index: 100;
     position: fixed;
     width: 100%;
     height: auto;
@@ -111,7 +131,7 @@ nav {
         justify-content: space-around;
         padding: 10px;
         list-style: none;
-        
+
         background-color: $bgc-blue;
 
 
@@ -148,7 +168,7 @@ nav {
 }
 
 #uno h1 {
-    padding: 8em 2em;
+    padding: 1em 2em;
 }
 
 .text-area {
@@ -161,9 +181,11 @@ nav {
         color: #2d2d2d;
         line-height: 1.5em;
     }
+
     a {
         margin: 4em;
         color: black;
+
         &:hover {
             color: darken($color: $bgc-blue, $amount: 10)
         }
@@ -173,6 +195,7 @@ nav {
         font-size: 1.2em;
         font-weight: 500;
     }
+
     button {
         text-transform: uppercase;
         font-size: 1em;
@@ -182,6 +205,7 @@ nav {
         background-color: $bgc-blue;
     }
 }
+
 .text-area-big {
     padding: 4em;
     color: #000;
@@ -192,25 +216,33 @@ nav {
         color: #2d2d2d;
         line-height: 1.5em;
     }
-    h1, h2, h3 {
+
+    h1,
+    h2,
+    h3 {
         color: $bgc-blue;
     }
+
     a {
         // margin: 4em;
         color: $bgc-blue;
+
         &:hover {
             color: darken($color: $bgc-blue, $amount: 10);
-            animation: moving-arrow  1s ease infinite ;
+            animation: moving-arrow 1s ease infinite;
         }
     }
 }
+
 @keyframes moving-arrow {
     0% {
         transform: translateX(0px);
     }
+
     50% {
         transform: translateX(10px);
     }
+
     100% {
         transform: translateX(0px);
     }
@@ -244,8 +276,20 @@ section a {
 .flex {
     display: flex;
 }
-
+.logo-home {
+    
+    padding: .5em;
+    margin: 9em;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 0;
+    padding-bottom:0; 
+}
 .half {
+    width: 50%;
+}
+.half-hover {
     width: 50%;
     // height: 100vh;
     text-align: left;
@@ -286,6 +330,7 @@ section a {
 
         p,
         a {
+            color: white;
             position: absolute;
             top: 45%;
             padding: 0 2em;
@@ -331,6 +376,16 @@ section a {
         transform: translate(-50%, -50%);
         font-size: 2em;
     }
+    &.logo {
+        background-color: $bgc-blue;
+        padding: 1em;
+        height: auto;
+        img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    }
 
 }
 
@@ -357,13 +412,16 @@ section a {
         top: 65%;
     }
 }
+
 .bottiglie {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 0 2em 2em;
+
     img {
-        max-height: 200px ;
+        
+        height: 250px;
     }
 }
 
@@ -409,20 +467,23 @@ section a {
     flex-direction: column;
     align-items: center;
 }
+
 #slogan {
     background-image: url(./img/sfondo.jpg);
     background-position: center center;
     background-size: cover;
     width: 100%;
     height: 50vh;
+
     .content {
-        padding: 4em ;
+        padding: 4em;
         width: 300px;
         margin: auto;
         font-size: 1.5em;
         line-height: 1.6em;
         text-align: left;
     }
+
     h3 {
         text-transform: uppercase;
         color: white;
@@ -440,10 +501,12 @@ section a {
     display: flex;
     align-items: center;
     padding: 1.357em 10%;
+
     .logo {
         display: flex;
         flex-direction: column;
         color: white;
+
         h1 {
             padding: .5em;
         }
@@ -454,26 +517,29 @@ section a {
     flex-grow: 1;
     align-items: center;
     text-align: right;
-    &.menu ul li{
+
+    &.menu ul li {
         text-align: left !important;
     }
-    
+
 }
 
 #footer ul li {
     list-style: none;
 }
+
 .social {
     display: flex;
     justify-content: flex-start;
+
     li {
         margin: 1em .5em;
-    //     width: 25px;
-    // height: 25px;
-    // background-color: #fff;
-    // border-radius: 50%;
+        //     width: 25px;
+        // height: 25px;
+        // background-color: #fff;
+        // border-radius: 50%;
     }
-    
+
 }
 
 #footer li,

@@ -55,10 +55,11 @@ body {
   margin: 0;
   padding: 2em;
   background-color: $bgc-blue;
+  // height: 100vh;
 
   .gruppo-svg {
     // height: 50vh;
-    margin: 0 auto;
+    margin: 12em auto 0;
     width: 50vh;
     background-color: #fff;
     border-radius: 50%;

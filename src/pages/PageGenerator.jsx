@@ -14,12 +14,15 @@ class PageGenerator extends React.Component {
     return (
       <>
         <Generator />
-        <div className="content-info-generator">
-          <p>
+        <section className="text-area">
+        <p>
             Se vuoi rendere ancora più unico il tuo regalo, realizza l’etichetta
             con dei messaggi personali... ti basterà scrivere una messaggio ed
             acquistare ciò che hai appena generato! Come funziona?
           </p>
+        </section>
+        <div className="content-info-generator">
+         
           <div className="content-generator">
             <div className="info">
               <p>
