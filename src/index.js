@@ -16,18 +16,50 @@ import AreaPersonale from "./pages/AreaPersonale";
 import Footer from "./pages/components/Footer";
 
 class App extends React.Component {
+  // addActive(){
+  //   this.classlist.toggle('is-active');
+  //   console.log('click');
+  // }
+  constructor(props) {
+    super(props);
+    this.addActiveClass = this.addActiveClass.bind(this);
+    this.state = {
+      active: true
+    };
+  }
+  addActiveClass() {
+    const currentState = this.state.active;
+    this.setState({ active: !currentState });
+    console.log("click");
+  }
+
   render() {
     return (
       <Router>
         <div>
           <nav>
-            {/* <div className="logo">
-          <Link to="/"><img src={ImgLogo} alt="xbacco"/></Link>
-          </div> */}
+            <div className="nav-flex">
+              <div className="logo-mobile">
+                <Link to="/">
+                  <img src={ImgLogo} alt="xbacco" />
+                </Link>
+              </div>
 
+              <div className="three" >
+                <div
+                  id="hamburger-9"
+                  onClick={this.toggleClass}
+                  className={
+                    this.state.active ? "hamburger is-active" : "hamburger"
+                  }
+                >
+                  <span className="line" />
+                  <span className="line" />
+                  <span className="line" />
+                </div>
+              </div>
+            </div>
             <ul className="menu-container">
-
-            
               <li>
                 <Link className="menu-item" to="/ChiSiamo">
                   Chi siamo
