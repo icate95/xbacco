@@ -18,7 +18,7 @@ class Home extends React.Component {
     return (
       <>
         <section id="uno">
-          <h1>video di xbacco</h1>
+          <h1>Animazione</h1>
         </section>
         <section id="due" className="text-area">
           <h1>XBacco e' un generative wine</h1>
@@ -26,9 +26,9 @@ class Home extends React.Component {
             Genera emozioni irripetibili, grazie ad un sistema di generative
             type design. Ci siamo ispirati a questa idea originale per offrire
             momenti indimenticabili e per dar vita ad un nuovo concetto di
-            esperienza regalo e consumo del vino...{" "}
+            esperienza regalo e consumo del vino...
           </p>
-          <input
+          {/* <input
             className="center-input"
             type="text"
             id="insert-code"
@@ -36,7 +36,11 @@ class Home extends React.Component {
           />
           <label className="center-label" htmlFor="insert-code">
             Inserisci qui il tuo codice esperienza
-          </label>
+          </label> */}
+          <p className="bigger">
+            inserisci il codice e inizia la tua esperienza
+          </p>
+          <button>clicca qui</button>
         </section>
         <div className="cover">
           <img src={bgcUno} alt="cover 1" />
@@ -54,8 +58,10 @@ class Home extends React.Component {
             relax, cultura del vino, ristorazione, arte e design.
           </p>
         </section>
-        <section id="bottiglie" />
-        <section id="pattern" />
+
+        <div className="cover">
+          <img src={bgcDue} alt="cover 1" />
+        </div>
         <section className="flex">
           <div className="half viola">
             <img src={esperienza} width="100%" alt="esperienza" />
@@ -65,7 +71,7 @@ class Home extends React.Component {
               ducimus!
             </p>
             <a href="">
-              <i class="fas fa-chevron-right fa-2x" />
+              <i className="fas fa-chevron-right fa-2x" />
             </a>
           </div>
           <div className="half verde immagini">
@@ -76,14 +82,19 @@ class Home extends React.Component {
               messaggio.{" "}
             </p>
             <a href="">
-              <i class="fas fa-chevron-right fa-2x" />
+              <i className="fas fa-chevron-right fa-2x" />
             </a>
           </div>
         </section>
+        <section id="slogan">
+          <div className="content">
+            <h3>vino</h3>
+            <h3>unicità</h3>
+            <h3>innovazione</h3>
+            <h3>design</h3>
+          </div>
+        </section>
 
-        <div className="cover">
-          <img src={bgcDue} alt="cover 1" />
-        </div>
         <section>
           <div className="text-area-big">
             <h2>Vini xbacco</h2>
@@ -96,16 +107,16 @@ class Home extends React.Component {
               nostri obiettivi
               <br />e ci teniamo ad offrire la migliore esperienza possibile.
             </p>
-            <a href="" className='hover-effect'>
-              <i class="fas fa-chevron-right fa-2x" />
+            <a href="" className="hover-effect">
+              <i className="fas fa-chevron-right fa-2x" />
             </a>
           </div>
           <div className="bottiglie">
-          <img src={bottigliaX} alt=""/> 
-          <img src={bottigliaAD} alt=""/> 
-          <img src={bottigliaC} alt=""/> 
-          <img src={bottigliaR} alt=""/> 
-          <img src={bottigliaRI} alt=""/> 
+            <img src={bottigliaX} alt="" />
+            <img src={bottigliaAD} alt="" />
+            <img src={bottigliaC} alt="" />
+            <img src={bottigliaR} alt="" />
+            <img src={bottigliaRI} alt="" />
           </div>
         </section>
       </>

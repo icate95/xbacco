@@ -8,20 +8,21 @@ class Footer extends React.Component {
         <section id="footer">
                 <div className="menu">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Chi siamo</a></li>
-                        <li><a href="esperienze.html">Esperienze</a></li>
-                        <li><a href="etichetta.html">Genera la tua etichetta</a></li>
-                        <li><a href="cantine.html">Punti vendita</a></li>
+                        <li>Home</li>
+                        <li>Chi siamo</li>
+                        <li>Esperienze</li>
+                        <li>Genera la tua etichetta</li>
+                        <li>Punti vendita</li>
                     </ul>
                     <ul className='social'>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      <li><i className="fab fa-instagram fa-2x"></i></li>
+                      <li><i className="fab fa-facebook-square fa-2x"></i></li>
+                      <li><i className="fab fa-twitter fa-2x"></i></li>
                     </ul>
                 </div>
                 <div className='logo'>
                   <img src={ImgLogo} alt=""/>
+                  <h1>xbacco</h1>
                 </div>
                 <div className="contatti">
                     <p>xbacco&#64;gmail.com <br/> Verona (VR) 37121 <br/> Via xxv Aprile, 7</p>
