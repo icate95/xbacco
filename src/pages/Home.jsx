@@ -65,7 +65,7 @@ class Home extends React.Component {
         <div className="cover">
           <img src={bgcDue} alt="cover 1" />
         </div>
-        <section className="flex">
+        <section className="flex two-column">
           <div className="half-hover viola">
             <img src={esperienza} width="100%" alt="esperienza" />
             <h2>Esperienze</h2>

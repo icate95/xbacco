@@ -26,9 +26,8 @@ class App extends React.Component {
           </div> */}
 
             <ul className="menu-container">
-              {/* <li>
-                Home
-              </li> */}
+
+            
               <li>
                 <Link className="menu-item" to="/ChiSiamo">
                   Chi siamo
