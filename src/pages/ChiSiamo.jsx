@@ -12,10 +12,10 @@ class ChiSiamo extends React.Component {
   render() {
     return (
       <>
-        <div id="sfondo" />
-        <div className="flex">
-          <div className="half bgc-blue">
-            <img src={logoColore} width="100%" alt="logo" />
+        <div id="hero-chisiamo" />
+        <div className="flex two-column info-chisiamo">
+          <div className="half bgc-blue tac img-center">
+            <img src={logoColore} width="100%" alt="logo-home" className='logo-home' />
           </div>
           <div className="half text-area tac">
             <p>
@@ -34,9 +34,9 @@ class ChiSiamo extends React.Component {
         <div className="cover">
           <img src={bgcDue} alt="cover 1" />
         </div>
-        <section className="flex info-bot">
-          <div className="half tac text-area">
-            <img src={logoColore} alt="logo" className="w-100" />
+        <section className="flex two-column info-bot">
+          <div className="tac text-area">
+            <img src={logoColore} alt="logo" className="logo-small" />
             <h2>vino xbacco</h2>
             <p>
               Vino XBACCO è il nome del vino che nasce dalle uve coltivate dalla
@@ -48,57 +48,54 @@ class ChiSiamo extends React.Component {
               armonico e pieno
             </p>
           </div>
-          
-          <div className="half text-area bgc-blue">
           <div className="bottiglia-centro">
             <img src={bottigliaX} alt="" />
           </div>
-            
-              <h2>scheda tecnica</h2>
-              < p>
+          <div className="text-area bgc-blue info-wine">
+              <h6>Scheda tecnica</h6>
+              <p>
                 <strong>Formato bottiglia: </strong>0,75l
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>Vitigni: </strong>rossese
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>Vigneto d'origine: </strong>Vigneti di Verona
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>periodo di vendemmia: </strong>prima meta' di settembre
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>Metodo di raccolta: </strong>Manuale
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>Vinificazione: </strong>Tradizionale con vasche in
                 acciaio, una breve macerazione di 18 ore, lieviti selezionati e
                 attenti ai controlli analitici
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>Zuccheri residui: </strong>2,0 g/l
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>Titolo alcolometrico volumico: </strong>12,5%
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>Temperatura di servizio: </strong>10˚C
-              </ p>
-              <h2>Degustazione:</h2>
-              < p>
+              </p>
+              <h6>Degustazione:</h6>
+              <p>
                 <strong>Colore: </strong>Rosso granato
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>profumo: </strong>intenso e netto con sentori floreali
-              </ p>
-              < p>
+              </p>
+              <p>
                 <strong>Gusto: </strong> Delicato ma di carattere, dal sapore
                 vellutato, armonico e avvolgente
-              </ p>
+              </p>
             </div>
-         
         </section>
-        <section className="flex">
+        <section className="flex two-column">
           <div className="half-hover viola">
             <img src={esperienza} width="100%" alt="esperienza" />
             <h2>Esperienze</h2>

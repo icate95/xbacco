@@ -16,7 +16,7 @@ $bgc-arte: #667384;
 
 #root {
     font-family: 'Comfortaa', cursive;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: lighter;
     // text-align: center;
     height: 100%;
@@ -24,8 +24,12 @@ $bgc-arte: #667384;
 
 h1,
 h2 {
-
     text-transform: uppercase;
+}
+
+h6 {
+    padding: .357em 1em;
+    font-size: 1.6em;
 }
 
 .bgc-blue {
@@ -39,6 +43,10 @@ h2 {
 
 .flex {
     display: flex;
+
+    &.two-column {
+        flex-direction: row;
+    }
 }
 
 .w-100 {
@@ -151,7 +159,8 @@ nav {
             text-decoration: none;
             color: #fff;
             padding: 1.375em .4em;
-            font-size: .8em;
+            font-size: 1em;
+            text-transform: uppercase;
         }
     }
 }
@@ -168,7 +177,7 @@ nav {
     height: auto;
 }
 
-#uno {
+#hero-home {
     // background-image: url(./img/sfondo.jpg);
     // background-size: cover;
     // background-position: center center;
@@ -176,23 +185,25 @@ nav {
     color: #fff;
     height: 100vh;
     overflow: hidden;
-}
+    text-align: center;
 
-#uno h1 {
-    padding: 1em 2em;
-}
+    h1 {
+        padding: 1em 2em;
+    }
 
-.info-bot {
-    flex-grow: 1;
-    .bottiglia-centro {
-        position: absolute;
-        transform: translateX(-50%);
-        img {
-            width: 100%;
-        }
-       
+    .logo-home {
+        padding: .5em;
+        margin: 9em;
+        width: 50%;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        max-width: 450px;
     }
 }
+
+
 
 .text-area {
     padding: 4em;
@@ -272,6 +283,61 @@ nav {
     }
 }
 
+.info-bot {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    p {
+        font-weight: 100;
+    }
+
+    strong,
+    h6 {
+        font-weight: 300;
+    }
+
+    div {
+        width: 50%;
+    }
+
+    .bottiglia-centro {
+        z-index: 50;
+        width: 135px;
+        overflow: visible;
+        transform: translateX(-50%);
+        margin: 0;
+        padding: 0;
+
+        img {
+            width: 400px;
+        }
+
+    }
+
+    .text-area {
+        padding: .5em
+    }
+
+    .info-wine {
+        padding-left: 3em;
+    }
+}
+
+@media (max-width: 48em) {
+    .info-bot {
+        div {
+            width: 100%;
+        }
+
+        .bottiglia-centro {
+            display: none;
+        }
+    }
+    .info-wine {
+        padding: 2em !important;
+    }
+}
+
 section a {
     text-decoration: none;
 }
@@ -299,9 +365,8 @@ section a {
 
 
 .logo-home {
-
     padding: .5em;
-    margin: 9em;
+    // margin: 9em;
     width: 50%;
     background-color: #fff;
     border-radius: 50%;
@@ -309,16 +374,21 @@ section a {
     padding-bottom: 0;
 }
 
+.logo-small {
+    width: 200px;
+    height: auto;
+}
+
 .half {
     width: 50%;
 
     img {
-        width: 50%;
+        width: 60%;
     }
 }
 
 .half-hover {
-    width: 50%;
+    // width: 50%;
     // height: 100vh;
     text-align: left;
     position: relative;
@@ -443,6 +513,18 @@ section a {
     }
 }
 
+@media (max-width: 48em) {
+    .flex.two-column {
+        flex-direction: column;
+        margin: 0;
+
+        .half,
+        .half-hover {
+            width: 100%;
+        }
+    }
+}
+
 .bottiglie {
     display: flex;
     justify-content: space-around;
@@ -460,12 +542,27 @@ section a {
     background-color: #2E5767;
 }
 
-#sfondo {
-    background-image: url(./img/jessy-smith-496883-unsplash.jpg);
+#hero-chisiamo {
+    background-image: url(./img/1chisiamo.png);
     background-size: cover;
     height: 80vh;
 }
 
+.info-chisiamo {
+
+    .img-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 48em) {
+    .img-center img {
+        margin: 2em;
+        width: 50%;
+    }
+}
 
 .margine {
     padding: 40px 0;
@@ -575,4 +672,21 @@ section a {
     height: auto;
     line-height: 2em;
     color: #fff;
+}
+
+@media (max-width: 48em) {
+    #footer {
+        // background-color: red;
+        flex-direction: column;
+        height: auto;
+
+        * {
+            text-align: center;
+            justify-content: center;
+        }
+
+        div {
+            margin: 2em auto;
+        }
+    }
 }

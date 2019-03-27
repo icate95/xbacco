@@ -19,11 +19,11 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <section id="uno">
+        <section id="hero-home">
           <img src={logoColore} className='logo-home' alt=""/>
           <h1>Animazione</h1>
         </section>
-        <section id="due" className="text-area">
+        <section id="due" className="text-area tac">
           <h1>XBacco e' un generative wine</h1>
           <p>
             Genera emozioni irripetibili, grazie ad un sistema di generative
