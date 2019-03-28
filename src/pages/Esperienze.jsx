@@ -9,7 +9,7 @@ class Esperienze extends React.Component {
     return (
       <>
       <div id="hero-esperienze" />
-        <div className="text-area">
+        <div className="text-area tac">
           <p>
             I nostri clienti trovano nell’esperienza regalo XBacco, una risposta
             adeguata ai loro desideri: riconciliarsi con l’ambiente circostante
@@ -30,7 +30,7 @@ class Esperienze extends React.Component {
               mirato: concediti un calice di vino, mentre guardi i nostri mini
               corsi da sommelier.
             </p>
-            <button className="btn-light"><i class="fas fa-shopping-basket"></i></button>
+            <button className="btn-light"><i className="fas fa-shopping-basket"></i></button>
           </div>
           <div className="quarto">
               <img src={logoColore} alt="" className='logo-home'/>
@@ -39,7 +39,7 @@ class Esperienze extends React.Component {
               Acquistando l’esperienza Relax avrai accesso a musica, libri e
               poesie.
             </p>
-            <button className="btn-light"><i class="fas fa-shopping-basket"></i></button>
+            <button className="btn-light"><i className="fas fa-shopping-basket"></i></button>
           </div>
           <div className="quarto">
               <img src={logoColore} alt="" className='logo-home'/>
@@ -48,7 +48,7 @@ class Esperienze extends React.Component {
               Per la Ristorazione abbiamo selezionato delle prelibate ricette
               abbinate al nostro vino.
             </p>
-            <button className="btn-light"><i class="fas fa-shopping-basket"></i></button>
+            <button className="btn-light"><i className="fas fa-shopping-basket"></i></button>
           </div>
           <div className="quarto">
               <img src={logoColore} alt="" className='logo-home'/>
@@ -59,7 +59,7 @@ class Esperienze extends React.Component {
               type design e sugli artisti più famosi (da Picasso a
               Brunelleschi).
             </p>
-            <button className="btn-light"><i class="fas fa-shopping-basket"></i></button>
+            <button className="btn-light"><i className="fas fa-shopping-basket"></i></button>
           </div>
         </section>
       </>

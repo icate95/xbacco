@@ -25,7 +25,8 @@ class AreaPersonale extends React.Component {
               className="logo-home"
             />
             <h3>Sofia bani</h3>
-            <table>
+            <table> 
+              <tbody>
               <tr>
                 <td>DATA DI NASCITA</td>
                 <td>26/05/1998</td>
@@ -38,36 +39,38 @@ class AreaPersonale extends React.Component {
                 </td>
               </tr>
               <tr>
-                <td>PASSWORD</td>
+                <td>PASSWORD</td>Î
                 <td>*********</td>
               </tr>
-            </table>
+            </tbody>
+            </table> 
           </div>
           <div className="half bottoniorrizzontali">
             <a href="">
-              milano
+              5 acquisti effettuati
               <i className="fas fa-chevron-right" />
             </a>
             <a href="">
-              brescia
+              3 etichette create
               <i className="fas fa-chevron-right" />
             </a>
             <a href="">
-              bergamo
+              2 esperienze vissute
               <i className="fas fa-chevron-right" />
             </a>
-            <a href="">
-              Torino
+            <a href="#carrello">
+              il tuo carrello
               <i className="fas fa-chevron-right" />
             </a>
           </div>
         </div>
 
-        <section id='carrello'>
+        <section id='carrello' className='tac'>
           <div className="flex two-column container-carrello">
             <div className="half carrello">
-              <h2> <i class="fas fa-shopping-basket"></i> carrello</h2>
-              <table>
+              <h2> <i className="fas fa-shopping-basket"></i> carrello</h2>
+              <table> 
+                <tbody>
               <tr>
                 <td>Totale:</td>
                 <td>140euro</td>
@@ -87,7 +90,8 @@ class AreaPersonale extends React.Component {
                 <td>Pagamento:</td>
                 <td>VISA / *********</td>
               </tr>
-              </table>
+              </tbody>
+              </table> 
             </div>
             <div className="half elem-carrello">
               <div className="elem">
@@ -99,7 +103,7 @@ class AreaPersonale extends React.Component {
                 </div>
                 <div className="icone">
                 <i className="fas fa-plus" />
-                <i class="fas fa-trash-alt"></i>
+                <i className="fas fa-trash-alt"></i>
                 </div>
               </div>
               <div className="elem">
@@ -111,7 +115,7 @@ class AreaPersonale extends React.Component {
                 </div>
                 <div className="icone">
                 <i className="fas fa-plus" />
-                <i class="fas fa-trash-alt"></i>
+                <i className="fas fa-trash-alt"></i>
                 </div>
               </div>
              

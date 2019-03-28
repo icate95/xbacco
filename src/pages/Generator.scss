@@ -233,153 +233,6 @@ svg {
   }
 }
 
-// .content-generator {
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-
-
-
-// .content {
-//   margin: 1em auto;
-
-//   i {
-//     &:hover {
-//       &:before {
-//         content: 'Aggiungi didascalia';
-//         background-color: $bgc-arte;
-//       }
-//     }
-//   }
-
-//   textarea {
-//     opacity: 0;
-
-//   }
-
-//   .in-content {
-//     .cont-esperienza {
-
-//       display: flex;
-//       justify-content: center;
-//       height: 3em;
-
-//       .esperienza {
-//         display: flex;
-//         margin: 1em;
-//         width: 125px;
-//         height: 125px;
-//         border-radius: 50%;
-//         color: white;
-//         text-align: center;
-//         box-sizing: border-box;
-//         align-items: center; 
-//         border: 1px solid white;
-
-//         &:hover {
-//           transform: scale(1.1);
-//           animation: transform 1s;
-//         }
-
-//         h4 {
-//           padding: 1.2em;
-//           margin: 0 auto;
-//           font-size: 1.2em;
-//         }
-//       }
-//     }
-
-//     p {
-
-//       display: none;
-
-//       &.active {
-//         display: block;
-//         padding: 1em;
-//         padding-top: 6em;
-
-//         border-radius: 5px;
-//       }
-//     }
-
-//     input[type=checkbox] {
-//       // display: none;
-//       &:checked > label {
-//           border: 1px solid $bgc-viola;
-//           background-color: #fff;
-//           color: black;
-
-//       }
-//     }
-
-//     label {
-//       background-color: $bgc-viola;
-//       padding: .5em 1.5em;
-//       border-radius: 5px;
-//       color: white;
-//       border: 1px solid transparent;
-
-//       &:hover {
-//         border: 1px solid $bgc-viola;
-//         background-color: #fff;
-//         color: black;
-
-//       }
-//     }
-//   }
-// }
-// }
-
-// .relax,
-// .p-relax {
-//   background-color: $bgc-relax;
-//   color: white;
-// }
-
-// .ristorazione,
-// .p-ristorazione {
-//   background-color: $bgc-ristorazione;
-//   color: white;
-// }
-
-// .arte,
-// .p-arte {
-//   background-color: $bgc-arte;
-//   color: white;
-// }
-
-// .cultura,
-// .p-cultura {
-//   background-color: $bgc-cultura;
-//   color: white;
-// }
-
-
-// @keyframes keepMooving {
-//   0% {
-//     border: 0;
-//     border-top: 0.5em solid black;
-//   }
-
-//   25% {
-//     border: 0;
-//     border-left: 0.5em solid black;
-//   }
-
-//   50% {
-//     border: 0;
-//     border-bottom: 0.5em solid black;
-//   }
-
-//   75% {
-//     border: 0;
-//     border-right: .5em solid black;
-//   }
-
-//   100% {
-//     border: 0;
-//     border-top: 0.5em solid black;
-//   }
-// }
 .genera,
 .scegli,
 .anteprima,
@@ -387,6 +240,7 @@ svg {
   max-width: 46em;
   margin: 0 auto;
   justify-content: space-around;
+  align-items: center;
 }
 
 .anteprima {
@@ -399,10 +253,16 @@ svg {
 }
 
 .messaggio {
+  width: 300px;
   textarea {
     margin: 2em auto;
     border: 1px solid $bgc-blue;
     padding: 1em;
     font-size: 1em;
+  }
+  &.text-area {
+    
+    text-align: center;
+    padding: 0;
   }
 }

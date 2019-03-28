@@ -31,6 +31,12 @@ h6 {
     padding: .357em 1em;
     font-size: 1.6em;
 }
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 .bgc-blue {
     background-color: $bgc-blue;
@@ -135,6 +141,18 @@ h6 {
         width: 100%;
         height: auto;
     }
+}
+.cover-bottiglie {
+    background-image: url(./img/bottigliehomeechisiamo.png);
+    background-size: cover;
+    height: 60vh;
+    background-position: center center;
+}
+.cover-bicchieri {
+    background-image: url(./img/1fotogenerale.png);
+    background-size: cover;
+    height: 60vh;
+    background-position: center center;
 }
 
 
@@ -339,9 +357,10 @@ section a {
 
 
 .logo-home {
-    padding: .5em;
+    // padding: .5em;
     // margin: 9em;
     width: 50%;
+    height: auto;
     background-color: #fff;
     border-radius: 50%;
     margin-bottom: 0;
@@ -358,6 +377,7 @@ section a {
 
     img {
         width: 60%;
+        max-width: 300px;
     }
 }
 
@@ -666,7 +686,12 @@ section a {
         &:nth-child(4) {
             background-color: $bgc-arte;
         }
+        &:hover {
+        
+            opacity: .8;
+        }
     }
+    
 }
 
 table {
@@ -811,23 +836,24 @@ table {
             padding: .5em;
         }
     }
+    .left {
+        text-align: left;
+        text-transform: uppercase;
+    }
 }
 
-#footer div {
+#footer > div {
     flex-grow: 1;
     align-items: center;
     text-align: right;
-
-    &.menu ul li {
-        text-align: left !important;
+    width: 30%;
+    ul li {
+        list-style: none;
     }
 
 }
 
-#footer ul li {
-    list-style: none;
-}
-
+#footer 
 .social {
     display: flex;
     justify-content: flex-start;
@@ -838,6 +864,9 @@ table {
         // height: 25px;
         // background-color: #fff;
         // border-radius: 50%;
+        &:nth-child(1){
+            margin-left: 0;
+        }
     }
 
 }
@@ -848,6 +877,14 @@ table {
     height: auto;
     line-height: 2em;
     color: #fff;
+}
+.contatti {
+    label {color: white;}
+    input {
+    //   text-align: right;
+        font-size: 1em;
+        padding: 5px;
+    }
 }
 
 @media (max-width: 48em) {

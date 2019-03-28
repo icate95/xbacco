@@ -34,14 +34,14 @@ class PageGenerator extends React.Component {
             <textarea name="" id="" cols="30" rows="10" />
           </div>
         </section>
-        <section className="scegli">
+        <section className="scegli flex">
           <div className="info">
             <p>
               <span>2</span>
               <span>scegli</span> una categoria di esperienza
             </p>
           </div>
-          <div className="text-area">
+          <div className="messaggio text-area">
             <p>
               Arricchisci il tuo regalo con un’esperienza tra quelle qui sotto
               elencate. Rendi il tuo regalo speciale!
@@ -112,7 +112,8 @@ class PageGenerator extends React.Component {
             </p>
           </div>
           <div className="messaggio">
-            <textarea name="" id="" cols="30" rows="10" placeholder='inserisci qui la tua dedica ...' />
+            <button className="btn-dark">Conferma</button>
+            <button className="btn-dark">Modifica</button>
           </div>
         </section>
       </>

@@ -20,7 +20,7 @@ class Home extends React.Component {
     return (
       <>
         <section id="hero-home">
-          <img src={logoColore} className='logo-home' alt=""/>
+          <img src={logoColore} className="logo-home" alt="" />
           <h1>Animazione</h1>
         </section>
         <section id="due" className="text-area tac">
@@ -45,9 +45,7 @@ class Home extends React.Component {
           </p>
           <button>clicca qui</button>
         </section>
-        <div className="cover">
-          <img src={bgcUno} alt="cover 1" />
-        </div>
+        <div className="cover-bicchieri" />
 
         <section id="quattro" className="text-area tac">
           <p>
@@ -62,7 +60,7 @@ class Home extends React.Component {
           </p>
         </section>
 
-        <div className="cover">
+        <div className="cover-bottiglie">
           <img src={bgcDue} alt="cover 1" />
         </div>
         <section className="flex two-column">
