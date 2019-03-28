@@ -21,8 +21,6 @@ nav {
     height: auto;
     display: flex;
     flex-direction: column;
-    // background-color: rgba(255, 255, 255, .5);
-
     background-color: $bgc-blue;
 
     .menu-container {
@@ -31,8 +29,6 @@ nav {
         padding: 10px;
         list-style: none;
 
-
-
         .menu-item {
             margin: auto;
             text-decoration: none;
@@ -40,6 +36,30 @@ nav {
             padding: 1.375em .4em;
             font-size: 1em;
             text-transform: uppercase;
+        }
+    }
+}
+
+.sub-menu {
+    display: none;
+}
+
+.has-children:hover {
+    .sub-menu {
+        display: flex;
+        position: absolute;
+        top: 6em;
+        width: 200px;
+        background-color: lighten($bgc-blue, 10);
+        flex-direction: column;
+
+        a {
+            text-align: center;
+            width: 100%;
+        }
+
+        a:hover {
+            background-color: lighten($bgc-blue, 15);
         }
     }
 }
@@ -64,26 +84,6 @@ nav {
             height: auto;
             padding: .5em;
         }
-
-        // .col {
-        //     display: block;
-        //     // float: left;
-        //     margin: 1% 0 1% 1.6%;
-        // }
-
-        // .cf:before,
-        // .cf:after {
-        //     content: " ";
-        //     display: table;
-        // }
-
-        // .cf:after {
-        //     clear: both;
-        // }
-
-        // .cf {
-        //     *zoom: 1;
-        // }
 
         .three {
             z-index: 110;

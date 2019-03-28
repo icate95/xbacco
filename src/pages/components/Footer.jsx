@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from 'react-router-dom'
+
 import ImgLogo from "../../img/logo_trasparente.png";
 
 class Footer extends React.Component {
@@ -8,11 +10,12 @@ class Footer extends React.Component {
       <section id="footer">
         <div className="menu">
           <div className="left">
-            <a href="/Home">Home</a> <br />
-            <a href="/ChiSiamo">Chi siamo</a> <br />
-            <a href="/Esperienze">Esperienze</a> <br />
-            <a href="/Generator">Generator</a> <br />
-            <a href="/PuntiVendita">Punti vendita</a> <br />
+          <Link to="/">HOME</Link><br />
+            <Link to="/chisiamo">Chi siamo</Link> <br />
+            <Link to="/puntivendita">Punti vendita</Link> <br />
+            <Link to="/esperienze">Esperienze</Link> <br />
+            <Link to="/areapersonale">Area personale</Link> <br />
+            <Link to="/pagegenerator">Generator</Link> <br />
           </div>
 
           <ul className="social">

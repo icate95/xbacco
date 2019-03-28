@@ -31,12 +31,6 @@ h6 {
     padding: .357em 1em;
     font-size: 1.6em;
 }
-a {
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-}
 
 .bgc-blue {
     background-color: $bgc-blue;
@@ -59,39 +53,63 @@ a {
     width: 100%;
 }
 
-.btn-dark {
+.color-blue {
+
+    p,
+    i,
+    a {
+        color: $bgc-blue;
+    }
+}
+i.fa-star {
+    margin: .3em
+}
+
+.btn-dark,
+a.btn-dark {
 
     text-transform: uppercase;
     font-size: 1em;
     padding: 1em 1.5em;
     border: 1px solid transparent;
-    color: white;
+    color: white !important;
     background-color: $bgc-blue;
-    margin: .5em;
 }
+
+Link.btn-light,
+a.btn-light,
 .btn-light {
     text-transform: uppercase;
-        font-size: 1em;
-        padding: 1em 1.5em;
-        border: 1px solid transparent;
-        color: $bgc-blue;
-        background-color: white;
+    font-size: 1em;
+    padding: 1em 1.5em;
+    border: 1px solid transparent;
+    color: $bgc-blue;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .center-input {
     margin-top: 1em;
-    font-size: 1em;
+    font-size: 1.5em;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #2d2d2d;
+    border-bottom: 1px solid white;
     line-height: 2.5em;
-    background-color: #fff;
-    color: $bgc-blue;
+    background-color: $bgc-blue;
+    color: white;
     font-family: 'Comfortaa', cursive;
 
     &::placeholder {
         opacity: 0;
-        color: $bgc-blue;
+        color: white;
+        font-size: 1.5em
     }
 
     &:focus~label,
@@ -119,7 +137,7 @@ a {
     left: calc(0.5rem + 5px);
     transform: translateY(-50%);
     transition: all 0.3s ease;
-    color: $bgc-blue;
+    color: white;
 }
 
 
@@ -142,12 +160,14 @@ a {
         height: auto;
     }
 }
+
 .cover-bottiglie {
     background-image: url(./img/bottigliehomeechisiamo.png);
     background-size: cover;
     height: 60vh;
     background-position: center center;
 }
+
 .cover-bicchieri {
     background-image: url(./img/1fotogenerale.png);
     background-size: cover;
@@ -203,9 +223,10 @@ a {
     h1,
     h2,
     p {
-        padding: .375em 2em;
+        padding: 1em 2em;
         // color: #2d2d2d;
         line-height: 1.5em;
+
     }
 
     a {
@@ -543,10 +564,6 @@ section a {
     }
 }
 
-// .banda {
-//     background-color: #2E5767;
-// }
-
 #hero-chisiamo {
     background-image: url(./img/1chisiamo.png);
     background-size: cover;
@@ -686,12 +703,13 @@ section a {
         &:nth-child(4) {
             background-color: $bgc-arte;
         }
+
         &:hover {
-        
+
             opacity: .8;
         }
     }
-    
+
 }
 
 table {
@@ -789,16 +807,22 @@ table {
     width: 25%;
     padding: 1em;
     text-align: center;
-    h2, img, p {
+
+    h2,
+    img,
+    p {
         margin: 2em auto;
     }
+
     h2 {
         min-height: 50px;
     }
+
     p {
         min-height: 200px;
         font-weight: 100;
     }
+
     &:nth-child(1) {
         background-color: $bgc-cultura;
     }
@@ -816,6 +840,77 @@ table {
     }
 }
 
+.section-select {
+
+    background-image: url(./img/pattern-sfondo.png);
+    padding: 2em 0;
+
+    .line-color {
+        background-color: $bgc-relax;
+        width: 100%;
+
+        .line {
+
+            max-width: 46em;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            padding: 1em;
+
+            h2 {
+                line-height: 3em;
+                text-transform: capitalize;
+            }
+
+            img {
+                max-width: 200px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+
+            .title {
+                width: 50%;
+            }
+        }
+    }
+}
+.bgc-img-registrati {
+   
+    background-image: url(./img/imgregistrati.png);
+    background-size: cover;
+    height: 95vh;
+    background-position: center center; 
+}
+
+.bgc-img-accedi {
+    background-image: url(./img/uvaneraaccedi.png);
+    background-size: cover;
+    height: 90vh;
+    background-position: center center; 
+}
+
+.modal {
+    width: 100%;
+    max-width: 30em;
+    margin: 7em auto;
+    background-color: $bgc-blue;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    *{
+        padding: .8em 3em;
+    }
+    input {
+        text-align: center;
+    }
+    button {
+        margin: 2em;
+    }
+}
 /* footer */
 #footer {
     height: 50vh;
@@ -836,35 +931,37 @@ table {
             padding: .5em;
         }
     }
+
     .left {
         text-align: left;
         text-transform: uppercase;
     }
 }
 
-#footer > div {
+#footer>div {
     flex-grow: 1;
     align-items: center;
     text-align: right;
     width: 30%;
+
     ul li {
         list-style: none;
     }
 
 }
 
-#footer 
-.social {
+#footer .social {
     display: flex;
     justify-content: flex-start;
 
     li {
         margin: 1em .5em;
+
         //     width: 25px;
         // height: 25px;
         // background-color: #fff;
         // border-radius: 50%;
-        &:nth-child(1){
+        &:nth-child(1) {
             margin-left: 0;
         }
     }
@@ -878,10 +975,14 @@ table {
     line-height: 2em;
     color: #fff;
 }
+
 .contatti {
-    label {color: white;}
+    label {
+        color: white;
+    }
+
     input {
-    //   text-align: right;
+        //   text-align: right;
         font-size: 1em;
         padding: 5px;
     }

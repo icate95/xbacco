@@ -4,6 +4,8 @@ import React from "react";
 import Generator from "./Generator";
 // import 'function.js';
 
+import { Link } from 'react-router-dom'
+
 import logoColore from "../img/logo1.png";
 import bottigliaX from "../img/bottiglia_XBACCO.png";
 
@@ -112,8 +114,8 @@ class PageGenerator extends React.Component {
             </p>
           </div>
           <div className="messaggio">
-            <button className="btn-dark">Conferma</button>
-            <button className="btn-dark">Modifica</button>
+            <Link to='/areapersonale' className="btn-dark">Conferma</Link>
+            <Link to='' className="btn-dark">Modifica</Link>
           </div>
         </section>
       </>

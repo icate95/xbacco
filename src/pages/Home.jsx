@@ -15,6 +15,8 @@ import bottigliaX from "../img/bottiglia_XBACCO.png";
 
 import logoColore from "../img/logo1.png";
 
+import { Link } from 'react-router-dom'
+
 class Home extends React.Component {
   render() {
     return (
@@ -43,7 +45,7 @@ class Home extends React.Component {
           <p className="bigger">
             inserisci il codice e inizia la tua esperienza
           </p>
-          <button>clicca qui</button>
+          <Link to='/selezionaesperienza' className='btn-dark'>clicca qui</Link>
         </section>
         <div className="cover-bicchieri" />
 
@@ -108,9 +110,9 @@ class Home extends React.Component {
               nostri obiettivi
               <br />e ci teniamo ad offrire la migliore esperienza possibile.
             </p>
-            <a href="" className="hover-effect">
+            <Link to='/chisiamo'>
               <i className="fas fa-chevron-right fa-2x" />
-            </a>
+            </Link>
           </div>
           <div className="bottiglie">
             <img src={bottigliaX} alt="" />

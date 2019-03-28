@@ -12,6 +12,9 @@ import PuntiVendita from "./pages/PuntiVendita";
 import Esperienze from "./pages/Esperienze";
 import PageGenerator from "./pages/PageGenerator";
 import AreaPersonale from "./pages/AreaPersonale";
+import SelezionaEsperienza from "./pages/SelezionaEsperienza";
+import Registrati from "./pages/Registrati";
+import Accedi from "./pages/Accedi";
 
 import Footer from "./pages/components/Footer";
 
@@ -80,10 +83,14 @@ class App extends React.Component {
                   <img src={ImgLogo} alt="xbacco" />
                 </Link>
               </li>
-              <li>
+              <li className='has-children'>
                 <Link className="menu-item" to="/areapersonale">
                   Area personale
                 </Link>
+                <ul className="sub-menu">
+                  <Link className='menu-item' to='/registrati'>Registrati</Link>
+                  <Link className='menu-item' to='/accedi'>Accedi</Link>
+                </ul>
               </li>
 
               <li>
@@ -101,6 +108,9 @@ class App extends React.Component {
             <Route path="/esperienze" component={Esperienze} />
             <Route path="/pagegenerator" component={PageGenerator} />
             <Route path="/areapersonale" component={AreaPersonale} />
+            <Route path="/selezionaesperienza" component={SelezionaEsperienza} />
+            <Route path="/registrati" component={Registrati} />
+            <Route path="/accedi" component={Accedi} />
           </div>
           <Footer />
         </div>
