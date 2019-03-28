@@ -53,6 +53,25 @@ h6 {
     width: 100%;
 }
 
+.btn-dark {
+
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 1em 1.5em;
+    border: 1px solid transparent;
+    color: white;
+    background-color: $bgc-blue;
+    margin: .5em;
+}
+.btn-light {
+    text-transform: uppercase;
+        font-size: 1em;
+        padding: 1em 1.5em;
+        border: 1px solid transparent;
+        color: $bgc-blue;
+        background-color: white;
+}
+
 .center-input {
     margin-top: 1em;
     font-size: 1em;
@@ -497,16 +516,16 @@ section a {
         width: 90%;
         margin: 0 auto;
         overflow: hidden;
+
         img {
             height: 200px;
         }
     }
 }
 
-/* chi siamo html */
-.banda {
-    background-color: #2E5767;
-}
+// .banda {
+//     background-color: #2E5767;
+// }
 
 #hero-chisiamo {
     background-image: url(./img/1chisiamo.png);
@@ -538,15 +557,9 @@ section a {
     line-height: 30px;
 }
 
-// /* fine chi siamo */
-/* esperienze */
-.quarto {
-    width: 25%;
-    height: 100vh;
-}
 
-// /* fine esperienze */
-/* punti vendita */
+
+
 .orizzontale {
     width: 100%;
     height: 25vh;
@@ -558,8 +571,9 @@ section a {
     align-items: center;
 }
 
+// solgan home
 #slogan {
-    background-image: url(./img/sfondo.jpg);
+    background-image: url(./img/pattern-sfondo.png);
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -580,7 +594,203 @@ section a {
     }
 }
 
-/* fine punti vendita */
+// punti vendita
+#hero-puntivendita {
+    background-image: url(./img/puntivendita.png);
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+}
+
+.img-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-puntivendita {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 40%;
+    }
+
+    p,
+    button,
+    img {
+        margin: 1em;
+    }
+
+    button {
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 1em 1.5em;
+        border: 1px solid transparent;
+        color: $bgc-blue;
+        background-color: white;
+    }
+}
+
+.bottoniorrizzontali {
+    display: flex;
+    flex-direction: column;
+    // align-content: stretch;
+    align-items: center;
+
+    a {
+        width: 100%;
+        height: 25%;
+
+        padding: 4em;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        i {
+            margin-left: 1em;
+        }
+
+        &:nth-child(1) {
+            background-color: $bgc-cultura;
+        }
+
+        &:nth-child(2) {
+            background-color: $bgc-relax;
+        }
+
+        &:nth-child(3) {
+            background-color: $bgc-ristorazione;
+        }
+
+        &:nth-child(4) {
+            background-color: $bgc-arte;
+        }
+    }
+}
+
+table {
+    margin: 1em auto;
+    text-align: left;
+
+    tr {
+        td {
+            padding: .2em;
+        }
+    }
+}
+
+#slogan.areapersonale .content {
+    width: 600px;
+    padding: 10em 2em;
+    text-align: center;
+}
+
+#carrello {
+    .container-carrello {
+        margin: 1em 0;
+
+        .carrello {
+            padding: 1em;
+
+            table {
+                width: 100%;
+
+                tr {
+                    border: 1px solid lightgray;
+                }
+            }
+        }
+
+        .elem-carrello {
+            .elem {
+                width: 100%;
+                display: flex;
+                color: white;
+                align-items: center;
+
+                img {
+                    width: auto;
+                    height: 200px;
+                }
+
+                .text {
+                    vertical-align: middle;
+                    width: 100%;
+
+                    p {
+                        padding: .5em;
+                    }
+                }
+
+                .icone {
+                    width: 60px;
+
+                    i {
+                        padding: .5em;
+                    }
+                }
+
+                &:nth-child(1) {
+                    background-color: $bgc-cultura;
+                }
+
+                &:nth-child(2) {
+                    background-color: $bgc-relax;
+                }
+
+                &:nth-child(3) {
+                    background-color: $bgc-ristorazione;
+                }
+
+                &:nth-child(4) {
+                    background-color: $bgc-arte;
+                }
+            }
+        }
+    }
+
+}
+
+#hero-esperienze {
+    background-image: url(./img/1esperienze.png);
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+}
+
+.quarto {
+    color: white;
+    width: 25%;
+    padding: 1em;
+    text-align: center;
+    h2, img, p {
+        margin: 2em auto;
+    }
+    h2 {
+        min-height: 50px;
+    }
+    p {
+        min-height: 200px;
+        font-weight: 100;
+    }
+    &:nth-child(1) {
+        background-color: $bgc-cultura;
+    }
+
+    &:nth-child(2) {
+        background-color: $bgc-relax;
+    }
+
+    &:nth-child(3) {
+        background-color: $bgc-ristorazione;
+    }
+
+    &:nth-child(4) {
+        background-color: $bgc-arte;
+    }
+}
+
 /* footer */
 #footer {
     height: 50vh;
