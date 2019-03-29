@@ -52,7 +52,10 @@ h6 {
 .w-100 {
     width: 100%;
 }
+a {
+    color: white;
 
+}
 .color-blue {
 
     p,
@@ -403,8 +406,8 @@ section a {
 }
 
 .half-hover {
-    // width: 50%;
-    // height: 100vh;
+    width: 50%;
+    height: 60vh;
     text-align: left;
     position: relative;
     transition: all .2s ease-in-out;
@@ -413,10 +416,10 @@ section a {
     a {
         // visibility: hidden;
         position: absolute;
-        top: 75%;
+        top: 50%;
         text-align: center;
         line-height: 1.5;
-        opacity: 0;
+        opacity: 1;
         animation: all 1s ease;
     }
 
@@ -426,38 +429,38 @@ section a {
         transform: translate(-50%, -50%);
     }
 
-    &:hover {
-        // transform: scale(1.05);
+    // &:hover {
+    //     // transform: scale(1.05);
 
-        &:before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            right: 0;
-        }
+    //     &:before {
+    //         content: '';
+    //         width: 100%;
+    //         height: 100%;
+    //         position: absolute;
+    //         right: 0;
+    //     }
 
-        h2 {
-            color: white;
-        }
+    //     h2 {
+    //         color: white;
+    //     }
 
-        p,
-        a {
-            color: white;
-            position: absolute;
-            top: 45%;
-            padding: 0 2em;
-        }
+    //     p,
+    //     a {
+    //         color: white;
+    //         position: absolute;
+    //         top: 45%;
+    //         padding: 0 2em;
+    //     }
 
-        p {
-            animation: upto45 .5s ease .1s 1 forwards;
-        }
+    //     p {
+    //         animation: upto70 .5s ease .1s 1 forwards;
+    //     }
 
-        a {
-            top: 65%;
-            animation: upto65 .5s ease .3s 1 forwards;
-        }
-    }
+    //     a {
+    //         top: 65%;
+    //         animation: upto65 .5s ease .3s 1 forwards;
+    //     }
+    // }
 
     &.viola {
         &:hover {
@@ -476,16 +479,15 @@ section a {
     }
 
     img {
-        width: 100%;
+        width: auto;
         height: 100%;
         overflow: hidden;
     }
 
     h2 {
-        padding: 2em;
         position: absolute;
-        top: 40%;
-        left: 50%;
+        top: 70%;
+        right: 0;
         transform: translate(-50%, -50%);
         font-size: 2em;
     }
@@ -512,7 +514,7 @@ section a {
 
     100% {
         opacity: 1;
-        top: 45%;
+        top: 70%;
     }
 }
 
@@ -565,7 +567,7 @@ section a {
 }
 
 #hero-chisiamo {
-    background-image: url(./img/1chisiamo.png);
+    background-image: url(./img/pattern-sfondo.png);
     background-size: cover;
     height: 80vh;
 }
@@ -914,10 +916,10 @@ table {
 /* footer */
 #footer {
     height: 50vh;
-    // background-image: url(./img/sfondo.jpg);
-    // background-position: center center;
-    // background-size: cover;
-    background-color: $bgc-blue;
+    background-image: url(./img/pattern-sfondo.png);
+    background-position: center center;
+    background-size: cover;
+    // background-color: $bgc-blue;
     display: flex;
     align-items: center;
     padding: 1.357em 10%;

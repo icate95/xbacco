@@ -12,8 +12,15 @@ class ChiSiamo extends React.Component {
   render() {
     return (
       <>
-        <div id="hero-chisiamo" />
-        <div className="flex two-column info-chisiamo">
+        <div id="hero-chisiamo" > 
+        <p>
+              XBACCO è una cantina 2.0, nata dalla passione di cinque giovani
+              rivoluzionari che hanno saputo unire l’esperienza del consumo del
+              vino al design. Da questo binomio nasce difatti un prodotto unico
+              nel suo genere, un vino personalizzato da condividere.
+            </p>
+        </div>
+        {/* <div className="flex two-column info-chisiamo">
           <div className="half bgc-blue tac img-center">
             <img src={logoColore} width="100%" alt="logo-home" className='logo-home' />
           </div>
@@ -33,7 +40,7 @@ class ChiSiamo extends React.Component {
         </div>
         <div className="cover">
           <img src={bgcDue} alt="cover 1" />
-        </div>
+        </div> */}
         <section className="flex two-column info-bot">
           <div className="tac text-area">
             <img src={logoColore} alt="logo" className="logo-small" />

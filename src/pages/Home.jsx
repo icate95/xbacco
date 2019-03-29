@@ -15,15 +15,46 @@ import bottigliaX from "../img/bottiglia_XBACCO.png";
 
 import logoColore from "../img/logo1.png";
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   render() {
     return (
       <>
-        <section id="hero-home">
-          <img src={logoColore} className="logo-home" alt="" />
-          <h1>Animazione</h1>
+        <section id="hero-home" className="flex">
+          <div className="half two-columns">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h2>
+              Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
+              Saepe, ipsum?
+            </h2>
+            <br />
+            <br />
+            <Link to="/chisiamo">Vieni a conoscerci ></Link>
+          </div>
+          <div className="half two-columns">
+            <img src={logoColore} className="logo-home" alt="" />
+            <h1>Animazione</h1>
+          </div>
         </section>
         <section id="due" className="text-area tac">
           <h1>XBacco e' un generative wine</h1>
@@ -42,12 +73,41 @@ class Home extends React.Component {
           <label className="center-label" htmlFor="insert-code">
             Inserisci qui il tuo codice esperienza
           </label> */}
-          <p className="bigger">
-            inserisci il codice e inizia la tua esperienza
-          </p>
-          <Link to='/selezionaesperienza' className='btn-dark'>clicca qui</Link>
         </section>
-        <div className="cover-bicchieri" />
+
+        {/* <section id="slogan">
+          <div className="content">
+            <h3>vino</h3>
+            <h3>unicità</h3>
+            <h3>innovazione</h3>
+            <h3>design</h3>
+          </div>
+        </section> */}
+
+        <section className="flex two-column">
+          <div className="half-hover verde immagini">
+            <img src={genera} width="100%" alt="genera" />
+            <h2>Crea</h2>
+            <p>
+              fai un regalo personalizzato, crea la tua etichetta e scrivi un
+              messaggio.{" "}
+            </p>
+            {/* <a href="">
+              <i className="fas fa-chevron-right fa-2x" />
+            </a> */}
+          </div>
+          <div className="half-hover viola">
+            <img src={esperienza} width="100%" alt="esperienza" />
+            <h2>VIVI</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              ducimus!
+            </p>
+            <a href="">
+              <i className="fas fa-chevron-right fa-2x" />
+            </a>
+          </div>
+        </section>
 
         <section id="quattro" className="text-area tac">
           <p>
@@ -62,42 +122,6 @@ class Home extends React.Component {
           </p>
         </section>
 
-        <div className="cover-bottiglie">
-          <img src={bgcDue} alt="cover 1" />
-        </div>
-        <section className="flex two-column">
-          <div className="half-hover viola">
-            <img src={esperienza} width="100%" alt="esperienza" />
-            <h2>Esperienze</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus!
-            </p>
-            <a href="">
-              <i className="fas fa-chevron-right fa-2x" />
-            </a>
-          </div>
-          <div className="half-hover verde immagini">
-            <img src={genera} width="100%" alt="genera" />
-            <h2>Genera</h2>
-            <p>
-              fai un regalo personalizzato, crea la tua etichetta e scrivi un
-              messaggio.{" "}
-            </p>
-            <a href="">
-              <i className="fas fa-chevron-right fa-2x" />
-            </a>
-          </div>
-        </section>
-        <section id="slogan">
-          <div className="content">
-            <h3>vino</h3>
-            <h3>unicità</h3>
-            <h3>innovazione</h3>
-            <h3>design</h3>
-          </div>
-        </section>
-
         <section>
           <div className="text-area-big tac">
             <h2>Vini xbacco</h2>
@@ -110,17 +134,12 @@ class Home extends React.Component {
               nostri obiettivi
               <br />e ci teniamo ad offrire la migliore esperienza possibile.
             </p>
-            <Link to='/chisiamo'>
+            <Link to="/chisiamo">
               <i className="fas fa-chevron-right fa-2x" />
             </Link>
           </div>
-          <div className="bottiglie">
-            <img src={bottigliaX} alt="" />
-            <img src={bottigliaAD} alt="" />
-            <img src={bottigliaC} alt="" />
-            <img src={bottigliaR} alt="" />
-            <img src={bottigliaRI} alt="" />
-          </div>
+
+          <div className="cover-bottiglie" />
         </section>
       </>
     );

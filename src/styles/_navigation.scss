@@ -25,7 +25,7 @@ nav {
 
     .menu-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         padding: 10px;
         list-style: none;
 
@@ -34,7 +34,7 @@ nav {
             text-decoration: none;
             color: #fff;
             padding: 1.375em .4em;
-            font-size: 1em;
+            font-size: .8em;
             text-transform: uppercase;
         }
     }
