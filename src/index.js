@@ -42,16 +42,16 @@ class App extends React.Component {
         <div>
           <nav>
             <div className="nav-flex">
-              {/* <div className="logo-mobile">
+              <div className="logo-mobile">
                 <Link to="/">
                   <img src={ImgLogo} alt="xbacco" />
                 </Link>
-              </div> */}
+              </div> 
 
-              {/* <div className="three" >
+               <div className="three" >
                 <div
                   id="hamburger-9"
-                  onClick={this.toggleClass}
+                  onClick={this.addActiveClass}
                   className={
                     this.state.active ? "hamburger is-active" : "hamburger"
                   }
@@ -60,7 +60,7 @@ class App extends React.Component {
                   <span className="line" />
                   <span className="line" />
                 </div>
-              </div> */}
+              </div>
             </div>
             <ul className="menu-container">
               <li>

@@ -878,41 +878,6 @@ table {
         }
     }
 }
-.bgc-img-registrati {
-   
-    background-image: url(./img/imgregistrati.png);
-    background-size: cover;
-    height: 95vh;
-    background-position: center center; 
-}
-
-.bgc-img-accedi {
-    background-image: url(./img/uvaneraaccedi.png);
-    background-size: cover;
-    height: 90vh;
-    background-position: center center; 
-}
-
-.modal {
-    width: 100%;
-    max-width: 30em;
-    margin: 7em auto;
-    background-color: $bgc-blue;
-    color: white;
-    padding: 1em 2em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    *{
-        padding: .8em 3em;
-    }
-    input {
-        text-align: center;
-    }
-    button {
-        margin: 2em;
-    }
-}
 /* footer */
 #footer {
     height: 50vh;
