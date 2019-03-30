@@ -19,10 +19,6 @@ import Accedi from "./pages/Accedi";
 import Footer from "./pages/components/Footer";
 
 class App extends React.Component {
-  // addActive(){
-  //   this.classlist.toggle('is-active');
-  //   console.log('click');
-  // }
   constructor(props) {
     super(props);
     this.addActiveClass = this.addActiveClass.bind(this);
@@ -31,85 +27,103 @@ class App extends React.Component {
     };
   }
   addActiveClass() {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
     console.log("click");
+    this.setState({ active: !this.state.active });
+    console.log(this.state.active);
+    if (this.state.active) {
+      document
+        .getElementsByClassName("hamburger")[0]
+        .classList.add("is-active");
+      document
+        .getElementsByClassName("menu-expanded")[0]
+        .classList.add("is-active");
+    } else {
+      document
+        .getElementsByClassName("hamburger")[0]
+        .classList.remove("is-active");
+      document
+        .getElementsByClassName("menu-expanded")[0]
+        .classList.remove("is-active");
+      document
+        .getElementsByClassName("menu-expanded")[0]
+        .classList.add("change-page");
+      setTimeout(
+        document
+          .getElementsByClassName("menu-expanded")[0]
+          .classList.remove("change-page"),
+        5000
+      );
+    }
   }
 
   render() {
     return (
       <Router>
         <div>
-          <nav>
-            <div className="nav-flex">
-              <div className="logo-mobile">
-                <Link to="/">
-                  <img src={ImgLogo} alt="xbacco" />
-                </Link>
-              </div> 
-
-               <div className="three" >
-                <div
-                  id="hamburger-9"
-                  onClick={this.addActiveClass}
-                  className={
-                    this.state.active ? "hamburger is-active" : "hamburger"
-                  }
-                >
-                  <span className="line" />
-                  <span className="line" />
-                  <span className="line" />
-                </div>
-              </div>
-            </div>
-            <ul className="menu-container">
-              <li>
+          <nav id="main-nav">
+            <div className="nav-bar">
+              <div className="logo">
                 <Link to="/">
                   <img src={ImgLogo} alt="xbacco" />
                   <h1 className="titolo-logo">xbacco</h1>
                 </Link>
-              </li>
-              <li>
-                <Link className="menu-item" to="/pagegenerator">
-                  Crea
-                </Link>
-              </li>
-              <li>
-                <Link className="menu-item" to="/esperienze">
-                  Vivi
-                </Link>
-              </li>
-              <li>
-                <Link className="menu-item" to="/puntivendita">
-                  Punti vendita
-                </Link>
-              </li>
-              <li>
-                <Link to="/selezionaesperienza" className="menu-item">
-                  inserisci codice
-                </Link>
-              </li>
+              </div>
 
-              <li>
-                <Link className="menu-item" to="/ChiSiamo">
-                  Chi siamo
-                </Link>
-              </li>
+              {/* <div className={{active: this.state.active ? 'hamburger is-active' : 'hamburger'}} onClick={this.addActiveClass} > */}
+              <div className="hamburger" onClick={this.addActiveClass}>
+                <span className="line" />
+                <span className="line" />
+                <span className="line" />
+              </div>
+            </div>
+            <div className="menu-expanded">
+              <ul className="menu-container">
+                <li onClick={this.addActiveClass}>
+                  <Link className="menu-item" to="/pagegenerator">
+                    Crea
+                  </Link>
+                </li>
+                <li onClick={this.addActiveClass}>
+                  <Link className="menu-item" to="/esperienze">
+                    Vivi
+                  </Link>
+                </li>
+                <li onClick={this.addActiveClass}>
+                  <Link className="menu-item" to="/puntivendita">
+                    Punti vendita
+                  </Link>
+                </li>
+                <li onClick={this.addActiveClass}>
+                  <Link to="/selezionaesperienza" className="menu-item">
+                    Inserisci codice
+                  </Link>
+                </li>
 
-              <li className="has-children">
-                <Link className="menu-item" to="/areapersonale">
-                  <i class="fas fa-user fa-2x" />
-                </Link>
-                <ul className="sub-menu">
+                <li onClick={this.addActiveClass}>
+                  <Link className="menu-item" to="/ChiSiamo">
+                    Chi siamo
+                  </Link>
+                </li>
+              </ul>
+              <ul className="menu-container">
+                <li className="has-children">
+                  <Link className="menu-item" to="/areapersonale">
+                    <i className="fas fa-user" />
+                    Area personale
+                  </Link>
+                </li>
+                <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/registrati">
                     Registrati
                   </Link>
+                </li>
+                <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/accedi">
                     Accedi
                   </Link>
-                </ul>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </nav>
 
           <div className="main">

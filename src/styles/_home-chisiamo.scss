@@ -1,5 +1,6 @@
 $bgc-viola: #960e3b;
-$bgc-blue: #3a5664;
+$bgc-blue: #3d5666;
+$bgc-blue-dark: #2f4653;
 
 $bgc-relax: #88abae;
 $bgc-cultura: #690e3b;
@@ -21,7 +22,9 @@ $bgc-arte: #667384;
     // text-align: center;
     height: 100%;
 }
-
+i {
+    margin: 0 8px;
+}
 h1,
 h2 {
     text-transform: uppercase;

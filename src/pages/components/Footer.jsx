@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from 'react-router-dom'
 
-import ImgLogo from "../../img/logo_trasparente.png";
+// import ImgLogo from "../../img/logo_trasparente.png";
 
 class Footer extends React.Component {
   render() {
@@ -31,7 +31,7 @@ class Footer extends React.Component {
           </ul>
         </div>
         <div className="logo">
-          <img src={ImgLogo} alt="" />
+          {/* <img src={ImgLogo} alt="" /> */}
           <h1>xbacco</h1>
         </div>
         <div className="contatti">
