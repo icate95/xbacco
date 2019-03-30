@@ -1,126 +1,109 @@
 import React from "react";
 import "./Generator.scss";
 
-class Generator extends React.Component {
-
-    constructor(props){
-        super(props);
-
-        this.state = {
-            value: '',
-            letters: {
-              q: {
-                visibility: 'false'
-              },
-              w: {
-                visibility: 'false'
-              },
-              e: {
-                visibility: 'false'
-              },
-              r: {
-                visibility: 'false'
-              },
-              t: {
-                visibility: 'false'
-              },
-              y: {
-                visibility: 'false'
-              },
-              u: {
-                visibility: 'false'
-              },
-              i: {
-                visibility: 'false'
-              },
-              o: {
-                visibility: 'false'
-              },
-              p: {
-                visibility: 'false'
-              },
-              l: {
-                visibility: 'false'
-              },
-              k: {
-                visibility: 'false'
-              },
-              j: {
-                visibility: 'false'
-              },
-              h: {
-                visibility: 'false'
-              },
-              g: {
-                visibility: 'false'
-              },
-              f: {
-                visibility: 'false'
-              },
-              d: {
-                visibility: 'false'
-              },
-              s: {
-                visibility: 'false'
-              },
-              a: {
-                visibility: 'false'
-              },
-              z: {
-                visibility: 'false'
-              },
-              x: {
-                visibility: 'false'
-              },
-              c: {
-                visibility: 'false'
-              },
-              v: {
-                visibility: 'false'
-              },
-              b: {
-                visibility: 'false'
-              },
-              n: {
-                visibility: 'false'
-              },
-              m: {
-                visibility: 'false'
-              }
-            }
+class SVG extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      letters: {
+        q: {
+          visibility: 'false'
+        },
+        w: {
+          visibility: 'false'
+        },
+        e: {
+          visibility: 'false'
+        },
+        r: {
+          visibility: 'false'
+        },
+        t: {
+          visibility: 'false'
+        },
+        y: {
+          visibility: 'false'
+        },
+        u: {
+          visibility: 'false'
+        },
+        i: {
+          visibility: 'false'
+        },
+        o: {
+          visibility: 'false'
+        },
+        p: {
+          visibility: 'false'
+        },
+        l: {
+          visibility: 'false'
+        },
+        k: {
+          visibility: 'false'
+        },
+        j: {
+          visibility: 'false'
+        },
+        h: {
+          visibility: 'false'
+        },
+        g: {
+          visibility: 'false'
+        },
+        f: {
+          visibility: 'false'
+        },
+        d: {
+          visibility: 'false'
+        },
+        s: {
+          visibility: 'false'
+        },
+        a: {
+          visibility: 'false'
+        },
+        z: {
+          visibility: 'false'
+        },
+        x: {
+          visibility: 'false'
+        },
+        c: {
+          visibility: 'false'
+        },
+        v: {
+          visibility: 'false'
+        },
+        b: {
+          visibility: 'false'
+        },
+        n: {
+          visibility: 'false'
+        },
+        m: {
+          visibility: 'false'
         }
-
-       
-    this.myInput = React.createRef();
-    this.handleChange = this.handleChange.bind(this);
+      }
     }
+  }
 
-    componentDidMount () {
-      this.myInput.current.focus()
-      console.log(this.state.value);
-    }
-    
-
-
-    handleChange(event) {
-      console.log(event.currentTarget);
-      this.setState({
-        value: event.currentTarget.value,
-        letters: {
-          ...this.state.letters,
-          [event.currentTarget.value]: {
-            visibility: ![event.currentTarget.value].visibility
-          }
-        }
-
-      });
-    }
-
-    render() {
-        return (
-          <div className="container">
-            <div className="gruppo-svg">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1417.52 1416.26">
+  componentDidUpdate() {
+    let value = document.getElementBYTagName('svg').attr('value').value;
+    value.forEach(letter => {
+      // this.setState(
+      //   this.state.letters: {
+      //     ...this.state.letters,
+      //     letter: !letter.visibility
+      //   }
+      // )
+      console.log(letter)
+      
+    });
+  }
+  render () {
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1417.52 1416.26" value={this.props.value} >
                 <defs />
                 <g id="e" style={{visibility: this.state.letters.e.visibility ? 'hidden' : 'visible' }}  ref="e">
                   <path d="M708.76,1128.89c-234.83,0-425.88-191.05-425.88-425.88h5c0,232.07,188.81,420.88,420.88,420.88S1129.63,935.08,1129.63,703h5C1134.63,937.84,943.59,1128.89,708.76,1128.89Z" />
@@ -268,6 +251,65 @@ class Generator extends React.Component {
                   <rect x="241.53" y="845.39" width="247.66" height="5" />
                 </g>
               </svg>
+    )
+  }
+}
+
+class Generator extends React.Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            value: 'ciao'
+        }
+    this.myInput = React.createRef();
+    // this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidMount () {
+      this.myInput.current.focus()
+      console.log(this.state.value);
+    }
+    
+
+
+    // handleChange(event) {
+    //   console.log(event.currentTarget);
+    //   this.setState({
+    //     value: event.currentTarget.value,
+    //     letters: {
+    //       ...this.state.letters,
+    //       [event.currentTarget.value]: {
+    //         visibility: ![event.currentTarget.value].visibility
+    //       }
+    //     }
+
+    //   });
+    // }
+
+    // handleChange(event) {
+    //     console.log(event.currentTarget);
+    //     let lettera = event.currentTarget.value.split("");
+    //     console.log(lettera);
+    //     this.setState({
+    //       value: event.currentTarget.value,
+    //       letters: lettera.map((lett) => this.state.lett: true )
+
+
+
+
+            
+    //       }
+  
+    //     });
+    //   }
+
+    render() {
+        return (
+          <div className="container">
+            <div className="gruppo-svg">
+              <SVG value={this.state.value} />
             </div>
             <input
           onChange={this.handleChange}
