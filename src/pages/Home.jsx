@@ -22,34 +22,15 @@ class Home extends React.Component {
     return (
       <>
         <section id="hero-home" className="flex">
-          <div className="half two-columns">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+          <div className="half two-columns title">
+          
             <h2>
               Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
               Saepe, ipsum?
             </h2>
             <br />
             <br />
-            <Link to="/chisiamo">Vieni a conoscerci ></Link>
+            <Link to="/chisiamo" className='link'>Vieni a conoscerci   </Link>
           </div>
           <div className="half two-columns">
             <img src={logoColore} className="logo-home" alt="" />
@@ -64,15 +45,6 @@ class Home extends React.Component {
             momenti indimenticabili e per dar vita ad un nuovo concetto di
             esperienza regalo e consumo del vino...
           </p>
-          {/* <input
-            className="center-input"
-            type="text"
-            id="insert-code"
-            placeholder="0000 0000 0000 0000"
-          />
-          <label className="center-label" htmlFor="insert-code">
-            Inserisci qui il tuo codice esperienza
-          </label> */}
         </section>
 
         {/* <section id="slogan">

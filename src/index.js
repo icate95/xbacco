@@ -55,11 +55,18 @@ class App extends React.Component {
       );
     }
   }
+  // Sliders(){
+  //   let sliders = document.getElementsById('sliders');
+  //   setTimeout( 
+  //     sliders.style.height = "100vh"
+  //   ), 5000;
+  // }
 
   render() {
     return (
       <Router>
         <div>
+          <div id="sliders"></div>
           <nav id="main-nav">
             <div className="nav-bar">
               <div className="logo">
@@ -78,28 +85,28 @@ class App extends React.Component {
             </div>
             <div className="menu-expanded">
               <ul className="menu-container">
-                <li onClick={this.addActiveClass}>
+                <li onClick={this.addActiveClass, this.Sliders} >
                   <Link className="menu-item" to="/pagegenerator">
                     Crea
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass}>
+                <li onClick={this.addActiveClass, this.Sliders}>
                   <Link className="menu-item" to="/esperienze">
                     Vivi
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass}>
+                <li onClick={this.addActiveClass, this.Sliders}>
                   <Link className="menu-item" to="/puntivendita">
                     Punti vendita
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass}>
+                <li onClick={this.addActiveClass, this.Sliders}>
                   <Link to="/selezionaesperienza" className="menu-item">
                     Inserisci codice
                   </Link>
                 </li>
 
-                <li onClick={this.addActiveClass}>
+                <li onClick={this.addActiveClass, this.Sliders}>
                   <Link className="menu-item" to="/ChiSiamo">
                     Chi siamo
                   </Link>
@@ -112,12 +119,12 @@ class App extends React.Component {
                     Area personale
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass}>
+                <li onClick={this.addActiveClass, this.Sliders}>
                   <Link className="menu-item" to="/registrati">
                     Registrati
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass}>
+                <li onClick={this.addActiveClass, this.Sliders}>
                   <Link className="menu-item" to="/accedi">
                     Accedi
                   </Link>

@@ -1,5 +1,5 @@
 $bgc-viola: #960e3b;
-$bgc-blue: #3d5666;
+$bgc-blue: #375768;
 $bgc-blue-dark: #2f4653;
 
 $bgc-relax: #88abae;
@@ -22,9 +22,11 @@ $bgc-arte: #667384;
     // text-align: center;
     height: 100%;
 }
+
 i {
     margin: 0 8px;
 }
+
 h1,
 h2 {
     text-transform: uppercase;
@@ -55,10 +57,12 @@ h6 {
 .w-100 {
     width: 100%;
 }
+
 a {
     color: white;
 
 }
+
 .color-blue {
 
     p,
@@ -67,13 +71,13 @@ a {
         color: $bgc-blue;
     }
 }
+
 i.fa-star {
     margin: .3em
 }
 
 .btn-dark,
 a.btn-dark {
-
     text-transform: uppercase;
     font-size: 1em;
     padding: 1em 1.5em;
@@ -101,14 +105,15 @@ a {
     }
 }
 
+// input
 .center-input {
     margin-top: 1em;
-    font-size: 1.5em;
+    font-size: 1em;
     width: 100%;
     text-align: center;
     border-bottom: 1px solid white;
-    line-height: 2.5em;
-    background-color: $bgc-blue;
+    line-height: 1.2em;
+    background-color: transparent;
     color: white;
     font-family: 'Comfortaa', cursive;
 
@@ -118,9 +123,9 @@ a {
         font-size: 1.5em
     }
 
-    &:focus~label,
-    &:not(:placeholder-shown)~label {
-        top: -55px;
+    &:focus~.center-label,
+    &:not(:placeholder-shown)~.center-label {
+        top: -45px;
         left: auto;
         font-size: 0.5rem;
         transform: translateY(0);
@@ -139,27 +144,29 @@ a {
 
 .center-label {
     position: relative;
-    top: -30px;
+    top: -23px;
     left: calc(0.5rem + 5px);
     transform: translateY(-50%);
     transition: all 0.3s ease;
     color: white;
 }
 
+// end input
+
 
 .cover {
     height: 20em;
     overflow: hidden;
 
-    &.x2-height {
-        height: 80vh;
+    // &.x2-height {
+    //     height: 80vh;
 
-        img {
-            width: 100%;
-            max-height: auto;
-            overflow: hidden;
-        }
-    }
+    //     img {
+    //         width: 100%;
+    //         max-height: auto;
+    //         overflow: hidden;
+    //     }
+    // }
 
     img {
         width: 100%;
@@ -181,41 +188,30 @@ a {
     background-position: center center;
 }
 
-
-.immagini {
-    max-width: 100%;
-    height: auto;
-}
-
 /* index.html */
-.container {
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-}
 
 #hero-home {
-    // background-image: url(./img/sfondo.jpg);
-    // background-size: cover;
-    // background-position: center center;
     background-color: $bgc-blue;
     color: #fff;
     height: 100vh;
     overflow: hidden;
     text-align: center;
 
+    h2 {
+        margin: 12em 1em 0;
+        text-align: left;
+    }
+
     h1 {
         padding: 1em 2em;
     }
 
     .logo-home {
-        padding: .5em;
         margin: 9em;
         width: 50%;
         background-color: #fff;
         border-radius: 50%;
         margin-bottom: 0;
-        padding-bottom: 0;
         max-width: 450px;
     }
 }
@@ -408,6 +404,47 @@ section a {
     }
 }
 
+.link {
+    transition: all 0.1s ease-in-out;
+
+    // &:before {
+    //     content: "";
+    //     width: 0%;
+    //     height: 10px;
+
+    //     background-color: #fff;
+    //     opacity: .2;
+    //     position: absolute;
+    //     top: 20px;
+    //     left: 20px;
+    //     transition: all .3s ease-in-out;
+    // }
+
+    // &:hover {
+
+        &:before {
+            content: "";
+            width: 80%;
+            height: 10px;
+
+            background-color: #fff;
+            opacity: .2;
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            transition: all 0.3s ease-in-out;
+        }
+    // }
+}
+
+// buble
+
+.immagini {
+    max-width: 100%;
+    height: auto;
+}
+
+
 .half-hover {
     width: 50%;
     height: 60vh;
@@ -431,39 +468,6 @@ section a {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-
-    // &:hover {
-    //     // transform: scale(1.05);
-
-    //     &:before {
-    //         content: '';
-    //         width: 100%;
-    //         height: 100%;
-    //         position: absolute;
-    //         right: 0;
-    //     }
-
-    //     h2 {
-    //         color: white;
-    //     }
-
-    //     p,
-    //     a {
-    //         color: white;
-    //         position: absolute;
-    //         top: 45%;
-    //         padding: 0 2em;
-    //     }
-
-    //     p {
-    //         animation: upto70 .5s ease .1s 1 forwards;
-    //     }
-
-    //     a {
-    //         top: 65%;
-    //         animation: upto65 .5s ease .3s 1 forwards;
-    //     }
-    // }
 
     &.viola {
         &:hover {
@@ -878,99 +882,6 @@ table {
             .title {
                 width: 50%;
             }
-        }
-    }
-}
-/* footer */
-#footer {
-    height: 50vh;
-    background-image: url(./img/pattern-sfondo.png);
-    background-position: center center;
-    background-size: cover;
-    // background-color: $bgc-blue;
-    display: flex;
-    align-items: center;
-    padding: 1.357em 10%;
-
-    .logo {
-        display: flex;
-        flex-direction: column;
-        color: white;
-
-        h1 {
-            padding: .5em;
-        }
-    }
-
-    .left {
-        text-align: left;
-        text-transform: uppercase;
-    }
-}
-
-#footer>div {
-    flex-grow: 1;
-    align-items: center;
-    text-align: right;
-    width: 30%;
-
-    ul li {
-        list-style: none;
-    }
-
-}
-
-#footer .social {
-    display: flex;
-    justify-content: flex-start;
-
-    li {
-        margin: 1em .5em;
-
-        //     width: 25px;
-        // height: 25px;
-        // background-color: #fff;
-        // border-radius: 50%;
-        &:nth-child(1) {
-            margin-left: 0;
-        }
-    }
-
-}
-
-#footer li,
-#footer p,
-#footer a {
-    height: auto;
-    line-height: 2em;
-    color: #fff;
-}
-
-.contatti {
-    label {
-        color: white;
-    }
-
-    input {
-        //   text-align: right;
-        font-size: 1em;
-        padding: 5px;
-    }
-}
-
-@media (max-width: 48em) {
-    #footer {
-        // background-color: red;
-        flex-direction: column;
-        height: auto;
-
-        * {
-            text-align: center;
-            justify-content: center;
-        }
-
-        div {
-            margin: 2em auto;
         }
     }
 }
