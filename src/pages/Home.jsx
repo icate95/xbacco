@@ -3,8 +3,8 @@ import React from "react";
 // import { Player } from "video-react";
 // import video from '../img/main_xbacco_conv.mov';
 
-// import bgcUno from "../img/1fotogenerale.png";
-// import bgcDue from "../img/bottigliehomeechisiamo.png";
+import bgcUno from "../img/1fotogenerale.png";
+import bgcDue from "../img/puntivendita.png";
 import esperienza from "../img/esperienza.jpg";
 import genera from "../img/genera.jpg";
 // import bottigliaAD from "../img/bottiglia_ARTE E DESIGN.png";
@@ -12,6 +12,8 @@ import genera from "../img/genera.jpg";
 // import bottigliaR from "../img/bottiglia_RELAX.png";
 // import bottigliaRI from "../img/bottiglia_RISTORAZIONE.png";
 // import bottigliaX from "../img/bottiglia_XBACCO.png";
+
+import SVG from "./SVG";
 
 import logoColore from "../img/logo1.png";
 
@@ -23,14 +25,15 @@ class Home extends React.Component {
       <>
         <section id="hero-home" className="flex">
           <div className="half two-columns title">
-          
             <h2>
               Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
               Saepe, ipsum?
             </h2>
             <br />
             <br />
-            <Link to="/chisiamo" className='link-light'>Vieni a conoscerci <i className="fas fa-chevron-right" /></Link>
+            <Link to="/chisiamo" className="link-light">
+              Vieni a conoscerci <i className="fas fa-chevron-right" />
+            </Link>
           </div>
           <div className="half two-columns">
             <img src={logoColore} className="logo-home" alt="" />
@@ -56,10 +59,33 @@ class Home extends React.Component {
           </div>
         </section> */}
         <section className="buble">
-          
+          <div className="crea">
+            <div className="bg-img" />
+            <SVG value="crea" />
+            <div className="content">
+              <h2>Crea</h2>
+              <p>Fai un regalo personalizzato</p>
+              <Link to="/crea" className="link-light">
+                Crea il tuo messaggio <i className="fas fa-chevron-right" />{" "}
+              </Link>
+            </div>
+          </div>
+
+          <div className="vivi">
+            <div className="bg-img" />
+
+            <SVG value="vivi" />
+            <div className="content">
+              <h2>Vivi</h2>
+              <p>Hai ricevuto una bottiglia XBACCO?</p>
+              <Link to="/vivi" className="link-light">
+                Vivi l'esperienza <i className="fas fa-chevron-right" />{" "}
+              </Link>
+            </div>
+          </div>
         </section>
 
-        <section className="flex two-column">
+        {/* <section className="flex two-column">
           <div className="half-hover verde immagini">
             <img src={genera} width="100%" alt="genera" />
             <h2>Crea</h2>
@@ -69,7 +95,7 @@ class Home extends React.Component {
             </p>
             {/* <a href="#link">
               <i className="fas fa-chevron-right fa-2x" />
-            </a> */}
+            </a> *
           </div>
           <div className="half-hover viola">
             <img src={esperienza} width="100%" alt="esperienza" />
@@ -82,9 +108,9 @@ class Home extends React.Component {
               <i className="fas fa-chevron-right fa-2x" />
             </a>
           </div>
-        </section>
+        </section> */}
 
-        <section id="quattro" className="text-area tac">
+        <section className="text-area tac">
           <p>
             Ad ogni occasione, con XBACCO hai la possibilità di acquistare il
             nostro vino generare il proprio logo e dedicare un messaggio
@@ -97,8 +123,9 @@ class Home extends React.Component {
           </p>
         </section>
 
-        <section>
-          <div className="text-area-big tac">
+        <section className="flex two-column">
+          <div className="half cover-bottiglie" />
+          <div className="half text-area-big tac">
             <h2>Vini xbacco</h2>
             <p>
               L’eleganza e la ricercatezza nei dettagli ed il sapore esclusivo,
@@ -109,12 +136,10 @@ class Home extends React.Component {
               nostri obiettivi
               <br />e ci teniamo ad offrire la migliore esperienza possibile.
             </p>
-            <Link to="/chisiamo">
-              <i className="fas fa-chevron-right fa-2x" />
+            <Link to="/chisiamo" className="link-dark">
+              scopri di più <i className="fas fa-chevron-right" />
             </Link>
           </div>
-
-          <div className="cover-bottiglie" />
         </section>
       </>
     );

@@ -85,28 +85,28 @@ class App extends React.Component {
             </div>
             <div className="menu-expanded">
               <ul className="menu-container">
-                <li onClick={this.addActiveClass, this.Sliders} >
+                <li onClick={this.addActiveClass} >
                   <Link className="menu-item" to="/pagegenerator">
                     Crea
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass, this.Sliders}>
+                <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/esperienze">
                     Vivi
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass, this.Sliders}>
+                <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/puntivendita">
                     Punti vendita
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass, this.Sliders}>
+                <li onClick={this.addActiveClass}>
                   <Link to="/selezionaesperienza" className="menu-item">
                     Inserisci codice
                   </Link>
                 </li>
 
-                <li onClick={this.addActiveClass, this.Sliders}>
+                <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/ChiSiamo">
                     Chi siamo
                   </Link>
@@ -119,12 +119,12 @@ class App extends React.Component {
                     Area personale
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass, this.Sliders}>
+                <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/registrati">
                     Registrati
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass, this.Sliders}>
+                <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/accedi">
                     Accedi
                   </Link>

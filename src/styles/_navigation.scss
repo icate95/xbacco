@@ -8,7 +8,7 @@ $bgc-ristorazione: #d49e55;
 $bgc-arte: #667384;
 
 .nav-bar {
-    z-index: 100;
+   z-index: 101;
     position: absolute;
     top: 0;
     left: 0;
@@ -93,6 +93,7 @@ $bgc-arte: #667384;
     position: fixed;
     // height: auto;
     width: 100%;
+    z-index: 100;
 }
 
 .menu-expanded {
