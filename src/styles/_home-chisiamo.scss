@@ -1,5 +1,5 @@
 $bgc-viola: #960e3b;
-$bgc-blue: #375768;
+$bgc-blue: #2b5667;
 $bgc-blue-dark: #2f4653;
 
 $bgc-relax: #88abae;
@@ -407,6 +407,7 @@ section a {
 .link-light {
     transition: all 0.1s ease-in-out;
     position: relative;
+    z-index: -10;
     &:before {
         content: "";
         width: 110%;
@@ -440,6 +441,7 @@ section a {
 .link-dark {
     transition: all 0.1s ease-in-out;
     position: relative;
+    z-index: -10;
     &:before {
         content: "";
         width: 110%;

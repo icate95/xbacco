@@ -55,6 +55,9 @@ class Home extends React.Component {
             <h3>design</h3>
           </div>
         </section> */}
+        <section className="buble">
+          
+        </section>
 
         <section className="flex two-column">
           <div className="half-hover verde immagini">
