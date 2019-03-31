@@ -46,15 +46,15 @@ class AreaPersonale extends React.Component {
             </table> 
           </div>
           <div className="half bottoniorrizzontali">
-            <a href="">
+            <a href="#link">
               5 acquisti effettuati
               <i className="fas fa-chevron-right" />
             </a>
-            <a href="">
+            <a href="#link">
               3 etichette create
               <i className="fas fa-chevron-right" />
             </a>
-            <a href="">
+            <a href="#link">
               2 esperienze vissute
               <i className="fas fa-chevron-right" />
             </a>

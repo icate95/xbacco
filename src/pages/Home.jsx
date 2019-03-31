@@ -3,15 +3,15 @@ import React from "react";
 // import { Player } from "video-react";
 // import video from '../img/main_xbacco_conv.mov';
 
-import bgcUno from "../img/1fotogenerale.png";
-import bgcDue from "../img/bottigliehomeechisiamo.png";
+// import bgcUno from "../img/1fotogenerale.png";
+// import bgcDue from "../img/bottigliehomeechisiamo.png";
 import esperienza from "../img/esperienza.jpg";
 import genera from "../img/genera.jpg";
-import bottigliaAD from "../img/bottiglia_ARTE E DESIGN.png";
-import bottigliaC from "../img/bottiglia_CULTURA DEL VINO.png";
-import bottigliaR from "../img/bottiglia_RELAX.png";
-import bottigliaRI from "../img/bottiglia_RISTORAZIONE.png";
-import bottigliaX from "../img/bottiglia_XBACCO.png";
+// import bottigliaAD from "../img/bottiglia_ARTE E DESIGN.png";
+// import bottigliaC from "../img/bottiglia_CULTURA DEL VINO.png";
+// import bottigliaR from "../img/bottiglia_RELAX.png";
+// import bottigliaRI from "../img/bottiglia_RISTORAZIONE.png";
+// import bottigliaX from "../img/bottiglia_XBACCO.png";
 
 import logoColore from "../img/logo1.png";
 
@@ -30,7 +30,7 @@ class Home extends React.Component {
             </h2>
             <br />
             <br />
-            <Link to="/chisiamo" className='link'>Vieni a conoscerci   </Link>
+            <Link to="/chisiamo" className='link-light'>Vieni a conoscerci <i className="fas fa-chevron-right" /></Link>
           </div>
           <div className="half two-columns">
             <img src={logoColore} className="logo-home" alt="" />
@@ -62,9 +62,9 @@ class Home extends React.Component {
             <h2>Crea</h2>
             <p>
               fai un regalo personalizzato, crea la tua etichetta e scrivi un
-              messaggio.{" "}
+              messaggio.
             </p>
-            {/* <a href="">
+            {/* <a href="#link">
               <i className="fas fa-chevron-right fa-2x" />
             </a> */}
           </div>
@@ -75,7 +75,7 @@ class Home extends React.Component {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
               ducimus!
             </p>
-            <a href="">
+            <a href="#link">
               <i className="fas fa-chevron-right fa-2x" />
             </a>
           </div>

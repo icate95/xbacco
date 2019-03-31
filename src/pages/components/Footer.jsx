@@ -11,14 +11,14 @@ class Footer extends React.Component {
         <div className="menu-flex">
           <div className="menu">
             <div className="left">
-              <Link to="/">Home</Link>
+              <Link className="link-light" to="/">Home</Link>
               <br />
 
-              <Link to="/pagegenerator">Crea</Link> <br />
-              <Link to="/esperienze">Vivi</Link> <br />
-              <Link to="/puntivendita">Punti vendita</Link> <br />
-              <Link to="/selezionaesperienza" className="menu-item">Inserisci codice</Link> <br/>
-              <Link to="/chisiamo">Chi siamo</Link> <br />
+              <Link className="link-light" to="/pagegenerator">Crea</Link> <br />
+              <Link className="link-light" to="/esperienze">Vivi</Link> <br />
+              <Link className="link-light" to="/puntivendita">Punti vendita</Link> <br />
+              <Link className="link-light" to="/selezionaesperienza">Inserisci codice</Link> <br/>
+              <Link className="link-light" to="/chisiamo">Chi siamo</Link> <br />
               {/* <Link to="/areapersonale">Area personale</Link> <br /> */}
             </div>
           </div>

@@ -270,7 +270,7 @@ $bgc-arte: #667384;
     background-size: cover;
 
     font-size: .8em;
-    line-height: 1.5em;
+    line-height: 2em;
 
     .menu-flex {
         display: flex;
@@ -300,6 +300,39 @@ $bgc-arte: #667384;
             width: 200px;
         }
     }
+
+.link-light {
+    transition: all 0.1s ease-in-out;
+    position: relative;
+    &:before {
+        content: "";
+        width: 110%;
+        height: 4px;
+
+        background-color: #fff;
+        opacity: .1;
+        position: absolute;
+        top: 10px;
+        left: -5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        text-decoration: none;
+        &:before {
+            content: "";
+            width: 115%;
+            height: 6px;
+
+            background-color: #fff;
+            opacity: .2;
+            position: absolute;
+            top: 6px;
+            left: -2px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
 }
 
 #footer .social {

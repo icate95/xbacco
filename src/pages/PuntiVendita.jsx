@@ -34,10 +34,10 @@ class PuntiVendita extends React.Component {
               <button>Mappa <i className="fas fa-chevron-right" /></button>
             </div>
             <div className="half bottoniorrizzontali">
-            <a href="">milano<i className="fas fa-chevron-right" /></a>
-            <a href="">brescia<i className="fas fa-chevron-right" /></a>
-            <a href="">bergamo<i className="fas fa-chevron-right" /></a>
-            <a href="">Torino<i className="fas fa-chevron-right" /></a>
+            <a href="#brescia">brescia<i className="fas fa-chevron-right" /></a>
+            <a href="#brescia">milano<i className="fas fa-chevron-right" /></a>
+            <a href="#brescia">bergamo<i className="fas fa-chevron-right" /></a>
+            <a href="#brescia">Torino<i className="fas fa-chevron-right" /></a>
           </div>
           </div>
           

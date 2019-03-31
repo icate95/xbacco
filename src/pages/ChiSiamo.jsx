@@ -2,7 +2,7 @@ import React from "react";
 // import ReactDOM from "react-dom";
 
 // import bgcUno from "../img/1chisiamo.png";
-import bgcDue from "../img/cantinachisiamo.png";
+// import bgcDue from "../img/cantinachisiamo.png";
 import logoColore from "../img/logo1.png";
 import esperienza from "../img/esperienza.jpg";
 import genera from "../img/genera.jpg";
@@ -110,7 +110,7 @@ class ChiSiamo extends React.Component {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
               ducimus!
             </p>
-            <a href="">
+            <a href="#link">
               <i className="fas fa-chevron-right fa-2x" />
             </a>
           </div>
@@ -121,7 +121,7 @@ class ChiSiamo extends React.Component {
               fai un regalo personalizzato, crea la tua etichetta e scrivi un
               messaggio.{" "}
             </p>
-            <a href="">
+            <a href="#link">
               <i className="fas fa-chevron-right fa-2x" />
             </a>
           </div>
