@@ -1,17 +1,18 @@
-
 .bgc-img-registrati {
    
     background-image: url(./img/imgregistrati.png);
     background-size: cover;
     height: 95vh;
-    background-position: center center; 
+    background-position: center center;
+    filter: blur(8px);
 }
 
 .bgc-img-accedi {
     background-image: url(./img/uvaneraaccedi.png);
     background-size: cover;
-    height: 90vh;
-    background-position: center center; 
+    height: 100vh;
+    background-position: center center;
+    filter: blur(8px);
 }
 
 .modal {
@@ -24,6 +25,9 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 32%;
     *{
         padding: .8em 3em;
     }
