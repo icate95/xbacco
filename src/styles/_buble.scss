@@ -1,12 +1,23 @@
+.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $bgc-blue-dark;;
+    z-index: 4;
+    position: relative;
+}
 .buble {
     z-index: -15;
     display: flex;
+    justify-content: space-around;
     color: white;
     position: relative;
     text-align: right;
-    background-color: $bgc-blue-dark;
+    
     padding: 1em;
     height: 330px;
+    width: 100%;
+    max-width: 58em;
 
     .vivi,
     .crea {

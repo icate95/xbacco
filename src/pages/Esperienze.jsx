@@ -1,67 +1,125 @@
 import React from "react";
 // import ReactDOM from "react-dom";
 
+// import logoColore from "../img/logo1.png";
+// import botti from "../img/botti.png";
 
-import logoColore from "../img/logo1.png";
+import SVG from "./SVG";
+
+import Generator from "./Generator";
+
+// import logoColore from "../img/logo1.png";
+
+// import { Link } from "react-router-dom";
 
 class Esperienze extends React.Component {
   render() {
     return (
       <>
-      <div id="hero-esperienze" />
-        <div className="text-area tac">
-          <p>
-            I nostri clienti trovano nell’esperienza regalo XBacco, una risposta
-            adeguata ai loro desideri: riconciliarsi con l’ambiente circostante
-            e vivere momenti veri, personali ed emozionanti.{" "}
-          </p>
-          <h2>
-            Perché il tempo da vivere è il dono più grande che si possa
-            ricevere!
-          </h2>
-        </div>
-        <section className="flex two-column">
-          <div className="quarto">
-              <img src={logoColore} alt="" className='logo-home'/>
-            <h2>Cultura del vino</h2>
+        {/* <div id="hero-esperienze" /> */}
+        <section className="vivi-page flex two-column">
+          <div className="half">
+          <div className="text-area tac testo-vivi">
             <p>
-              Se sei appassionato di vino ma vorresti saperne di più, ti
-              offriamo l’accesso alla Cultura del vino in modo semplice e
-              mirato: concediti un calice di vino, mentre guardi i nostri mini
-              corsi da sommelier.
+              I nostri clienti trovano nell’esperienza regalo XBacco, una
+              risposta adeguata ai loro desideri: riconciliarsi con l’ambiente
+              circostante e vivere momenti veri, personali ed emozionanti.{" "}
             </p>
-            <button className="btn-light"><i className="fas fa-shopping-basket"></i></button>
+            <h2>
+              Perché il tempo da vivere è il dono più grande che si possa
+              ricevere!
+            </h2>
           </div>
-          <div className="quarto">
-              <img src={logoColore} alt="" className='logo-home'/>
-            <h2>Relax</h2>
-            <p>
-              Acquistando l’esperienza Relax avrai accesso a musica, libri e
-              poesie.
-            </p>
-            <button className="btn-light"><i className="fas fa-shopping-basket"></i></button>
           </div>
-          <div className="quarto">
-              <img src={logoColore} alt="" className='logo-home'/>
-            <h2>Ristorazione</h2>
-            <p>
-              Per la Ristorazione abbiamo selezionato delle prelibate ricette
-              abbinate al nostro vino.
-            </p>
-            <button className="btn-light"><i className="fas fa-shopping-basket"></i></button>
-          </div>
-          <div className="quarto">
-              <img src={logoColore} alt="" className='logo-home'/>
-            <h2>Arte e design</h2>
-            <p>
-              Per gli appassionati del vino che non vogliono rinunciare nemmeno
-              alla bellezza dell’arte, abbiamo ideato Arte e Design: nozioni sul
-              type design e sugli artisti più famosi (da Picasso a
-              Brunelleschi).
-            </p>
-            <button className="btn-light"><i className="fas fa-shopping-basket"></i></button>
+          <div className="half">
+            <Generator />
           </div>
         </section>
+
+        <section className="center">
+          <form action="" method="post">
+            <fieldset>
+            <legend>What is Your Favorite Pet?</legend> 
+
+          <div className="buble-quattro">
+            <div className="card cultura">
+              <div className="bg-img" />
+              <div className="content">
+                <SVG value="cultura" />
+
+                <h2>Cultura del vino</h2>
+                <input type="checkbox" name="vivi" value="cultura" />
+                <div className="extra">
+                  <i className="fas fa-ellipsis-h" />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perferendis saepe reprehenderit architecto ut impedit
+                    similique amet quisquam excepturi dolorem nisi.
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div className="card relax">
+              <div className="bg-img" />
+              <div className="content">
+                <SVG value="relax" />
+
+                <h2>Relax</h2>
+                <input type="checkbox" name="vivi" value="relax" />
+                <div className="extra">
+                  <i className="fas fa-ellipsis-h" />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perferendis saepe reprehenderit architecto ut impedit
+                    similique amet quisquam excepturi dolorem nisi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className=" card ristorazione">
+              <div className="bg-img" />
+              <div className="content">
+                <SVG value="ristorazione" />
+
+                <h2>Ristorazione</h2>
+                <input type="checkbox" name="vivi" value="ristorazione" />
+                <div className="extra">
+                  <i className="fas fa-ellipsis-h" />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perferendis saepe reprehenderit architecto ut impedit
+                    similique amet quisquam excepturi dolorem nisi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card arte">
+              <div className="bg-img" />
+              <div className="content">
+                <SVG value="arte" />
+
+                <h2>Arte e design</h2>
+                <input type="checkbox" name="vivi" value="arte" />
+                <div className="extra">
+                  <i className="fas fa-ellipsis-h" />
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Iste voluptates corrupti, adipisci animi repudiandae beatae
+                    aliquam unde molestiae soluta tempora?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </fieldset>
+          </form>
+        </section>
+
       </>
     );
   }

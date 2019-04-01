@@ -3,10 +3,10 @@ import React from "react";
 // import { Player } from "video-react";
 // import video from '../img/main_xbacco_conv.mov';
 
-import bgcUno from "../img/1fotogenerale.png";
-import bgcDue from "../img/puntivendita.png";
-import esperienza from "../img/esperienza.jpg";
-import genera from "../img/genera.jpg";
+// import bgcUno from "../img/1fotogenerale.png";
+// import bgcDue from "../img/puntivendita.png";
+// import esperienza from "../img/esperienza.jpg";
+// import genera from "../img/genera.jpg";
 // import bottigliaAD from "../img/bottiglia_ARTE E DESIGN.png";
 // import bottigliaC from "../img/bottiglia_CULTURA DEL VINO.png";
 // import bottigliaR from "../img/bottiglia_RELAX.png";
@@ -58,58 +58,34 @@ class Home extends React.Component {
             <h3>design</h3>
           </div>
         </section> */}
-        <section className="buble">
-          <div className="crea">
-            <div className="bg-img" />
-            <SVG value="crea" />
-            <div className="content">
-              <h2>Crea</h2>
-              <p>Fai un regalo personalizzato</p>
-              <Link to="/crea" className="link-light">
-                Crea il tuo messaggio <i className="fas fa-chevron-right" />{" "}
-              </Link>
+        <section className="center">
+          <div className="buble">
+            <div className="crea">
+              <div className="bg-img" />
+              <SVG value="crea" />
+              <div className="content">
+                <h2>Crea</h2>
+                <p>Fai un regalo personalizzato</p>
+                <Link to="/crea" className="link-light">
+                  Crea il tuo messaggio <i className="fas fa-chevron-right" />{" "}
+                </Link>
+              </div>
             </div>
-          </div>
 
-          <div className="vivi">
-            <div className="bg-img" />
+            <div className="vivi">
+              <div className="bg-img" />
 
-            <SVG value="vivi" />
-            <div className="content">
-              <h2>Vivi</h2>
-              <p>Hai ricevuto una bottiglia XBACCO?</p>
-              <Link to="/vivi" className="link-light">
-                Vivi l'esperienza <i className="fas fa-chevron-right" />{" "}
-              </Link>
+              <SVG value="vivi" />
+              <div className="content">
+                <h2>Vivi</h2>
+                <p>Hai ricevuto una bottiglia XBACCO?</p>
+                <Link to="/vivi" className="link-light">
+                  Vivi l'esperienza <i className="fas fa-chevron-right" />{" "}
+                </Link>
+              </div>
             </div>
           </div>
         </section>
-
-        {/* <section className="flex two-column">
-          <div className="half-hover verde immagini">
-            <img src={genera} width="100%" alt="genera" />
-            <h2>Crea</h2>
-            <p>
-              fai un regalo personalizzato, crea la tua etichetta e scrivi un
-              messaggio.
-            </p>
-            {/* <a href="#link">
-              <i className="fas fa-chevron-right fa-2x" />
-            </a> *
-          </div>
-          <div className="half-hover viola">
-            <img src={esperienza} width="100%" alt="esperienza" />
-            <h2>VIVI</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus!
-            </p>
-            <a href="#link">
-              <i className="fas fa-chevron-right fa-2x" />
-            </a>
-          </div>
-        </section> */}
-
         <section className="text-area tac">
           <p>
             Ad ogni occasione, con XBACCO hai la possibilità di acquistare il

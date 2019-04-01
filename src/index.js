@@ -86,12 +86,12 @@ class App extends React.Component {
             <div className="menu-expanded">
               <ul className="menu-container">
                 <li onClick={this.addActiveClass} >
-                  <Link className="menu-item" to="/pagegenerator">
+                  <Link className="menu-item" to="/crea">
                     Crea
                   </Link>
                 </li>
                 <li onClick={this.addActiveClass}>
-                  <Link className="menu-item" to="/esperienze">
+                  <Link className="menu-item" to="/vivi">
                     Vivi
                   </Link>
                 </li>
@@ -101,13 +101,13 @@ class App extends React.Component {
                   </Link>
                 </li>
                 <li onClick={this.addActiveClass}>
-                  <Link to="/selezionaesperienza" className="menu-item">
+                  <Link to="/inseriscicodice" className="menu-item">
                     Inserisci codice
                   </Link>
                 </li>
 
                 <li onClick={this.addActiveClass}>
-                  <Link className="menu-item" to="/ChiSiamo">
+                  <Link className="menu-item" to="/chisiamo">
                     Chi siamo
                   </Link>
                 </li>
@@ -137,11 +137,11 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/chisiamo" component={ChiSiamo} />
             <Route exact path="/puntivendita" component={PuntiVendita} />
-            <Route exact path="/esperienze" component={Esperienze} />
-            <Route exact path="/pagegenerator" component={PageGenerator} />
+            <Route exact path="/vivi" component={Esperienze} />
+            <Route exact path="/crea" component={PageGenerator} />
             <Route exact path="/areapersonale" component={AreaPersonale} />
             <Route
-              path="/selezionaesperienza"
+              path="/inseriscicodice"
               component={SelezionaEsperienza}
             />
             <Route path="/registrati" component={Registrati} />

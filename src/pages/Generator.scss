@@ -53,13 +53,13 @@ body {
 
 .container {
   margin: 0;
-  padding: 2em;
-  background-color: $bgc-blue;
+  // padding: 2em;
+  // background-color: $bgc-blue;
   // height: 100vh;
 
   .gruppo-svg {
     // height: 50vh;
-    margin: 12em auto 0;
+    margin: 9em auto 0;
     width: 50vh;
     background-color: #fff;
     border-radius: 50%;
@@ -85,7 +85,7 @@ body {
     margin-top: 1em;
     width: 90%;
     text-transform: uppercase;
-    background-color: $bgc-blue;
+    background-color:transparent;
     color: white
   }
 }
