@@ -84,6 +84,7 @@ a.btn-dark {
     border: 1px solid transparent;
     color: white !important;
     background-color: $bgc-blue;
+    cursor: pointer;
 }
 
 Link.btn-light,
@@ -95,6 +96,7 @@ a.btn-light,
     border: 1px solid transparent;
     color: $bgc-blue;
     background-color: white;
+    cursor: pointer;
 }
 
 a {
