@@ -16,7 +16,7 @@ import AreaPersonale from "./pages/AreaPersonale";
 import SelezionaEsperienza from "./pages/SelezionaEsperienza";
 import Registrati from "./pages/Registrati";
 import Accedi from "./pages/Accedi";
-
+import Team from "./pages/Team";
 
 
 class App extends React.Component {
