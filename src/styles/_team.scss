@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+}
+.padding{
+    padding-top: 6em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.padding img{
+    width: 20%;
+    border-radius: 50%;
+}
