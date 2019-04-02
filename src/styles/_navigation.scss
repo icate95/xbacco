@@ -8,14 +8,14 @@ $bgc-ristorazione: #d49e55;
 $bgc-arte: #667384;
 
 .nav-bar {
-   z-index: 101;
+    z-index: 101;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: $bgc-blue;
+    background-color: $bgc-blue-dark;
     justify-content: space-between;
 
     .logo a {
@@ -270,8 +270,12 @@ $bgc-arte: #667384;
     background-position: center center;
     background-size: cover;
 
-    font-size: .8em;
+    font-size: 1em;
     line-height: 2em;
+
+    i {
+        font-size: 1.2em;
+    }
 
     .menu-flex {
         display: flex;
@@ -302,38 +306,40 @@ $bgc-arte: #667384;
         }
     }
 
-.link-light {
-    transition: all 0.1s ease-in-out;
-    position: relative;
-    &:before {
-        content: "";
-        width: 110%;
-        height: 4px;
+    .link-light {
+        transition: all 0.1s ease-in-out;
+        position: relative;
 
-        background-color: #fff;
-        opacity: .1;
-        position: absolute;
-        top: 10px;
-        left: -5px;
-        transition: all 0.3s ease-in-out;
-    }
-
-    &:hover {
-        text-decoration: none;
         &:before {
             content: "";
-            width: 115%;
-            height: 6px;
+            width: 110%;
+            height: 4px;
 
             background-color: #fff;
-            opacity: .2;
+            opacity: .1;
             position: absolute;
-            top: 6px;
-            left: -2px;
+            top: 10px;
+            left: -5px;
             transition: all 0.3s ease-in-out;
         }
+
+        &:hover {
+            text-decoration: none;
+
+            &:before {
+                content: "";
+                width: 115%;
+                height: 6px;
+
+                background-color: #fff;
+                opacity: .2;
+                position: absolute;
+                top: 6px;
+                left: -2px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
     }
-}
 }
 
 #footer .social {

@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom'
 import logoColore from "../img/logo1.png";
 import bottigliaX from "../img/bottiglia_XBACCO.png";
 
+import Footer from "./components/Footer";
+
 class PageGenerator extends React.Component {
   AddActive() {
     console.log(this);
@@ -118,6 +120,7 @@ class PageGenerator extends React.Component {
             <Link to='' className="btn-dark">Modifica</Link>
           </div>
         </section>
+        <Footer />
       </>
     );
   }

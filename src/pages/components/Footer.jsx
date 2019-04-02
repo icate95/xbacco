@@ -16,7 +16,7 @@ class Footer extends React.Component {
 
               <Link className="link-light" to="/pagegenerator">Crea</Link> <br />
               <Link className="link-light" to="/esperienze">Vivi</Link> <br />
-              <Link className="link-light" to="/puntivendita">Punti vendita</Link> <br />
+              {/* <Link className="link-light" to="/puntivendita">Punti vendita</Link> <br /> */}
               <Link className="link-light" to="/selezionaesperienza">Inserisci codice</Link> <br/>
               <Link className="link-light" to="/chisiamo">Chi siamo</Link> <br />
               {/* <Link to="/areapersonale">Area personale</Link> <br /> */}
@@ -96,7 +96,7 @@ class Footer extends React.Component {
                 scopo didattico presso la <a href="https://scuola.mohole.it/">Scuola Mohole</a>, dagli studenti 
                 di Grafica e Web&App per il
                 progetto <a href="http://metaproject.xyz/">Metaproject</a>.
-                Alcuni contenuti e riferimenti aziendali sono di fantasia.
+               <br/> Alcuni contenuti e riferimenti aziendali sono di fantasia.
               </small>
             </p>
           </div>

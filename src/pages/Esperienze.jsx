@@ -12,6 +12,8 @@ import Generator from "./Generator";
 
 // import { Link } from "react-router-dom";
 
+import Footer from "./components/Footer";
+
 class Esperienze extends React.Component {
   render() {
     return (
@@ -119,6 +121,8 @@ class Esperienze extends React.Component {
           </fieldset>
           </form>
         </section>
+
+        <Footer />
 
       </>
     );

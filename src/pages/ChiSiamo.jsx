@@ -8,18 +8,21 @@ import esperienza from "../img/esperienza.jpg";
 import genera from "../img/genera.jpg";
 import bottigliaX from "../img/bottiglia_XBACCO.png";
 
+
+import Footer from "./components/Footer";
+
 class ChiSiamo extends React.Component {
   render() {
     return (
       <>
-        <div id="hero-chisiamo" > 
+        {/* <div id="hero-chisiamo" >  */}
         <p>
               XBACCO è una cantina 2.0, nata dalla passione di cinque giovani
               rivoluzionari che hanno saputo unire l’esperienza del consumo del
               vino al design. Da questo binomio nasce difatti un prodotto unico
               nel suo genere, un vino personalizzato da condividere.
             </p>
-        </div>
+        {/* </div> */}
         {/* <div className="flex two-column info-chisiamo">
           <div className="half bgc-blue tac img-center">
             <img src={logoColore} width="100%" alt="logo-home" className='logo-home' />
@@ -102,30 +105,13 @@ class ChiSiamo extends React.Component {
               </p>
             </div>
         </section>
-        <section className="flex two-column">
-          <div className="half-hover viola">
-            <img src={esperienza} width="100%" alt="esperienza" />
-            <h2>Esperienze</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-              ducimus!
-            </p>
-            <a href="#link">
-              <i className="fas fa-chevron-right fa-2x" />
-            </a>
-          </div>
-          <div className="half-hover verde immagini">
-            <img src={genera} width="100%" alt="genera" />
-            <h2>Genera</h2>
-            <p>
-              fai un regalo personalizzato, crea la tua etichetta e scrivi un
-              messaggio.{" "}
-            </p>
-            <a href="#link">
-              <i className="fas fa-chevron-right fa-2x" />
-            </a>
-          </div>
-        </section>
+       
+       {/* card home */}
+
+        <secton id="chisiamo">
+          <h2>chi siamo </h2>
+        </secton>
+        <Footer />
       </>
     );
   }

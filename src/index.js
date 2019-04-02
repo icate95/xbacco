@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-manager';
+import { createBrowserHistory as createHistory } from 'history';
 import "./styles.scss";
 
 import ImgLogo from "../src/img/logo_trasparente.png";
 
 import Home from "./pages/Home";
 import ChiSiamo from "./pages/ChiSiamo";
-import PuntiVendita from "./pages/PuntiVendita";
+// import PuntiVendita from "./pages/PuntiVendita";
 import Esperienze from "./pages/Esperienze";
 import PageGenerator from "./pages/PageGenerator";
 import AreaPersonale from "./pages/AreaPersonale";
@@ -16,16 +17,19 @@ import SelezionaEsperienza from "./pages/SelezionaEsperienza";
 import Registrati from "./pages/Registrati";
 import Accedi from "./pages/Accedi";
 
-import Footer from "./pages/components/Footer";
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.history = createHistory();
     this.addActiveClass = this.addActiveClass.bind(this);
     this.state = {
       active: true
     };
   }
+
+
   addActiveClass() {
     console.log("click");
     this.setState({ active: !this.state.active });
@@ -64,7 +68,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+    <ScrollManager history={this.history}>
+      <Router history={this.history}>
         <div>
           <div id="sliders"></div>
           <nav id="main-nav">
@@ -95,11 +100,11 @@ class App extends React.Component {
                     Vivi
                   </Link>
                 </li>
-                <li onClick={this.addActiveClass}>
+                {/* <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/puntivendita">
                     Punti vendita
                   </Link>
-                </li>
+                </li> */}
                 <li onClick={this.addActiveClass}>
                   <Link to="/inseriscicodice" className="menu-item">
                     Inserisci codice
@@ -136,7 +141,7 @@ class App extends React.Component {
           <div className="main">
             <Route exact path="/" component={Home} />
             <Route exact path="/chisiamo" component={ChiSiamo} />
-            <Route exact path="/puntivendita" component={PuntiVendita} />
+            {/* <Route exact path="/puntivendita" component={PuntiVendita} /> */}
             <Route exact path="/vivi" component={Esperienze} />
             <Route exact path="/crea" component={PageGenerator} />
             <Route exact path="/areapersonale" component={AreaPersonale} />
@@ -147,9 +152,11 @@ class App extends React.Component {
             <Route path="/registrati" component={Registrati} />
             <Route path="/accedi" component={Accedi} />
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
+      </ScrollManager>
+    
     );
   }
 }

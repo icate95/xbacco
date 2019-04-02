@@ -13,6 +13,8 @@ import React from "react";
 // import bottigliaRI from "../img/bottiglia_RISTORAZIONE.png";
 // import bottigliaX from "../img/bottiglia_XBACCO.png";
 
+import Footer from "./components/Footer";
+
 import SVG from "./SVG";
 
 import logoColore from "../img/logo1.png";
@@ -117,6 +119,7 @@ class Home extends React.Component {
             </Link>
           </div>
         </section>
+        <Footer />
       </>
     );
   }
