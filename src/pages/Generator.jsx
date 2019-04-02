@@ -15,7 +15,7 @@ class Generator extends React.Component {
     }
 
     componentDidMount () {
-      this.myInput.current.focus()
+      // this.myInput.current.focus()
       console.log(this.state.value);
     }
     
@@ -50,8 +50,9 @@ class Generator extends React.Component {
               <SVG value={this.state.value} />
             </div>
             <input
+            className='inputGenerator'
           onChange={this.handleChange}
-          ref={this.myInput}
+          
           defaultValue={this.state.value}
         />
           </div>

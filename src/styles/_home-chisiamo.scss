@@ -84,6 +84,12 @@ a.btn-dark {
     color: white !important;
     background-color: $bgc-blue;
     cursor: pointer;
+    margin: 0.5em;
+    &:hover {
+        background-color: white;
+        color: $bgc-blue-dark !important;
+        border: 1px solid $bgc-blue-dark
+    }
 }
 
 Link.btn-light,
@@ -96,6 +102,12 @@ a.btn-light,
     color: $bgc-blue;
     background-color: white;
     cursor: pointer;
+    margin: 0.5em;
+    &:hover {
+        background-color: $bgc-blue-dark;
+        color: white;
+        border: 1px solid white;
+    }
 }
 
 a {
