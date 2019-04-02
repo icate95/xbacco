@@ -15,51 +15,117 @@ import Generator from "./Generator";
 import Footer from "./components/Footer";
 
 class Esperienze extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
 
-this.xbaccoVivi = this.xbaccoVivi.bind(this);
-}
+    this.xbaccoVivi = this.xbaccoVivi.bind(this);
+    
+  }
+  addActiveMusica(){
+    document.getElementsByClassName('musica')[0].classList.add('selected');
+    document.getElementById("modal-musica").classList.add("active");
+  }
+  addActiveLibro(){
+    document.getElementsByClassName('libro')[0].classList.add('selected');
+    document.getElementById("modal-libro").classList.add("active");
+  }
+  addActivePoesia(){
+    document.getElementsByClassName('poesia')[0].classList.add('selected');
+    document.getElementById("modal-poesia").classList.add("active");
+  }
 
+  xbaccoVivi() {
+    var inputValue = document.getElementsByClassName("inputGenerator")[0].value;
 
-xbaccoVivi() {
-  var inputValue = document.getElementsByClassName('inputGenerator')[0].value;
-
-  document.getElementById('inserisciCodice').
-  console.log(inputValue);
-}
+    document.getElementById("inserisciCodice").classList.remove("active");
+    document.getElementById("inserisciCodice").classList.add("not-active");
+    document.getElementById("passo2").classList.add("active");
+    document.getElementById("passo2").classList.remove("not-active");
+    console.log(inputValue);
+  }
 
   render() {
     return (
       <>
-        <section className="hero-vivi" id='inserisciCodice'>
-          <div className="half-30">
-            <div className="slogan">
-              <p>
-                <span className="big-title">Come funziona</span>
-              </p>
-              <p>Inserisci il codice</p>
-              <p>Scegli</p>
-              <p>Vivi l'esperienza</p>
+        <div id="inserisciCodice" className="active">
+          <section className="hero-vivi">
+            <div className="half-30">
+              <div className="slogan">
+                <p>
+                  <span className="big-title">Come funziona</span>
+                </p>
+                <p>
+                  <span className="big-title">1</span> Inserisci il codice
+                </p>
+                <p>
+                  <span className="big-title">2</span> Scegli
+                </p>
+                <p>
+                  <span className="big-title">3</span> Vivi l'esperienza
+                </p>
+              </div>
+            </div>
+
+            <div className="half-70">
+              <Generator />
+            </div>
+          </section>
+
+          <section className="tac">
+            <button onClick={this.xbaccoVivi} className="btn-dark">
+              Prossimo passaggio <i className="fas fa-chevron-right" />
+            </button>
+          </section>
+        </div>
+        <div className="not-active custom" id="passo2">
+          <p><span className="big-title">Scegli</span></p>
+          <div className="buble-quattro">
+
+            <div className="libro" onClick={this.addActiveLibro}>
+              <input type="checkbox" name="libro" id="libro" />
+              <label htmlFor="libro">Libro</label>
+              <div className="libro">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Eaque, omnis?
+                </p>
+              </div>
+            </div>
+
+            <div className="musica" onClick={this.addActiveMusica}>
+              <input type="checkbox" name="musica" id="musica" />
+              <label htmlFor="musica">Musica</label>
+              <div className="musica">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Eaque, omnis?
+                </p>
+              </div>
+            </div>
+
+            <div className="poesia" onClick={this.addActivePoesia}>
+              <input type="checkbox" name="poesia" id="poesia" />
+              <label htmlFor="poesia">Poesia</label>
+              <div className="poesia">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Eaque, omnis?
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="half-70">
-            <Generator />
+          <div id="modal-poesia">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut magnam maxime soluta illum cum accusantium alias doloremque, asperiores vitae ipsum exercitationem at eveniet, unde deserunt reiciendis. Explicabo aperiam ratione fugiat modi dolor nobis nostrum et corrupti perspiciatis provident beatae reiciendis aliquam expedita ducimus necessitatibus maxime autem, est voluptas neque. Repudiandae repellat tenetur, corrupti dicta delectus, atque eum tempora veritatis debitis dolor accusantium in, vitae nostrum ducimus iste officia. Ab eaque, in doloribus perferendis, mollitia aperiam neque omnis, quo quia non laudantium beatae earum excepturi asperiores quas illum veniam ex eum fuga magnam laboriosam quos accusantium! Rerum perspiciatis esse dolorem ipsum, error placeat dolorum quae, eos rem nihil tenetur, aliquid soluta temporibus architecto nisi corporis velit quis id nulla ipsam quod dolores distinctio? Illo delectus doloremque eos labore ipsa accusantium? Magni suscipit odio voluptatem itaque quam aut eum vitae? Quae ipsa inventore, hic exercitationem tempore ut ducimus corporis dolores nihil totam quo obcaecati quos aperiam excepturi dolorum deleniti omnis suscipit. Tempora nulla fugiat quas asperiores iusto. Veniam est, atque ullam, natus in et consequatur non odit reiciendis alias ipsa at magnam hic. Unde placeat ea illum libero neque totam reiciendis, vero qui autem beatae, exercitationem, modi quod saepe cupiditate repellendus rem!</p>
           </div>
-          
-        </section>
+          <div id="modal-musica">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut magnam maxime soluta illum cum accusantium alias doloremque, asperiores vitae ipsum exercitationem at eveniet, unde deserunt reiciendis. Explicabo aperiam ratione fugiat modi dolor nobis nostrum et corrupti perspiciatis provident beatae reiciendis aliquam expedita ducimus necessitatibus maxime autem, est voluptas neque. Repudiandae repellat tenetur, corrupti dicta delectus, atque eum tempora veritatis debitis dolor accusantium in, vitae nostrum ducimus iste officia. Ab eaque, in doloribus perferendis, mollitia aperiam neque omnis, quo quia non laudantium beatae earum excepturi asperiores quas illum veniam ex eum fuga magnam laboriosam quos accusantium! Rerum perspiciatis esse dolorem ipsum, error placeat dolorum quae, eos rem nihil tenetur, aliquid soluta temporibus architecto nisi corporis velit quis id nulla ipsam quod dolores distinctio? Illo delectus doloremque eos labore ipsa accusantium? Magni suscipit odio voluptatem itaque quam aut eum vitae? Quae ipsa inventore, hic exercitationem tempore ut ducimus corporis dolores nihil totam quo obcaecati quos aperiam excepturi dolorum deleniti omnis suscipit. Tempora nulla fugiat quas asperiores iusto. Veniam est, atque ullam, natus in et consequatur non odit reiciendis alias ipsa at magnam hic. Unde placeat ea illum libero neque totam reiciendis, vero qui autem beatae, exercitationem, modi quod saepe cupiditate repellendus rem!</p>
+          </div>
+          <div id="modal-libro">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut magnam maxime soluta illum cum accusantium alias doloremque, asperiores vitae ipsum exercitationem at eveniet, unde deserunt reiciendis. Explicabo aperiam ratione fugiat modi dolor nobis nostrum et corrupti perspiciatis provident beatae reiciendis aliquam expedita ducimus necessitatibus maxime autem, est voluptas neque. Repudiandae repellat tenetur, corrupti dicta delectus, atque eum tempora veritatis debitis dolor accusantium in, vitae nostrum ducimus iste officia. Ab eaque, in doloribus perferendis, mollitia aperiam neque omnis, quo quia non laudantium beatae earum excepturi asperiores quas illum veniam ex eum fuga magnam laboriosam quos accusantium! Rerum perspiciatis esse dolorem ipsum, error placeat dolorum quae, eos rem nihil tenetur, aliquid soluta temporibus architecto nisi corporis velit quis id nulla ipsam quod dolores distinctio? Illo delectus doloremque eos labore ipsa accusantium? Magni suscipit odio voluptatem itaque quam aut eum vitae? Quae ipsa inventore, hic exercitationem tempore ut ducimus corporis dolores nihil totam quo obcaecati quos aperiam excepturi dolorum deleniti omnis suscipit. Tempora nulla fugiat quas asperiores iusto. Veniam est, atque ullam, natus in et consequatur non odit reiciendis alias ipsa at magnam hic. Unde placeat ea illum libero neque totam reiciendis, vero qui autem beatae, exercitationem, modi quod saepe cupiditate repellendus rem!</p>
+          </div>
+        </div>
 
-        <section className='tac'>
-        <button onClick={this.xbaccoVivi} className='btn-dark'>Prossimo passaggio <i className="fas fa-chevron-right" /></button>
-        </section>
-       
-       <section>
-
-       </section>
-         
-       
         {/* <div id="hero-esperienze" /> */}
         {/* <section className="vivi-page flex two-column">
           <div className="half">

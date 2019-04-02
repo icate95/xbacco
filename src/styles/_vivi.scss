@@ -1,11 +1,11 @@
-.hero-vivi {
+.hero-vivi,
+.custom {
     display: flex;
     padding: 6em 1em 0;
     color: $bgc-blue-dark;
 
     .half-30 {
         width: 30%;
-
 
     }
 
@@ -20,16 +20,38 @@
 span.big-title {
     font-family: 'Comfortaa', cursive;
     font-weight: 800;
-    // text-transform: uppercase;
     font-size: 1.8em;
 }
+
 .slogan {
+    color: $bgc-ristorazione;
     transform: translate(80px, -20px);
-    padding: 4em 2em;
+    padding: 4em 2em 0;
     line-height: 2em;
     font-size: 1.5em;
-    width: 600px;
-   
+    width: 500px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 200px;
+        border: 1px solid $bgc-cultura;
+        bottom: 0;
+        left: 100px;
+    }
+
+}
+
+.custom {
+    background-color: $bgc-relax;
+}
+
+.not-active {
+    display: none;
+}
+
+.active {
+    display: block
 }
 
 
@@ -50,82 +72,62 @@ span.big-title {
 //     }
 // }
 
-// .buble-quattro {
-//     display: flex;
+.buble-quattro {
+    display: flex;
+    padding: 4em 1em;
 
-//     .card {
-//         transform: translateY(-20%);
-//         flex-grow: 1;
-//         border-radius: 5px;
-//         margin: 1em;
-//         overflow: hidden;
-//         height: 350px;
+    .card {
+        // transform: translateY(-20%);
+        flex-grow: 1;
+        border-radius: 5px;
+        margin: 1em;
+        padding: 1em;
+        background-color: #fff;
+        border: 1px solid black;
 
-//         svg {
-//             background-color: #fff;
-//             border-radius: 50%;
-//             width: 40%;
-//             transform: translate(-15px, -15px);
+        h2 {
+            color: white;
+            padding: 2em 1em;
+            text-align: center;
+        }
+    }
+}
 
-//         }
+input[type=checkbox] {
+    visibility: hidden;
+}
 
-//         h2 {
-//             color: white;
-//             padding: 2em 1em;
-//             text-align: center;
+input[type=checkbox]:checked~div, .selected {
+    // border: 1px solid black;
+    // background-color: red;
+    transform: scale(1.1);
+}
 
-//         }
+label {
+    font-size: 800;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0 .8em;
+}
 
-//         .content {
-//             transform: translateY(-100%);
-//             input {
+.libro,
+.musica,
+.poesia {
+    margin: 1em;
+    padding: 1em;
+    background-color: #fff;
+}
 
-//             }
-//         }
+div[class*='modal'] {
+    display: none;
 
-
-
-//         &.cultura .bg-img {
-//             background-color: $bgc-relax;
-//             background-image: url(./img/know.jpeg);
-//             background-position: center right;
-//             background-size: cover;
-//             filter: blur(1px);
-//             width: 100%;
-//             height: 100%;
-//         }
-
-//         &.relax .bg-img {
-//             background-color: $bgc-relax;
-//             background-image: url(./img/glass.jpg);
-//             background-position: center center;
-//             background-size: cover;
-//             filter: blur(1px);
-//             width: 100%;
-//             height: 100%;
-//         }
-
-//         &.ristorazione .bg-img {
-//             background-color: $bgc-relax;
-//             background-image: url(./img/group.jpeg);
-//             background-position: center center;
-//             background-size: cover;
-//             filter: blur(1px);
-//             width: 100%;
-//             height: 100%;
-//         }
-
-//         &.arte .bg-img {
-//             background-color: $bgc-relax;
-//             background-image: url(./img/art.jpg);
-//             background-position: center center;
-//             background-size: cover;
-//             filter: blur(1px);
-//             width: 100%;
-//             height: 100%;
-//         }
-//     }
-// }
+    &.active {
+        display: block;
+        width: 90vw;
+        height: 90vh;
+        background-color: #fff;
+    }
+}
 
 // .extra {
 //     transition: all 1s ease-in-out;
