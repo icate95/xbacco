@@ -1,9 +1,10 @@
 .vivi-page {
-    background-image: url(./img/1fotogenerale.png);
-    background-size: cover;
+    background-color: $bgc-blue;
+    // background-image: url(./img/1fotogenerale.png);
+    // background-size: cover;
     // height: 50vh;
     // min-height: 400px;
-    background-position: center center;
+    // background-position: center center;
 
     .testo-vivi {
         padding: 9em 4em;
@@ -119,4 +120,15 @@
         margin: 1em;
         color: black;
     }
+}
+
+section.vivi {
+    display: flex;
+    .card {
+        
+    }
+}
+
+.modal {
+    display: none;
 }

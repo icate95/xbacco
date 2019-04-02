@@ -111,6 +111,9 @@ class ChiSiamo extends React.Component {
         <secton id="chisiamo">
           <h2>chi siamo </h2>
         </secton>
+        <section>
+          crea e vivi
+        </section>
         <Footer />
       </>
     );

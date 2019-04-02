@@ -2,22 +2,23 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: $bgc-blue-dark;;
+    // background-color: $bgc-blue-dark;
     z-index: 4;
     position: relative;
 }
+
 .buble {
     z-index: -15;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: white;
     position: relative;
     text-align: right;
-    
+
     padding: 1em;
     height: 330px;
     width: 100%;
-    max-width: 58em;
+    // max-width: 58em;
 
     .vivi,
     .crea {
@@ -83,7 +84,7 @@
         }
     }
 
-   
+
 
     svg {
         background: #fff;
@@ -96,6 +97,7 @@
     }
 
 }
+
 @media (max-width: 40em) {
     .buble {
         z-index: -15;
@@ -106,7 +108,7 @@
         background-color: $bgc-blue-dark;
         padding: 1em;
         height: auto;
-    
+
         .vivi,
         .crea {
             overflow: hidden;
@@ -114,11 +116,11 @@
             margin: 1em auto;
             border-radius: 10px;
             position: relative;
-       
+
             height: 300px;
         }
-    
-    
+
+
         .crea>.bg-img {
             overflow: hidden;
             position: absolute;
@@ -132,7 +134,7 @@
             width: 100%;
             height: 100%;
         }
-    
+
         .vivi .bg-img {
             overflow: hidden;
             position: absolute;
@@ -145,12 +147,12 @@
             width: 100%;
             height: 100%;
         }
-    
+
         .content {
             position: absolute;
             bottom: 35px;
             right: 35px;
-    
+
             p,
             h2,
             a {
@@ -159,7 +161,7 @@
                 margin-left: 0;
             }
         }
-    
+
         svg {
             background: #fff;
             width: 200px;
@@ -169,6 +171,43 @@
             left: -50px;
             border-radius: 50%
         }
-    
+
+    }
+}
+
+.card-etichette {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+
+    .crea,
+    .vivi {
+        background-color: $bgc-blue;
+        text-align: center;
+        color: white;
+        width: 400px;
+
+        .content {
+            margin: 1em;
+        }
+
+        h2 {
+            padding: 1em;
+        }
+
+        p {
+            padding: .5em;
+        }
+
+        a {
+            padding: 1em;
+        }
+
+        svg {
+            margin: 1em;
+            width: 100px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
     }
 }

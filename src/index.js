@@ -5,7 +5,7 @@ import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-man
 import { createBrowserHistory as createHistory } from 'history';
 import "./styles.scss";
 
-import ImgLogo from "../src/img/logo_trasparente.png";
+import ImgLogo from "../src/img/XBACCObold.png";
 
 import Home from "./pages/Home";
 import ChiSiamo from "./pages/ChiSiamo";
@@ -105,11 +105,11 @@ class App extends React.Component {
                     Punti vendita
                   </Link>
                 </li> */}
-                <li onClick={this.addActiveClass}>
+                {/* <li onClick={this.addActiveClass}>
                   <Link to="/inseriscicodice" className="menu-item">
                     Inserisci codice
                   </Link>
-                </li>
+                </li> */}
 
                 <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/chisiamo">

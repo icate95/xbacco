@@ -10,7 +10,6 @@ $bgc-arte: #667384;
 /* reset css */
 * {
     margin: 0;
-    padding: 0;
     border: 0;
     box-sizing: border-box;
 }
@@ -177,7 +176,7 @@ a {
 }
 
 .cover-bottiglie {
-    background-image: url(./img/bottigliehomeechisiamo.png);
+    background-image: url(./img/gift.jpeg);
     background-size: cover;
     // height: 60vh;
     background-position: center center;
@@ -197,24 +196,42 @@ a {
     color: #fff;
     height: 100vh;
     overflow: hidden;
-    text-align: center;
+    // text-align: center;
+    display: flex;
 
-    h2 {
-        margin: 12em 1em 0;
-        text-align: left;
+
+
+    .half-30 {
+        width: 40%;
+        padding: 3em;
+        h1 {
+           
+            margin: 6em 0 0;
+            font-family: 'Comfortaa';
+            font-size: 3em;
+
+            span {
+                font-weight: 800;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-style: 2em;
+        }
     }
 
-    h1 {
-        padding: 1em 2em;
-    }
+    .half-70 {
+        width: 60%;
 
-    .logo-home {
-        margin: 9em;
-        width: 50%;
-        background-color: #fff;
-        border-radius: 50%;
-        margin-bottom: 0;
-        max-width: 450px;
+        img {
+            // margin: 9em;
+            width: 100%;
+            background-color: #fff;
+            // border-radius: 50%;
+            margin-bottom: 0;
+            max-width: 650px;
+        }
     }
 }
 
@@ -257,13 +274,42 @@ a {
     }
 }
 
+.text-area-bandiera {
+    display: flex;
+
+    .left {
+        padding: 6em 4em;
+        width: 30%;
+
+        h1 {
+            font-family: 'Comfortaa';
+            font-size: 3em;
+
+            span {
+                font-weight: 800;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-style: 2em;
+        }
+    }
+
+    .right {
+        padding: 3em 6em;
+        padding-left: 2em;
+        width: 70%;
+    }
+}
+
 .text-area-big {
     padding: 4em;
     color: #000;
 
     h1,
     p {
-        padding: 1.375em 2em 2.5em;
+        padding: 1.375em 0 2.5em;
         color: #2d2d2d;
         line-height: 1.5em;
     }
@@ -409,6 +455,7 @@ section a {
 .link-light {
     transition: all 0.1s ease-in-out;
     position: relative;
+
     &:before {
         content: "";
         width: 110%;
@@ -424,6 +471,7 @@ section a {
 
     &:hover {
         text-decoration: none;
+
         &:before {
             content: "";
             width: 115%;
@@ -442,6 +490,7 @@ section a {
 .link-dark {
     transition: all 0.1s ease-in-out;
     position: relative;
+
     &:before {
         content: "";
         width: 110%;
@@ -457,6 +506,7 @@ section a {
 
     &:hover {
         text-decoration: none;
+
         &:before {
             content: "";
             width: 115%;
@@ -582,10 +632,13 @@ section a {
             width: 100%;
         }
     }
+
     .cover-bottiglie {
         height: 40vh
     }
-    .text-area, .text-area-big {
+
+    .text-area,
+    .text-area-big {
         padding: 1em;
     }
 }
@@ -925,4 +978,7 @@ table {
             }
         }
     }
+}
+.info-home {
+    margin-top: 1em;
 }
