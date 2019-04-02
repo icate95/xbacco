@@ -145,6 +145,7 @@ class App extends React.Component {
             <Route exact path="/vivi" component={Esperienze} />
             <Route exact path="/crea" component={PageGenerator} />
             <Route exact path="/areapersonale" component={AreaPersonale} />
+            <Route exact path="/team" component={Team} />
             <Route
               path="/inseriscicodice"
               component={SelezionaEsperienza}
