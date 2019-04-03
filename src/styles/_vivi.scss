@@ -14,6 +14,12 @@
         background-color: $bgc-blue;
         margin-bottom: 1em;
         padding: 1em;
+        svg {
+            width: 55%;
+            margin: 1em auto;
+            background-color: #fff;
+            border-radius: 50%
+        }
     }
 }
 
@@ -52,6 +58,19 @@ span.big-title {
 
 .active {
     display: block
+}
+
+input[type=text] {
+    width: 100%;
+    padding: .2em;
+    font-size: 1em;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    
 }
 
 
@@ -107,21 +126,7 @@ span.big-title {
     display: flex;
     padding: 4em 1em;
 
-    .card {
-        // transform: translateY(-20%);
-        flex-grow: 1;
-        border-radius: 5px;
-        margin: 1em;
-        padding: 1em;
-        background-color: #fff;
-        border: 1px solid black;
-        
-        h2 {
-            color: white;
-            padding: 2em 1em;
-            text-align: center;
-        }
-    }
+    
 }
 
 .libro,
@@ -131,10 +136,13 @@ span.big-title {
     border: 5px solid white;
     margin: 1em;
     margin-bottom: 10em;
-    padding: 5vw 3vw;
+    padding: 5vw 4vw;
     color: white;
     box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
     transition: all.2s ease-in-out;
+    h3 {
+        padding-bottom: 1em;
+    }
     
     &:hover {
         transform: scale(1.1);
