@@ -84,6 +84,31 @@ a.btn-dark {
     color: white !important;
     background-color: $bgc-blue;
     cursor: pointer;
+    margin: 0.5em;
+
+    &:hover {
+        background-color: white;
+        color: $bgc-blue-dark !important;
+        border: 1px solid $bgc-blue-dark
+    }
+}
+
+.btn-dark-small,
+a.btn-dark-small {
+    text-transform: uppercase;
+    font-size: .9em;
+    padding: .5em 1.2em;
+    border: .5px solid transparent;
+    color: white !important;
+    background-color: $bgc-blue;
+    cursor: pointer;
+    margin: 0.3em;
+
+    &:hover {
+        background-color: white;
+        color: $bgc-blue-dark !important;
+        border: .5px solid $bgc-blue-dark
+    }
 }
 
 Link.btn-light,
@@ -96,6 +121,32 @@ a.btn-light,
     color: $bgc-blue;
     background-color: white;
     cursor: pointer;
+    margin: 0.5em;
+
+    &:hover {
+        background-color: $bgc-blue-dark;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+Link.btn-light-small,
+a.btn-light-small,
+.btn-light-small {
+    text-transform: uppercase;
+    font-size: .9em;
+    padding: .5em 1.2em;
+    border: .5px solid transparent;
+    color: $bgc-blue;
+    background-color: white;
+    cursor: pointer;
+    margin: 0.3em;
+
+    &:hover {
+        background-color: $bgc-blue-dark;
+        color: white;
+        border: .5px solid white;
+    }
 }
 
 a {
@@ -185,8 +236,8 @@ a {
 .cover-bicchieri {
     background-image: url(./img/1fotogenerale.png);
     background-size: cover;
-    height: 60vh;
-    background-position: center center;
+    // height: 40vh;
+    background-position: center ;
 }
 
 /* index.html */
@@ -199,39 +250,46 @@ a {
     // text-align: center;
     display: flex;
 
+    // .half-30 {
+    //     width: 40%;
+    //     padding: 3em;
 
+    //     h1 {
+    //         margin: 6em 0 0;
+    //         font-family: 'Comfortaa';
+    //         font-size: 3em;
 
-    .half-30 {
-        width: 40%;
-        padding: 3em;
-        h1 {
-           
-            margin: 6em 0 0;
-            font-family: 'Comfortaa';
-            font-size: 3em;
+    //         span {
+    //             font-weight: 800;
+    //         }
+    //     }
 
-            span {
-                font-weight: 800;
-            }
-        }
+    //     h3 {
+    //         text-transform: uppercase;
+    //         font-style: 2em;
+    //     }
+    // }
 
-        h3 {
-            text-transform: uppercase;
-            font-style: 2em;
-        }
-    }
+    // .half-70 {
+    //     width: 60%;
 
-    .half-70 {
-        width: 60%;
+    //     img {
+    //         // margin: 9em;
+    //         width: 100%;
+    //         background-color: #fff;
+    //         // border-radius: 50%;
+    //         margin-bottom: 0;
+    //         max-width: 650px;
+    //     }
+    // }
+}
 
-        img {
-            // margin: 9em;
-            width: 100%;
-            background-color: #fff;
-            // border-radius: 50%;
-            margin-bottom: 0;
-            max-width: 650px;
-        }
+// prova hero 
+#hero-home {
+    img {
+        width: 100vh;
+        height: 100vh;
+        margin: 0 auto;
     }
 }
 
@@ -306,6 +364,9 @@ a {
 .text-area-big {
     padding: 4em;
     color: #000;
+        span.grassetto {
+            font-weight: 800;
+        }
 
     h1,
     p {
@@ -716,21 +777,31 @@ section a {
     background-image: url(./img/pattern-sfondo.png);
     background-position: center center;
     background-size: cover;
-    width: 100%;
+    width: 50%;
     height: 50vh;
 
     .content {
-        padding: 4em;
-        width: 300px;
+        padding: 2em 10vw;
+        // width: 300px;
         margin: auto;
-        font-size: 1.5em;
-        line-height: 1.6em;
+        // line-height: 1.6em;
         text-align: left;
     }
 
-    h3 {
+    h1, h3 {
+        margin: 0;
+        padding: 0;
         text-transform: uppercase;
-        color: white;
+        color: white; 
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    a {
+        color: white
     }
 }
 
@@ -979,6 +1050,7 @@ table {
         }
     }
 }
+
 .info-home {
     margin-top: 1em;
 }

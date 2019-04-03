@@ -16,9 +16,20 @@ class Generator extends React.Component {
   }
 
   componentDidMount() {
-    this.myInput.current.focus()
-    console.log(this.state.value);
+    // this.myInput.current.focus()
+    // console.log(this.state.value);
   }
+
+  // handleChange(event) {
+  //   console.log(event.currentTarget);
+  //   this.setState({
+  //     value: event.currentTarget.value,
+  //     letters: {
+  //       ...this.state.letters,
+  //       [event.currentTarget.value]: {
+  //         visibility: ![event.currentTarget.value].visibility
+  //       }
+  //     }
 
   // handleChange(event) {
   //   console.log(event.currentTarget);
@@ -51,7 +62,7 @@ class Generator extends React.Component {
         </div>
         <input
           onChange={this.handleChange}
-          ref={this.myInput}
+
           defaultValue={this.state.value}
         />
       </div>

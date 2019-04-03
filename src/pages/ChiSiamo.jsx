@@ -4,8 +4,8 @@ import React from "react";
 // import bgcUno from "../img/1chisiamo.png";
 // import bgcDue from "../img/cantinachisiamo.png";
 import logoColore from "../img/logo1.png";
-import esperienza from "../img/esperienza.jpg";
-import genera from "../img/genera.jpg";
+// import esperienza from "../img/esperienza.jpg";
+// import genera from "../img/genera.jpg";
 import bottigliaX from "../img/bottiglia_XBACCO.png";
 
 

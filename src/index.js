@@ -20,6 +20,8 @@ import Accedi from "./pages/Accedi";
 
 
 class App extends React.Component {
+
+
   constructor(props) {
     super(props);
     this.history = createHistory();
@@ -34,6 +36,7 @@ class App extends React.Component {
       window.scrollTo(0, 0);
     }
   }
+
 
   addActiveClass() {
     console.log("click");
