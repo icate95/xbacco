@@ -2,7 +2,8 @@ import React from "react";
 // import ReactDOM from "react-dom";
 
 // import logoColore from "../img/logo1.png";
-// import botti from "../img/botti.png";
+import botti from "../img/botti.png";
+import audio from "../audio/You_Never_Can_Tell.mp3";
 
 import SVG from "./SVG";
 
@@ -19,19 +20,48 @@ class Esperienze extends React.Component {
     super(props);
 
     this.xbaccoVivi = this.xbaccoVivi.bind(this);
-    
   }
-  addActiveMusica(){
-    document.getElementsByClassName('musica')[0].classList.add('selected');
-    document.getElementById("modal-musica").classList.add("active");
+  addActiveMusica() {
+    if (
+      document.getElementsByClassName("musica")[0].classList.contains("active")
+    ) {
+      // document.getElementsByClassName("musica")[0].classList.remove("selected");
+      document.getElementById("info-select-musica").classList.remove("active");
+    } else {
+      // document.getElementsByClassName("musica")[0].classList.add("selected");
+      document.getElementById("info-select-musica").classList.add("active");
+    }
   }
-  addActiveLibro(){
-    document.getElementsByClassName('libro')[0].classList.add('selected');
-    document.getElementById("modal-libro").classList.add("active");
+  addActiveLibro() {
+    if (
+      document.getElementsByClassName("libro")[0].classList.contains("active")
+    ) {
+      // document.getElementsByClassName("libro")[0].classList.remove("selected");
+      document.getElementById("info-select-libro").classList.remove("active");
+    } else {
+      // document.getElementsByClassName("libro")[0].classList.add("selected");
+      document.getElementById("info-select-libro").classList.add("active");
+    }
   }
-  addActivePoesia(){
-    document.getElementsByClassName('poesia')[0].classList.add('selected');
-    document.getElementById("modal-poesia").classList.add("active");
+  addActivePoesia() {
+    if (
+      document.getElementsByClassName("poesia")[0].classList.contains("active")
+    ) {
+      // document.getElementsByClassName("poesia")[0].classList.remove("selected");
+      document.getElementById("info-select-poesia").classList.remove("active");
+    } else {
+      // document.getElementsByClassName("poesia")[0].classList.add("selected");
+      document.getElementById("info-select-poesia").classList.add("active");
+    }
+  }
+  closePoesia() {
+    document.getElementById("info-select-poesia").classList.remove("active");
+  }
+  closeLibro() {
+    document.getElementById("info-select-libro").classList.remove("active");
+  }
+  closeMusica() {
+    document.getElementById("info-select-musica").classList.remove("active");
   }
 
   xbaccoVivi() {
@@ -78,51 +108,130 @@ class Esperienze extends React.Component {
           </section>
         </div>
         <div className="not-active custom" id="passo2">
+          <h1><span className="big-title">Pacchetto relax</span></h1>
           <p><span className="big-title">Scegli</span></p>
-          <div className="buble-quattro">
 
+          <div className="buble-quattro">
             <div className="libro" onClick={this.addActiveLibro}>
-              <input type="checkbox" name="libro" id="libro" />
-              <label htmlFor="libro">Libro</label>
-              <div className="libro">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eaque, omnis?
-                </p>
-              </div>
+              <h3>Libro</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+                omnis?
+              </p>
             </div>
 
             <div className="musica" onClick={this.addActiveMusica}>
-              <input type="checkbox" name="musica" id="musica" />
-              <label htmlFor="musica">Musica</label>
-              <div className="musica">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eaque, omnis?
-                </p>
-              </div>
+              <h3>Musica</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+                omnis?
+              </p>
             </div>
 
             <div className="poesia" onClick={this.addActivePoesia}>
-              <input type="checkbox" name="poesia" id="poesia" />
-              <label htmlFor="poesia">Poesia</label>
-              <div className="poesia">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eaque, omnis?
-                </p>
-              </div>
+              <h3>Poesia</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
+                omnis?
+              </p>
             </div>
           </div>
 
-          <div id="modal-poesia">
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut magnam maxime soluta illum cum accusantium alias doloremque, asperiores vitae ipsum exercitationem at eveniet, unde deserunt reiciendis. Explicabo aperiam ratione fugiat modi dolor nobis nostrum et corrupti perspiciatis provident beatae reiciendis aliquam expedita ducimus necessitatibus maxime autem, est voluptas neque. Repudiandae repellat tenetur, corrupti dicta delectus, atque eum tempora veritatis debitis dolor accusantium in, vitae nostrum ducimus iste officia. Ab eaque, in doloribus perferendis, mollitia aperiam neque omnis, quo quia non laudantium beatae earum excepturi asperiores quas illum veniam ex eum fuga magnam laboriosam quos accusantium! Rerum perspiciatis esse dolorem ipsum, error placeat dolorum quae, eos rem nihil tenetur, aliquid soluta temporibus architecto nisi corporis velit quis id nulla ipsam quod dolores distinctio? Illo delectus doloremque eos labore ipsa accusantium? Magni suscipit odio voluptatem itaque quam aut eum vitae? Quae ipsa inventore, hic exercitationem tempore ut ducimus corporis dolores nihil totam quo obcaecati quos aperiam excepturi dolorum deleniti omnis suscipit. Tempora nulla fugiat quas asperiores iusto. Veniam est, atque ullam, natus in et consequatur non odit reiciendis alias ipsa at magnam hic. Unde placeat ea illum libero neque totam reiciendis, vero qui autem beatae, exercitationem, modi quod saepe cupiditate repellendus rem!</p>
+          <div id="info-select-poesia" ref={this.divRef}>
+          <div className="img">
+              <img src={botti} alt="" />
+            </div>
+            <div className="text">
+              <i onClick={this.closePoesia} className="fas fa-times" />
+              <h3>Musica</h3>
+
+              <br />
+              <br />
+              <p>
+                <span>Autore:</span> asdasd asdasdas
+              </p>
+              <p>
+                <span>Anno:</span> asdasd asdasdas
+              </p>
+              <br />
+              <p>
+                <span>Altre informazioni:</span> Lorem ipsum dolor sit, amet
+                consectetur adipisicing elit. Ut, commodi voluptas quidem eaque
+                tempora accusantium blanditiis rerum ex explicabo quisquam
+                adipisci illum dicta voluptates cum illo velit possimus minus id
+                numquam exercitationem nihil excepturi neque reprehenderit!
+                Veritatis numquam libero cupiditate? Incidunt modi praesentium
+                consequuntur iusto quaerat, quo sed tempore velit?
+              </p>
+
+              <br />
+              <br />
+              <audio src={audio} controls />
+            </div>
           </div>
-          <div id="modal-musica">
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut magnam maxime soluta illum cum accusantium alias doloremque, asperiores vitae ipsum exercitationem at eveniet, unde deserunt reiciendis. Explicabo aperiam ratione fugiat modi dolor nobis nostrum et corrupti perspiciatis provident beatae reiciendis aliquam expedita ducimus necessitatibus maxime autem, est voluptas neque. Repudiandae repellat tenetur, corrupti dicta delectus, atque eum tempora veritatis debitis dolor accusantium in, vitae nostrum ducimus iste officia. Ab eaque, in doloribus perferendis, mollitia aperiam neque omnis, quo quia non laudantium beatae earum excepturi asperiores quas illum veniam ex eum fuga magnam laboriosam quos accusantium! Rerum perspiciatis esse dolorem ipsum, error placeat dolorum quae, eos rem nihil tenetur, aliquid soluta temporibus architecto nisi corporis velit quis id nulla ipsam quod dolores distinctio? Illo delectus doloremque eos labore ipsa accusantium? Magni suscipit odio voluptatem itaque quam aut eum vitae? Quae ipsa inventore, hic exercitationem tempore ut ducimus corporis dolores nihil totam quo obcaecati quos aperiam excepturi dolorum deleniti omnis suscipit. Tempora nulla fugiat quas asperiores iusto. Veniam est, atque ullam, natus in et consequatur non odit reiciendis alias ipsa at magnam hic. Unde placeat ea illum libero neque totam reiciendis, vero qui autem beatae, exercitationem, modi quod saepe cupiditate repellendus rem!</p>
+          <div id="info-select-musica" ref={this.divRef}>
+            <div className="img">
+              <img src={botti} alt="" />
+            </div>
+            <div className="text">
+              <i onClick={this.closeMusica} className="fas fa-times" />
+              <h3>Musica</h3>
+
+              <br />
+              <br />
+              <p>
+                <span>Autore:</span> asdasd asdasdas
+              </p>
+              <p>
+                <span>Anno:</span> asdasd asdasdas
+              </p>
+              <br />
+              <p>
+                <span>Altre informazioni:</span> Lorem ipsum dolor sit, amet
+                consectetur adipisicing elit. Ut, commodi voluptas quidem eaque
+                tempora accusantium blanditiis rerum ex explicabo quisquam
+                adipisci illum dicta voluptates cum illo velit possimus minus id
+                numquam exercitationem nihil excepturi neque reprehenderit!
+                Veritatis numquam libero cupiditate? Incidunt modi praesentium
+                consequuntur iusto quaerat, quo sed tempore velit?
+              </p>
+
+              <br />
+              <br />
+              <audio src={audio} controls />
+            </div>
           </div>
-          <div id="modal-libro">
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut magnam maxime soluta illum cum accusantium alias doloremque, asperiores vitae ipsum exercitationem at eveniet, unde deserunt reiciendis. Explicabo aperiam ratione fugiat modi dolor nobis nostrum et corrupti perspiciatis provident beatae reiciendis aliquam expedita ducimus necessitatibus maxime autem, est voluptas neque. Repudiandae repellat tenetur, corrupti dicta delectus, atque eum tempora veritatis debitis dolor accusantium in, vitae nostrum ducimus iste officia. Ab eaque, in doloribus perferendis, mollitia aperiam neque omnis, quo quia non laudantium beatae earum excepturi asperiores quas illum veniam ex eum fuga magnam laboriosam quos accusantium! Rerum perspiciatis esse dolorem ipsum, error placeat dolorum quae, eos rem nihil tenetur, aliquid soluta temporibus architecto nisi corporis velit quis id nulla ipsam quod dolores distinctio? Illo delectus doloremque eos labore ipsa accusantium? Magni suscipit odio voluptatem itaque quam aut eum vitae? Quae ipsa inventore, hic exercitationem tempore ut ducimus corporis dolores nihil totam quo obcaecati quos aperiam excepturi dolorum deleniti omnis suscipit. Tempora nulla fugiat quas asperiores iusto. Veniam est, atque ullam, natus in et consequatur non odit reiciendis alias ipsa at magnam hic. Unde placeat ea illum libero neque totam reiciendis, vero qui autem beatae, exercitationem, modi quod saepe cupiditate repellendus rem!</p>
+          <div id="info-select-libro" ref={this.divRef}>
+          <div className="img">
+              <img src={botti} alt="" />
+            </div>
+            <div className="text">
+              <i onClick={this.closeLibro} className="fas fa-times" />
+              <h3>Libro</h3>
+
+              <br />
+              <br />
+              <p>
+                <span>Autore:</span> asdasd asdasdas
+              </p>
+              <p>
+                <span>Anno:</span> asdasd asdasdas
+              </p>
+              <br />
+              <p>
+                <span>Altre informazioni:</span> Lorem ipsum dolor sit, amet
+                consectetur adipisicing elit. Ut, commodi voluptas quidem eaque
+                tempora accusantium blanditiis rerum ex explicabo quisquam
+                adipisci illum dicta voluptates cum illo velit possimus minus id
+                numquam exercitationem nihil excepturi neque reprehenderit!
+                Veritatis numquam libero cupiditate? Incidunt modi praesentium
+                consequuntur iusto quaerat, quo sed tempore velit?
+              </p>
+
+              <br />
+              <br />
+              <audio src={audio} controls />
+            </div>
           </div>
         </div>
 

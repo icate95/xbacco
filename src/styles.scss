@@ -7,6 +7,19 @@ $bgc-cultura: #690e3b;
 $bgc-ristorazione: #d49e55;
 $bgc-arte: #667384;
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Comfortaa', cursive;
+}
+
+p, li {
+    font-family: 'Raleway', sans-serif;
+}
+
 @import './styles/home-chisiamo';
 @import './styles/puntivendita';
 @import './styles/forms';
