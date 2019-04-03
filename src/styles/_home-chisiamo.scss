@@ -107,7 +107,7 @@ a.btn-dark-small {
     &:hover {
         background-color: white;
         color: $bgc-blue-dark !important;
-        border: 1px solid $bgc-blue-dark
+        border: .5px solid $bgc-blue-dark
     }
 }
 
@@ -145,7 +145,7 @@ a.btn-light-small,
     &:hover {
         background-color: $bgc-blue-dark;
         color: white;
-        border: 1px solid white;
+        border: .5px solid white;
     }
 }
 
@@ -236,8 +236,8 @@ a {
 .cover-bicchieri {
     background-image: url(./img/1fotogenerale.png);
     background-size: cover;
-    height: 60vh;
-    background-position: center center;
+    // height: 40vh;
+    background-position: center ;
 }
 
 /* index.html */
@@ -364,6 +364,9 @@ a {
 .text-area-big {
     padding: 4em;
     color: #000;
+        span.grassetto {
+            font-weight: 800;
+        }
 
     h1,
     p {
@@ -774,21 +777,31 @@ section a {
     background-image: url(./img/pattern-sfondo.png);
     background-position: center center;
     background-size: cover;
-    width: 100%;
+    width: 50%;
     height: 50vh;
 
     .content {
-        padding: 4em;
-        width: 300px;
+        padding: 2em 10vw;
+        // width: 300px;
         margin: auto;
-        font-size: 1.5em;
-        line-height: 1.6em;
+        // line-height: 1.6em;
         text-align: left;
     }
 
-    h3 {
+    h1, h3 {
+        margin: 0;
+        padding: 0;
         text-transform: uppercase;
-        color: white;
+        color: white; 
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    a {
+        color: white
     }
 }
 

@@ -16,7 +16,7 @@ class Generator extends React.Component {
 
     componentDidMount () {
       // this.myInput.current.focus()
-      console.log(this.state.value);
+      // console.log(this.state.value);
     }
     
     // handleChange(event) {

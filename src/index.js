@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-manager';
+import { Router, Route, Link } from "react-router-dom";
+// import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-manager';
+import { ScrollManager} from 'react-scroll-manager';
 import { createBrowserHistory as createHistory } from 'history';
 import "./styles.scss";
 
@@ -31,7 +32,7 @@ class App extends React.Component {
 
 
   addActiveClass() {
-    console.log("click");
+    // console.log("click");
     this.setState({ active: !this.state.active });
     console.log(this.state.active);
     if (this.state.active) {

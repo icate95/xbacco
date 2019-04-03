@@ -17,7 +17,7 @@ import Footer from "./components/Footer";
 
 import SVG from "./SVG";
 
-import logoColore from "../img/logo1.png";
+// import logoColore from "../img/logo1.png";
 import animazione from "../img/animazione.gif";
 
 import { Link } from "react-router-dom";
@@ -27,24 +27,26 @@ class Home extends React.Component {
     return (
       <>
         <section id="hero-home" className="flex">
-         
           <img src={animazione} alt="" />
         </section>
 
- {/* */}
-          <section className="flex two-column info-home">
-          <div className="half text-area-big">
-          {/* <div className="half two-columns title"> */}
-          <h1> <span>X</span>Bacco</h1>
-          <h3>è un generative wine</h3>
-
+        <section className="flex two-column info-home">
+          <div className="half text-area-big" id="slogan">
+            {/* <div className="half two-columns title"> */}
+              <div className="content">
+            <h1>
+              {" "}
+              <span className="grassetto">X</span>Bacco
+            </h1>
+            <h3>è un generative wine</h3>
             <br />
             <Link to="/chisiamo" className="link-light">
               Vieni a conoscerci <i className="fas fa-chevron-right" />
             </Link>
+            </div>
           </div>
           {/* </div> */}
-          <div className="half cover-bottiglie" />
+          <div className="half cover-bicchieri" />
         </section>
 
         <section className="flex two-column info-home">
@@ -52,13 +54,9 @@ class Home extends React.Component {
           <div className="half text-area-big">
             <h2>Vini xbacco</h2>
             <p>
-              L’eleganza e la ricercatezza nei dettagli ed il sapore esclusivo,
-              <br />
-              valorizzano il nostro brand e ci consentono di distinguerci.
-              <br />
-              La qualità dei nostri prodotti e servizi offerti è al centro dei
-              nostri obiettivi
-              <br />e ci teniamo ad offrire la migliore esperienza possibile.
+            XBACCO è il nome del vino che nasce dai vitigni coltivati nella nostra azienda presso Verona. 
+È il risultato del lavoro e dall’utilizzo di tecniche e metodologie moderne, nonostante i terreni siano coltivati da tradizioni.
+Il vino si presenta di colore rossastro, con aromi fruttati ma intensi, che rendono un gusto armonio e vellutato
             </p>
             <Link to="/chisiamo" className="link-dark">
               scopri di più <i className="fas fa-chevron-right" />
@@ -66,9 +64,7 @@ class Home extends React.Component {
           </div>
         </section>
 
-
-
-{/*         
+        {/*         
         <section id="due" className="text-area-bandiera">
           <div className="left">
           <h1> <span>X</span>Bacco</h1>
@@ -92,7 +88,6 @@ class Home extends React.Component {
             <h3>design</h3>
           </div>
         </section> */}
-
 
         {/* <section className="center">
           <div className="buble">
@@ -123,33 +118,26 @@ class Home extends React.Component {
           </div>
         </section> */}
 
-
         <section className="center">
           <div className="card-etichette">
-            <div className="crea">
-              <div className="bg-img" />
+            <div className="card">
               <SVG value="crea" />
-             
-                <h2>Crea</h2>
-                <p>Fai un regalo personalizzato</p>
-                <button className="btn-light">ckajs</button>
-            
+              <h2>Crea</h2>
+              <p>Fai un regalo personalizzato</p>
+              <button className="btn-light-small">Scopri di più</button>
             </div>
 
-            <div className="vivi">
-              <div className="bg-img" />
-
+            <div className="card">
               <SVG value="vivi" />
-             
-                <h2>Vivi</h2>
-                <p>Hai ricevuto una bottiglia XBACCO?</p>
-                <button className="btn-light">ckajs</button>
-              </div>
-         
+
+              <h2>Vivi</h2>
+              <p>Hai ricevuto una bottiglia XBACCO?</p>
+              <button className="btn-light-small">Scopri di più</button>
+            </div>
           </div>
         </section>
 
-
+        <section>*Video*</section>
 
         {/* <section className="text-area tac">
           <p>

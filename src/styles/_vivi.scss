@@ -1,5 +1,6 @@
 .hero-vivi,
-.custom {
+.custom,
+.crea {
     display: flex;
     padding: 6em 1em 0;
     color: $bgc-blue-dark;
@@ -14,6 +15,7 @@
         background-color: $bgc-blue;
         margin-bottom: 1em;
         padding: 1em;
+
         svg {
             width: 55%;
             margin: 1em auto;
@@ -70,7 +72,7 @@ input[type=text] {
     color: white;
     text-transform: uppercase;
     letter-spacing: 1em;
-    
+
 }
 
 
@@ -126,7 +128,7 @@ input[type=text] {
     display: flex;
     padding: 4em 1em;
 
-    
+
 }
 
 .libro,
@@ -140,10 +142,11 @@ input[type=text] {
     color: white;
     box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
     transition: all.2s ease-in-out;
+
     h3 {
         padding-bottom: 1em;
     }
-    
+
     &:hover {
         transform: scale(1.1);
         transition: all.2s ease-in-out;
@@ -217,55 +220,51 @@ div[id*='info-select'] {
 }
 
 @media (max-width:48em) {
-   
-div[id*='info-select'] {
-  
 
-  
-
-    &.active {
-
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        background-color: #fff;
-        position: absolute;
-        // padding: 3em 2em;
-        margin: 2em 5%;
-        top: 5em;
-        left: 0;
-        z-index: 4;
-        box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
-
-        .img {
-            width: 100%;
-            height: 25vh;
-            overflow: hidden;
-
-            img {
-                height: 130%;
-                transform: scale(1.1)
-            }
-        }
-
-        .text {
-            width: 100%;
-            // height: 100%;
-            padding: 1.5em 1em;
-
-            span {
-                font-weight: 800;
-            }
-        }
-
-        i {
-            color: white;
+    div[id*='info-select'] {
+        &.active {
+            transition: all .2s ease-in-out;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
             position: absolute;
-            top: 1em;
-            right: 1em;
-            margin: 1em;
-        }
+            // padding: 3em 2em;
+            margin: 2em 5%;
+            top: 5em;
+            left: 0;
+            z-index: 4;
+            box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
 
+            .img {
+                width: 100%;
+                height: 25vh;
+                overflow: hidden;
+
+                img {
+                    height: 130%;
+                    transform: scale(1.1)
+                }
+            }
+
+            .text {
+                width: 100%;
+                // height: 100%;
+                padding: 1.5em 1em;
+
+                span {
+                    font-weight: 800;
+                }
+            }
+
+            i {
+                color: white;
+                position: absolute;
+                top: 1em;
+                right: 1em;
+                margin: 1em;
+            }
+
+        }
     }
-} 
 }
