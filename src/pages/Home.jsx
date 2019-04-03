@@ -27,7 +27,14 @@ class Home extends React.Component {
     return (
       <>
         <section id="hero-home" className="flex">
-          <div className="half-30 two-columns title">
+         
+          <img src={animazione} alt="" />
+        </section>
+
+ {/* */}
+          <section className="flex two-column info-home">
+          <div className="half text-area-big">
+          {/* <div className="half two-columns title"> */}
           <h1> <span>X</span>Bacco</h1>
           <h3>è un generative wine</h3>
 
@@ -36,12 +43,9 @@ class Home extends React.Component {
               Vieni a conoscerci <i className="fas fa-chevron-right" />
             </Link>
           </div>
-          <div className="half-70 two-columns">
-            <img src={animazione} alt="" />
-          </div>
+          {/* </div> */}
+          <div className="half cover-bottiglie" />
         </section>
-
-
 
         <section className="flex two-column info-home">
           <div className="half cover-bottiglie" />

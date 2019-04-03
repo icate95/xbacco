@@ -66,7 +66,7 @@ class Esperienze extends React.Component {
   }
 
   xbaccoVivi() {
-    var inputValue = document.getElementsByClassName("inputGenerator")[0].value;
+    var inputValue = document.getElementsByClassName("input-code")[0].value;
 
     document.getElementById("inserisciCodice").classList.remove("active");
     document.getElementById("inserisciCodice").classList.add("not-active");

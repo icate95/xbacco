@@ -85,6 +85,7 @@ a.btn-dark {
     background-color: $bgc-blue;
     cursor: pointer;
     margin: 0.5em;
+
     &:hover {
         background-color: white;
         color: $bgc-blue-dark !important;
@@ -102,6 +103,7 @@ a.btn-dark-small {
     background-color: $bgc-blue;
     cursor: pointer;
     margin: 0.3em;
+
     &:hover {
         background-color: white;
         color: $bgc-blue-dark !important;
@@ -120,6 +122,7 @@ a.btn-light,
     background-color: white;
     cursor: pointer;
     margin: 0.5em;
+
     &:hover {
         background-color: $bgc-blue-dark;
         color: white;
@@ -138,6 +141,7 @@ a.btn-light-small,
     background-color: white;
     cursor: pointer;
     margin: 0.3em;
+
     &:hover {
         background-color: $bgc-blue-dark;
         color: white;
@@ -246,39 +250,46 @@ a {
     // text-align: center;
     display: flex;
 
+    // .half-30 {
+    //     width: 40%;
+    //     padding: 3em;
 
+    //     h1 {
+    //         margin: 6em 0 0;
+    //         font-family: 'Comfortaa';
+    //         font-size: 3em;
 
-    .half-30 {
-        width: 40%;
-        padding: 3em;
-        h1 {
-           
-            margin: 6em 0 0;
-            font-family: 'Comfortaa';
-            font-size: 3em;
+    //         span {
+    //             font-weight: 800;
+    //         }
+    //     }
 
-            span {
-                font-weight: 800;
-            }
-        }
+    //     h3 {
+    //         text-transform: uppercase;
+    //         font-style: 2em;
+    //     }
+    // }
 
-        h3 {
-            text-transform: uppercase;
-            font-style: 2em;
-        }
-    }
+    // .half-70 {
+    //     width: 60%;
 
-    .half-70 {
-        width: 60%;
+    //     img {
+    //         // margin: 9em;
+    //         width: 100%;
+    //         background-color: #fff;
+    //         // border-radius: 50%;
+    //         margin-bottom: 0;
+    //         max-width: 650px;
+    //     }
+    // }
+}
 
-        img {
-            // margin: 9em;
-            width: 100%;
-            background-color: #fff;
-            // border-radius: 50%;
-            margin-bottom: 0;
-            max-width: 650px;
-        }
+// prova hero 
+#hero-home {
+    img {
+        width: 100vh;
+        height: 100vh;
+        margin: 0 auto;
     }
 }
 
@@ -1026,6 +1037,7 @@ table {
         }
     }
 }
+
 .info-home {
     margin-top: 1em;
 }
