@@ -12,15 +12,18 @@ import bottigliaX from "../img/bottiglia_XBACCO.png";
 import Footer from "./components/Footer";
 
 class ChiSiamo extends React.Component {
+  // componentDidMount() {
+  //   window.scrollTo(0, 0);
+  // }
   render() {
     return (
       <>
         {/* <div id="hero-chisiamo" >  */}
         <p>
-              XBACCO è una cantina 2.0, nata dalla passione di cinque giovani
-              rivoluzionari che hanno saputo unire l’esperienza del consumo del
-              vino al design. Da questo binomio nasce difatti un prodotto unico
-              nel suo genere, un vino personalizzato da condividere.
+          XBACCO è una cantina 2.0, nata dalla passione di cinque giovani
+          rivoluzionari che hanno saputo unire l’esperienza del consumo del
+          vino al design. Da questo binomio nasce difatti un prodotto unico
+          nel suo genere, un vino personalizzato da condividere.
             </p>
         {/* </div> */}
         {/* <div className="flex two-column info-chisiamo">
@@ -62,51 +65,51 @@ class ChiSiamo extends React.Component {
             <img src={bottigliaX} alt="" />
           </div>
           <div className="text-area bgc-blue info-wine">
-              <h6>Scheda tecnica</h6>
-              <p>
-                <strong>Formato bottiglia: </strong>0,75l
+            <h6>Scheda tecnica</h6>
+            <p>
+              <strong>Formato bottiglia: </strong>0,75l
               </p>
-              <p>
-                <strong>Vitigni: </strong>rossese
+            <p>
+              <strong>Vitigni: </strong>rossese
               </p>
-              <p>
-                <strong>Vigneto d'origine: </strong>Vigneti di Verona
+            <p>
+              <strong>Vigneto d'origine: </strong>Vigneti di Verona
               </p>
-              <p>
-                <strong>periodo di vendemmia: </strong>prima meta' di settembre
+            <p>
+              <strong>periodo di vendemmia: </strong>prima meta' di settembre
               </p>
-              <p>
-                <strong>Metodo di raccolta: </strong>Manuale
+            <p>
+              <strong>Metodo di raccolta: </strong>Manuale
               </p>
-              <p>
-                <strong>Vinificazione: </strong>Tradizionale con vasche in
-                acciaio, una breve macerazione di 18 ore, lieviti selezionati e
-                attenti ai controlli analitici
+            <p>
+              <strong>Vinificazione: </strong>Tradizionale con vasche in
+              acciaio, una breve macerazione di 18 ore, lieviti selezionati e
+              attenti ai controlli analitici
               </p>
-              <p>
-                <strong>Zuccheri residui: </strong>2,0 g/l
+            <p>
+              <strong>Zuccheri residui: </strong>2,0 g/l
               </p>
-              <p>
-                <strong>Titolo alcolometrico volumico: </strong>12,5%
+            <p>
+              <strong>Titolo alcolometrico volumico: </strong>12,5%
               </p>
-              <p>
-                <strong>Temperatura di servizio: </strong>10˚C
+            <p>
+              <strong>Temperatura di servizio: </strong>10˚C
               </p>
-              <h6>Degustazione:</h6>
-              <p>
-                <strong>Colore: </strong>Rosso granato
+            <h6>Degustazione:</h6>
+            <p>
+              <strong>Colore: </strong>Rosso granato
               </p>
-              <p>
-                <strong>profumo: </strong>intenso e netto con sentori floreali
+            <p>
+              <strong>profumo: </strong>intenso e netto con sentori floreali
               </p>
-              <p>
-                <strong>Gusto: </strong> Delicato ma di carattere, dal sapore
-                vellutato, armonico e avvolgente
+            <p>
+              <strong>Gusto: </strong> Delicato ma di carattere, dal sapore
+              vellutato, armonico e avvolgente
               </p>
-            </div>
+          </div>
         </section>
-       
-       {/* card home */}
+
+        {/* card home */}
 
         <secton id="chisiamo">
           <h2>chi siamo </h2>

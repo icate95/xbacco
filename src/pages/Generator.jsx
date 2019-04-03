@@ -4,58 +4,58 @@ import SVG from "./SVG";
 
 class Generator extends React.Component {
 
-    constructor(props){
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            value: 'ciao'
-        }
+    this.state = {
+      value: 'ciao',
+      letters: [],
+    }
     this.myInput = React.createRef();
-    // this.handleChange = this.handleChange.bind(this);
-    }
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-    componentDidMount () {
-      this.myInput.current.focus()
-      console.log(this.state.value);
-    }
-    
-    // handleChange(event) {
-    //   console.log(event.currentTarget);
-    //   this.setState({
-    //     value: event.currentTarget.value,
-    //     letters: {
-    //       ...this.state.letters,
-    //       [event.currentTarget.value]: {
-    //         visibility: ![event.currentTarget.value].visibility
-    //       }
-    //     }
+  componentDidMount() {
+    this.myInput.current.focus()
+    console.log(this.state.value);
+  }
 
-    //   });
-    // }
-    // handleChange(event) {
-    //     console.log(event.currentTarget);
-    //     let lettera = event.currentTarget.value.split("");
-    //     console.log(lettera);
-    //     this.setState({
-    //       value: event.currentTarget.value,
-    //       letters: lettera.map((lett) => this.state.lett: true )            
-    //       }
-    //     });
-    //   }
+  // handleChange(event) {
+  //   console.log(event.currentTarget);
+  //   this.setState({
+  //     value: event.currentTarget.value,
+  //     letters: {
+  //       ...this.state.letters,
+  //       [event.currentTarget.value]: {
+  //         visibility: ![event.currentTarget.value].visibility
+  //       }
+  //     }
 
-    render() {
-        return (
-          <div className="container">
-            <div className="gruppo-svg">
-              <SVG value={this.state.value} />
-            </div>
-            <input
+  //   });
+  // }
+  handleChange(event) {
+    // console.log(event.currentTarget);
+    let lettera = event.currentTarget.value.split("");
+    // console.log(lettera);
+    this.setState({
+      value: event.currentTarget.value,
+      letters: lettera
+    });
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <div className="gruppo-svg">
+          <SVG value={this.state.value} />
+        </div>
+        <input
           onChange={this.handleChange}
           ref={this.myInput}
           defaultValue={this.state.value}
         />
-          </div>
-        );
-      }
-    }
-    export default Generator;
+      </div>
+    );
+  }
+}
+export default Generator;

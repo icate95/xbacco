@@ -23,13 +23,16 @@ import animazione from "../img/animazione.gif";
 import { Link } from "react-router-dom";
 
 class Home extends React.Component {
+  // componentDidMount() {
+  //   window.scrollTo(0, 0);
+  // }
   render() {
     return (
       <>
         <section id="hero-home" className="flex">
           <div className="half-30 two-columns title">
-          <h1> <span>X</span>Bacco</h1>
-          <h3>è un generative wine</h3>
+            <h1> <span>X</span>Bacco</h1>
+            <h3>è un generative wine</h3>
 
             <br />
             <Link to="/chisiamo" className="link-light">
@@ -64,7 +67,7 @@ class Home extends React.Component {
 
 
 
-{/*         
+        {/*         
         <section id="due" className="text-area-bandiera">
           <div className="left">
           <h1> <span>X</span>Bacco</h1>
@@ -125,23 +128,23 @@ class Home extends React.Component {
             <div className="crea">
               <div className="bg-img" />
               <SVG value="crea" />
-             
-                <h2>Crea</h2>
-                <p>Fai un regalo personalizzato</p>
-                <button className="btn-light">ckajs</button>
-            
+
+              <h2>Crea</h2>
+              <p>Fai un regalo personalizzato</p>
+              <button className="btn-light">ckajs</button>
+
             </div>
 
             <div className="vivi">
               <div className="bg-img" />
 
               <SVG value="vivi" />
-             
-                <h2>Vivi</h2>
-                <p>Hai ricevuto una bottiglia XBACCO?</p>
-                <button className="btn-light">ckajs</button>
-              </div>
-         
+
+              <h2>Vivi</h2>
+              <p>Hai ricevuto una bottiglia XBACCO?</p>
+              <button className="btn-light">ckajs</button>
+            </div>
+
           </div>
         </section>
 
