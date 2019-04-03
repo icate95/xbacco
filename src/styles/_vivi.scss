@@ -1,5 +1,3 @@
-
-
 .hero-vivi,
 .custom {
     display: flex;
@@ -57,22 +55,53 @@ span.big-title {
 }
 
 
+@media (max-width:48em) {
 
-// .vivi-page {
-//     background-color: $bgc-blue;
-//     // background-image: url(./img/1fotogenerale.png);
-//     // background-size: cover;
-//     // height: 50vh;
-//     // min-height: 400px;
-//     // background-position: center center;
+    .hero-vivi,
+    .custom {
+        // background-color: red;
+        display: flex;
+        // padding: 6em 1em 0;
+        color: $bgc-blue-dark;
+        flex-direction: column;
 
-//     .testo-vivi {
-//         padding: 9em 4em;
-//         position: relative;
-//         color: white;
 
-//     }
-// }
+        .half-30 {
+            width: 100%;
+
+        }
+
+        .half-70 {
+            width: 100%;
+            background-color: $bgc-blue;
+            margin-bottom: 1em;
+            padding: 1em;
+        }
+    }
+
+    .slogan {
+        color: $bgc-ristorazione;
+        // transform: translate(80px, -20px);
+        padding: 1em .5em 0;
+        line-height: 1.5em;
+        font-size: 1em;
+        width: 500px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            border: 1px solid $bgc-cultura;
+            bottom: -15px;
+            left: 100px;
+        }
+
+    }
+
+    .not-active {
+        display: none;
+    }
+}
 
 .buble-quattro {
     display: flex;
@@ -95,24 +124,6 @@ span.big-title {
     }
 }
 
-input[type=checkbox] {
-    visibility: hidden;
-}
-
-input[type=checkbox]:checked~div,
-.selected {
-    // border: 1px solid black;
-    // background-color: red;
-    transform: scale(1.1);
-}
-
-label {
-    font-size: 800;
-    font-size: 1.5em;
-    cursor: pointer;
-    margin: 0 .8em;
-}
-
 .libro,
 .musica,
 .poesia {
@@ -124,20 +135,37 @@ label {
     color: white;
     box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
     transition: all.2s ease-in-out;
+
     &:hover {
         transform: scale(1.1);
         transition: all.2s ease-in-out;
     }
 }
 
-div[id*='info-select'] {
-    display: none;
-    *{
-        box-sizing: border-box ;
+
+@media (max-width: 48em) {
+    .buble-quattro {
+        flex-direction: column;
+        padding: .5em;
+
+        .card {
+            margin: 1em;
+        }
+
     }
 
+    .libro,
+    .musica,
+    .poesia {
+        margin: 1em;
+    }
+}
+
+div[id*='info-select'] {
+    display: none;
+
     &.active {
-       
+
         width: 80%;
         display: flex;
         background-color: #fff;
@@ -148,69 +176,88 @@ div[id*='info-select'] {
         left: 0;
         z-index: 4;
         box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
+
         .img {
             width: 40%;
             height: 100%;
             overflow: hidden;
+
             img {
                 height: 100%;
                 transform: scale(1.1)
             }
         }
+
         .text {
             width: 60%;
             height: 100%;
             padding: 3em 1.5em 1.5em;
+
             span {
                 font-weight: 800;
             }
         }
+
         i {
             position: absolute;
             top: 1em;
             right: 1em;
             margin: 1em;
         }
-    
+
     }
 }
 
-// .extra {
-//     transition: all 1s ease-in-out;
-//     background-color: #fff;
+@media (max-width:48em) {
+   
+div[id*='info-select'] {
+  
 
-//     i {
-//         margin: .5em 47%;
-//         color: color;
-//     }
+  
 
-//     &:hover {
-//         p {
-//             visibility: visible;
-//             height: 200px;
-//             transition: all .5s ease-in-out;
-//         }
-//         h2 {
-//             transform: translateY(-10%);
-//         }
-//     }
+    &.active {
 
-//     p {
-//         transition: all .5s ease-in-out;
-//         height: 0;
-//         visibility: hidden;
-//         margin: 1em;
-//         color: black;
-//     }
-// }
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        // padding: 3em 2em;
+        margin: 2em 5%;
+        top: 5em;
+        left: 0;
+        z-index: 4;
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
 
-// section.vivi {
-//     display: flex;
-//     .card {
+        .img {
+            width: 100%;
+            height: 25vh;
+            overflow: hidden;
 
-//     }
-// }
+            img {
+                height: 130%;
+                transform: scale(1.1)
+            }
+        }
 
-// .modal {
-//     display: none;
-// }
+        .text {
+            width: 100%;
+            // height: 100%;
+            padding: 1.5em 1em;
+
+            span {
+                font-weight: 800;
+            }
+        }
+
+        i {
+            color: white;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            margin: 1em;
+        }
+
+    }
+} 
+}

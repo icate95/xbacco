@@ -108,7 +108,7 @@ class Esperienze extends React.Component {
           </section>
         </div>
         <div className="not-active custom" id="passo2">
-          <h1><span className="big-title">Pacchetto relax</span></h1>
+          <h1><span className="big-title">relax</span></h1>
           <p><span className="big-title">Scegli</span></p>
 
           <div className="buble-quattro">
