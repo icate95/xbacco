@@ -33,56 +33,32 @@ class SVG extends React.Component {
       n: false,
       m: false
     };
-
-
   }
-
-  //   componentDidMount() {
-  //     let value = this.state.value.split("");
-  //         console.log(value)
-
-  //     if (value.length < 10) {
-  //         this.setState( (value) => ({
-  //             value[0]: true,
-  //             value[1]: true,
-  //             value[2]: true,
-  //             value[3]: true,
-  //             value[4]: true,
-  //             value[5]: true,
-  //             value[6]: true,
-  //             value[7]: true,
-  //             value[8]: true,
-  //             value[9]: true
-  //         })
-  //         )
-  //     }
-
-
-  //     }
-  //     //   const letterUpdate = { element: !element };
-
-  //     //   console.log(this.state)
-  //     // });
-  //   }
 
   componentDidUpdate() {
     if (this.state.value !== this.props.value) {
-      this.setState({
-        value: this.props.value
-      }, () => console.log(this.state));
+      this.setState(
+        {
+          value: this.props.value
+        },
+        () => console.log(this.state)
+      );
     }
-    //   //   let value = document.getElementBYTagName('svg')[0].attr('value').value;
-    //   //   value.forEach(letter => {
-    //   //     // this.setState(
-    //   //     //   this.state.letters: {
-    //   //     //     ...this.state.letters,
-    //   //     //     letter: !letter.visibility
-    //   //     //   }
-    //   //     // )
-    //   //     console.log(letter)
-
-    //   //   });
   }
+
+// io
+handleChange(event) {
+  // console.log(event.currentTarget);
+  let lettera = event.currentTarget.value.split("");
+  // console.log(lettera);
+  this.setState({
+    value: event.currentTarget.value,
+    letters: lettera
+  });
+  console.log(this.state.letters)
+  
+}
+//
 
   render() {
     return (
@@ -144,11 +120,7 @@ class SVG extends React.Component {
             <path d="M708.76,1238.48c-293.5,0-532.29-238.78-532.29-532.29S415.26,173.91,708.76,173.91s532.29,238.78,532.29,532.28S1002.26,1238.48,708.76,1238.48Zm0-1059.57c-290.75,0-527.29,236.53-527.29,527.28S418,1233.48,708.76,1233.48s527.29-236.54,527.29-527.29S999.51,178.91,708.76,178.91Z" />
             <path d="M445.46,704.54h-80c0-189.57,154.23-343.79,343.8-343.79v80C563.8,440.75,445.46,559.09,445.46,704.54Z" />
           </g>
-          <g
-            id="n"
-            style={{ n: this.state.n ? "hidden" : "visible" }}
-            ref="n"
-          >
+          <g id="n" style={{ n: this.state.n ? "hidden" : "visible" }} ref="n">
             <path d="M711.31,1324.92c-167.37,0-324.24-65.68-441.71-184.94l28.49-28.06c109.9,111.56,256.65,173,413.22,173,153.17,0,297.64-59.16,406.8-166.58l28.05,28.5C1029.48,1261.68,875,1324.92,711.31,1324.92Z" />
           </g>
           <g
@@ -381,7 +353,8 @@ class SVG extends React.Component {
             <rect x="241.53" y="845.39" width="247.66" height="5" />
           </g>
         </svg>
-      </div>);
+      </div>
+    );
   }
 }
 

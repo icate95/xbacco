@@ -18,9 +18,7 @@ import Registrati from "./pages/Registrati";
 import Accedi from "./pages/Accedi";
 
 
-
 class App extends React.Component {
-
 
   constructor(props) {
     super(props);
@@ -39,10 +37,10 @@ class App extends React.Component {
 
 
   addActiveClass() {
-    console.log("click");
+    // console.log("click");
     this.handleUpdate();
     this.setState({ active: !this.state.active });
-    console.log(this.state.active);
+    // console.log(this.state.active);
     if (this.state.active) {
       document
         .getElementsByClassName("hamburger")[0]
