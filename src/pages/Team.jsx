@@ -17,14 +17,26 @@ class Team extends React.Component {
         <section className="padding">
           <h2>Il nostro Team</h2>
           <div className="padding">
-            <img src={allegra} alt="Allegra Graziani"/>
-            <img src={alessia} alt="Alessia Porro"/>
-            <img src={sofia} alt="Sofia Bani"/>
+            <div className="">
+              <img src={allegra} alt="Allegra Graziani"/>
+            </div>
+            <div>
+              <img src={alessia} alt="Alessia Porro"/>
+            </div>
+            <div>
+              <img src={sofia} alt="Sofia Bani"/>
+            </div>
           </div>
           <div className="padding">
-            <img src={cate} alt="Caterina Ianeselli"/>
-            <img src={silvia_foto} alt="Silvia Monzani"/>
-            <img src={foto_CV} alt="Fabio Pergami"/>
+            <div>
+              <img src={cate} alt="Caterina Ianeselli"/>
+            </div>
+            <div>
+              <img src={silvia_foto} alt="Silvia Monzani"/>
+            </div>
+            <div>
+              <img src={foto_CV} alt="Fabio Pergami"/>
+            </div>
           </div>
         </section>
       </>
