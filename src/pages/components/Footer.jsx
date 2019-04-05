@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-// import ImgLogo from "../../img/logo_trasparente.png";
+import ImgLogo from "../../img/logo_trasparente.png";
 
 class Footer extends React.Component {
   render() {
@@ -17,11 +17,13 @@ class Footer extends React.Component {
               <Link className="link-light" to="/pagegenerator">Crea</Link> <br />
               <Link className="link-light" to="/esperienze">Vivi</Link> <br />
               {/* <Link className="link-light" to="/puntivendita">Punti vendita</Link> <br /> */}
-              <Link className="link-light" to="/selezionaesperienza">Inserisci codice</Link> <br/>
+              {/* <Link className="link-light" to="/selezionaesperienza">Inserisci codice</Link> <br/> */}
               <Link className="link-light" to="/chisiamo">Chi siamo</Link> <br />
+              <Link className="link-light" to="/team">Team</Link> <br />
               {/* <Link to="/areapersonale">Area personale</Link> <br /> */}
             </div>
           </div>
+          <img src={ImgLogo} alt=""/>
           <div className="contatti">
             <p>
               Via xxv Aprile, 7, <br /> Verona (VR), Italia <br /> CAP 37121{" "}

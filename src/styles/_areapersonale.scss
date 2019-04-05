@@ -1,0 +1,34 @@
+.areapersonale {
+    padding-top: 6em;
+    display: flex;
+    .utente {
+        width: 30%;
+        text-align: center;
+        background-color: $bgc-blue;
+        color: white;
+        padding: 1em;
+        img {
+            margin: 1em;
+        }
+        .info-user {
+            text-align: left;
+            padding: 1em 2em;
+        } 
+    }
+    .content {
+        width: 70%;
+       
+        .elem {
+            
+            display: flex;
+            img {
+                width: auto;
+                height: 200px;
+            }
+            .text {
+                width: 100%;
+            }
+           
+        }
+    }
+}

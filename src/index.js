@@ -5,7 +5,7 @@ import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-man
 import { createBrowserHistory as createHistory } from 'history';
 import "./styles.scss";
 
-import ImgLogo from "../src/img/logo_trasparente.png";
+import ImgLogo from "../src/img/XBACCObold.png";
 
 import Home from "./pages/Home";
 import ChiSiamo from "./pages/ChiSiamo";
@@ -20,6 +20,8 @@ import Team from "./pages/Team";
 
 
 class App extends React.Component {
+
+
   constructor(props) {
     super(props);
     this.history = createHistory();
@@ -29,9 +31,16 @@ class App extends React.Component {
     };
   }
 
+  handleUpdate() {
+    if (this.state.location === 'PUSH') {
+      window.scrollTo(0, 0);
+    }
+  }
+
 
   addActiveClass() {
     console.log("click");
+    this.handleUpdate();
     this.setState({ active: !this.state.active });
     console.log(this.state.active);
     if (this.state.active) {
@@ -68,74 +77,91 @@ class App extends React.Component {
 
   render() {
     return (
-    <ScrollManager history={this.history}>
-      <Router history={this.history}>
-        <div>
-          <div id="sliders"></div>
-          <nav id="main-nav">
-            <div className="nav-bar">
-              <div className="logo">
-                <Link to="/">
-                  <img src={ImgLogo} alt="xbacco" />
-                  <h1 className="titolo-logo">xbacco</h1>
-                </Link>
-              </div>
+      <ScrollManager history={this.history}>
+        <Router onUpdate={this.history}>
+          <div>
+            <div id="sliders"></div>
+            <nav id="main-nav">
+              <div className="nav-bar">
+                <div className="logo">
+                  <Link to="/" onClick={this.handleUpdate}>
+                    <img src={ImgLogo} alt="xbacco" />
+                    <h1 className="titolo-logo">xbacco</h1>
+                  </Link>
+                </div>
 
-              {/* <div className={{active: this.state.active ? 'hamburger is-active' : 'hamburger'}} onClick={this.addActiveClass} > */}
-              <div className="hamburger" onClick={this.addActiveClass}>
-                <span className="line" />
-                <span className="line" />
-                <span className="line" />
+                {/* <div className={{active: this.state.active ? 'hamburger is-active' : 'hamburger'}} onClick={this.addActiveClass} > */}
+                <div className="hamburger" onClick={this.addActiveClass}>
+                  <span className="line" />
+                  <span className="line" />
+                  <span className="line" />
+                </div>
               </div>
-            </div>
-            <div className="menu-expanded">
-              <ul className="menu-container">
-                <li onClick={this.addActiveClass} >
-                  <Link className="menu-item" to="/crea">
-                    Crea
+              <div className="menu-expanded">
+                <ul className="menu-container">
+                  <li onClick={this.addActiveClass} >
+                    <Link className="menu-item" to="/crea">
+                      Crea
                   </Link>
-                </li>
-                <li onClick={this.addActiveClass}>
-                  <Link className="menu-item" to="/vivi">
-                    Vivi
+                  </li>
+                  <li onClick={this.addActiveClass}>
+                    <Link className="menu-item" to="/vivi">
+                      Vivi
                   </Link>
-                </li>
-                {/* <li onClick={this.addActiveClass}>
+                  </li>
+                  {/* <li onClick={this.addActiveClass}>
                   <Link className="menu-item" to="/puntivendita">
                     Punti vendita
                   </Link>
                 </li> */}
-                <li onClick={this.addActiveClass}>
+                  {/* <li onClick={this.addActiveClass}>
                   <Link to="/inseriscicodice" className="menu-item">
                     Inserisci codice
                   </Link>
-                </li>
+                </li> */}
 
-                <li onClick={this.addActiveClass}>
-                  <Link className="menu-item" to="/chisiamo">
-                    Chi siamo
+                  <li onClick={this.addActiveClass}>
+                    <Link className="menu-item" to="/chisiamo">
+                      Chi siamo
                   </Link>
-                </li>
-              </ul>
-              <ul className="menu-container">
-                <li className="has-children">
-                  <Link className="menu-item" to="/areapersonale">
-                    <i className="fas fa-user" />
-                    Area personale
+                  </li>
+                </ul>
+                <ul className="menu-container">
+                  <li className="has-children">
+                    <Link className="menu-item" to="/areapersonale">
+                      <i className="fas fa-user" />
+                      Area personale
                   </Link>
-                </li>
-                <li onClick={this.addActiveClass}>
-                  <Link className="menu-item" to="/registrati">
-                    Registrati
+                  </li>
+                  <li onClick={this.addActiveClass}>
+                    <Link className="menu-item" to="/registrati">
+                      Registrati
                   </Link>
-                </li>
-                <li onClick={this.addActiveClass}>
-                  <Link className="menu-item" to="/accedi">
-                    Accedi
+                  </li>
+                  <li onClick={this.addActiveClass}>
+                    <Link className="menu-item" to="/accedi">
+                      Accedi
                   </Link>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div className="main">
+              <Route exact path="/" component={Home} />
+              <Route exact path="/chisiamo" component={ChiSiamo} />
+              {/* <Route exact path="/puntivendita" component={PuntiVendita} /> */}
+              <Route exact path="/vivi" component={Esperienze} />
+              <Route exact path="/crea" component={PageGenerator} />
+              <Route exact path="/areapersonale" component={AreaPersonale} />
+              <Route
+                path="/inseriscicodice"
+                component={SelezionaEsperienza}
+              />
+              <Route path="/registrati" component={Registrati} />
+              <Route path="/accedi" component={Accedi} />
             </div>
+<<<<<<< HEAD
           </nav>
 
           <div className="main">
@@ -152,12 +178,13 @@ class App extends React.Component {
             />
             <Route path="/registrati" component={Registrati} />
             <Route path="/accedi" component={Accedi} />
+=======
+            {/* <Footer /> */}
+>>>>>>> 8beae27ef12497a7c0f75f5476e88ccaf6433354
           </div>
-          {/* <Footer /> */}
-        </div>
-      </Router>
+        </Router>
       </ScrollManager>
-    
+
     );
   }
 }
