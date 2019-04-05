@@ -11,6 +11,13 @@
     justify-content: space-around;
 
     .card {
+        &:nth-child(1) {
+            margin-right: 2px; 
+        }
+        &:nth-child(2) {
+            margin-left: 2px; 
+        }
+        padding: 1em;
         // padding: 10vh 3em;
         background-color: $bgc-blue;
         text-align: center;

@@ -41,8 +41,12 @@ class PageGenerator extends React.Component {
             </div>
           </div>
 
-          <div className="half-70 tac">
+          {/* <div className="half-70 tac"> */}
+          <div className="fascia">
+            <div className="in-fascia">
             <Generator />
+            </div>
+           
           </div>
         </section>
 
@@ -57,15 +61,18 @@ class PageGenerator extends React.Component {
             </div>
           </div>
 
-          <div className="half-70 secondopasso">
-            <textarea
+          {/* <div className="half-70 secondopasso"> */}
+          <div className="fascia secondopasso">
+            <div className='in-fascia'>
+              <textarea
               name=""
               id=""
               placeholder="Inserisci qui la tua dedica..."
             />
             <button className="btn-light-small">Conferma dedica</button>
-            <br />
-            <br />
+       
+            </div>
+
           </div>
         </section>
         {/* terzo passo  */}
@@ -80,12 +87,16 @@ class PageGenerator extends React.Component {
             </div>
           </div>
 
-          <div className="half-70 terzopasso">
-            {/* scelte  */}
-            <RelaxChoice />
-            <CulturaChoice />
-            <RistorazioneChoice />
-            <ArteChoice />
+          {/* <div className="half-70 terzopasso"> */}
+          <div className="fascia terzopasso">
+            <div className="in-fascia">
+               {/* scelte  */}
+              <RelaxChoice />
+              <CulturaChoice />
+              <RistorazioneChoice />
+              <ArteChoice />
+            </div>
+           
           </div>
         </section>
         {/* quarto passo  */}
@@ -99,18 +110,22 @@ class PageGenerator extends React.Component {
             </div>
           </div>
 
-          <div className="half-70 quartopasso">
+          {/* <div className="half-70 quartopasso"> */}
+          <div className="fascia quartopasso">
+            <div className="in-fascia">
             <div className="riepilogo">
               <img src={bottigliaX} alt="bottiglia" className="" />
             </div>
+            </div>
+           
           </div>
         </section>
-
+{/* 
         <section className="tac">
           <Link to="/areapersonale" className="btn-dark">
             Conferma
           </Link>
-        </section>
+        </section> */}
 
         <Footer />
       </>

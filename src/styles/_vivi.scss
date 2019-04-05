@@ -3,7 +3,8 @@
 .hero-vivi,
 .custom,
 .custommessage,
-.crea {
+// .crea 
+{
   
     display: flex;
     padding: 6em 1em 0;
@@ -34,9 +35,18 @@
     padding-top: 0;
     display: block;
 }
-.crea {
-    max-width: 52em;
-    margin: 0 auto;
+// .crea {
+//     max-width: 52em;
+//     margin: 0 auto;
+// }
+.fascia {
+    background-color: $bgc-blue;
+    .in-fascia {
+        max-width: 48em;
+        padding: 2em 3em;
+        margin: 0 auto;
+        min-height: 40em;
+    }
 }
 .custommessage {
     
@@ -292,7 +302,13 @@ div[id*='info-select'] {
         }
     }
 }
-
+.hero-crea {
+    color: white;
+    background-image: url(./img/puntivendita.png);
+    background-size: cover;
+    height: 60vh;
+    background-position: center center;
+}
 p.come-funziona {
     text-align: center;
     padding: 3em 6em;

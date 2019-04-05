@@ -86,62 +86,7 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section className="center">
-          <div className="card-etich\ette">
-            <div className="card">
-              <SVG value="crea" />
-              <h2>Crea</h2>
-              <p>Fai un regalo personalizzato</p>
-              <button className="btn-light-small">Scopri di più</button>
-            </div>
-
-            <div className="card">
-              <SVG value="vivi" />
-
-              <h2>Vivi</h2>
-              <p>Hai ricevuto una bottiglia XBACCO?</p>
-              <button className="btn-light-small">Scopri di più</button>
-            </div>
-          </div>
-        </section>
-
-        {/* <section className="flex two-column info-home">
-          <div className="half " >
-          <div className="card-etichette">
-            <div className="card">
-              <SVG value="crea" />
-              <h2>Crea</h2>
-              <p>Fai un regalo personalizzato</p>
-              <button className="btn-light-small">Scopri di più</button>
-            </div>
-
-            <div className="card">
-              <SVG value="vivi" />
-
-              <h2>Vivi</h2>
-              <p>Hai ricevuto una bottiglia XBACCO?</p>
-              <button className="btn-light-small">Scopri di più</button>
-            </div>
-          </div>
-
-
-            </div>
-          <div className="half text-area-big">
-          <div className="card-etichette">
-            <div className="card">
-              <SVG value="crea" />
-              <h2>Crea</h2>
-              <p>Fai un regalo personalizzato</p>
-              <button className="btn-light-small">Scopri di più</button>
-        
-            </div>
-          </div>
-          </div>
-        </section> */}
-
         <section>*Video*</section>
-
-      
 
         <Footer />
       </>

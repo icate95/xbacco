@@ -144,23 +144,7 @@ class App extends React.Component {
                 </ul>
               </div>
             </nav>
-
-            <div className="main">
-              <Route exact path="/" component={Home} />
-              <Route exact path="/chisiamo" component={ChiSiamo} />
-              {/* <Route exact path="/puntivendita" component={PuntiVendita} /> */}
-              <Route exact path="/vivi" component={Esperienze} />
-              <Route exact path="/crea" component={PageGenerator} />
-              <Route exact path="/areapersonale" component={AreaPersonale} />
-              <Route
-                path="/inseriscicodice"
-                component={SelezionaEsperienza}
-              />
-              <Route path="/registrati" component={Registrati} />
-              <Route path="/accedi" component={Accedi} />
-            </div>
-        
-
+      
           <div className="main">
             <Route exact path="/" component={Home} />
             <Route exact path="/chisiamo" component={ChiSiamo} />
