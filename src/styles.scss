@@ -20,6 +20,10 @@ p, li {
     font-family: 'Raleway', sans-serif;
 }
 
+// bottoni, titoli, spazi
+@import './styles/general';
+
+// tutte le pagine
 @import './styles/home-chisiamo';
 @import './styles/puntivendita';
 @import './styles/forms';

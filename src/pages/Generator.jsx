@@ -8,10 +8,10 @@ class Generator extends React.Component {
     super(props);
 
     this.state = {
-      value: 'ciao',
+      value: '',
       letters: [],
     }
-    this.myInput = React.createRef();
+    // this.myInput = React.createRef();
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -19,17 +19,6 @@ class Generator extends React.Component {
     // this.myInput.current.focus()
     // console.log(this.state.value);
   }
-
-  // handleChange(event) {
-  //   console.log(event.currentTarget);
-  //   this.setState({
-  //     value: event.currentTarget.value,
-  //     letters: {
-  //       ...this.state.letters,
-  //       [event.currentTarget.value]: {
-  //         visibility: ![event.currentTarget.value].visibility
-  //       }
-  //     }
 
   // handleChange(event) {
   //   console.log(event.currentTarget);
@@ -52,6 +41,8 @@ class Generator extends React.Component {
       value: event.currentTarget.value,
       letters: lettera
     });
+    console.log(this.state.letters)
+    
   }
 
   render() {

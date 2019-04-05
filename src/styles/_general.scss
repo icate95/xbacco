@@ -1,0 +1,13 @@
+.big-title {
+    font-size: 3em;
+    padding-top: 20vh;
+    // width: 80vw;
+    margin: 0 auto;
+    span {
+        font-weight: 800;
+        font-size: 1.5em;
+    }
+    &.tac {
+        text-align: center;
+    }
+}

@@ -1,6 +1,10 @@
+
+
 .hero-vivi,
 .custom,
+.custommessage,
 .crea {
+  
     display: flex;
     padding: 6em 1em 0;
     color: $bgc-blue-dark;
@@ -23,8 +27,28 @@
             border-radius: 50%
         }
     }
+    max-width: 52em;
+    margin: 0 auto;
 }
-
+.custom {
+    padding-top: 0;
+    display: block;
+}
+.crea {
+    max-width: 52em;
+    margin: 0 auto;
+}
+.custommessage {
+    
+   .message {
+       width: 100%;
+       padding: 2em 3em;
+       margin: 6em 4em;
+       border: 1px solid $bgc-relax;
+    background-color: #fff;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
+   }
+}
 span.big-title {
     font-family: 'Comfortaa', cursive;
     font-weight: 800;
@@ -54,13 +78,13 @@ span.big-title {
     // background-color: $bgc-relax;
 }
 
-.not-active {
-    display: none;
-}
+// .not-active {
+//     display: none;
+// }
 
-.active {
-    display: block
-}
+// .active {
+//     display: block
+// }
 
 input[type=text] {
     width: 100%;
@@ -268,3 +292,16 @@ div[id*='info-select'] {
         }
     }
 }
+
+p.come-funziona {
+    text-align: center;
+    padding: 3em 6em;
+    background-color: $bgc-ristorazione;
+    color: white;
+    font-size: 1em;
+    margin: 1em auto;
+    max-width: 52em;
+    span {
+      font-weight: 800;
+    }
+  }

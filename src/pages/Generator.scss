@@ -212,19 +212,9 @@ svg {
   .half-30.secondopasso,
   .half-30.terzopasso,
   .half-30.quartopasso {
-    transform: translate(6vw, -1vw);
+    // transform: translate(6vw, -1vw);
 
-    p.come-funziona {
-      text-align: center;
-      padding: 3em 1em;
-      background-color: $bgc-ristorazione;
-      color: white;
-      font-size: 1.3em;
-
-      span {
-        font-weight: 800;
-      }
-    }
+   
   }
 
 
@@ -298,7 +288,12 @@ textarea:focus, button:focus {
   padding: 1px;
   margin: 1em auto;
   // transform: translate(100px, 50px)
-
+  span:nth-child(1) {
+    font-size: 15em;
+    position: absolute;
+    opacity: .4;
+    transform: translate(5px, -93px);
+  }
   span {
     font-weight: 700;
     font-size: 1.5em;
