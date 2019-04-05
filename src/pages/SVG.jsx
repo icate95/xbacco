@@ -6,59 +6,165 @@ class SVG extends React.Component {
     super(props);
     this.state = {
       value: props.value,
-      q: false,
-      w: false,
-      e: false,
-      r: false,
-      t: false,
-      y: false,
-      u: false,
-      i: false,
-      o: false,
-      p: false,
-      l: false,
-      k: false,
-      j: false,
-      h: false,
-      g: false,
-      f: false,
-      d: false,
-      s: false,
-      a: false,
-      z: false,
-      x: false,
-      c: false,
-      v: false,
-      b: false,
-      n: false,
-      m: false
+      length: 0,
+      letters: [
+        {
+          value: "q",
+          hidden: false
+        },
+
+        {
+          value: "w",
+          hidden: false
+        },
+        {
+          value: "e",
+          hidden: false
+        },
+        {
+          value: "r",
+          hidden: false
+        },
+        {
+          value: "t",
+          hidden: false
+        },
+        {
+          value: "y",
+          hidden: false
+        },
+        {
+          value: "u",
+          hidden: false
+        },
+        {
+          value: "i",
+          hidden: false
+        },
+        {
+          value: "o",
+          hidden: false
+        },
+        {
+          value: "p",
+          hidden: false
+        },
+        {
+          value: "l",
+          hidden: false
+        },
+        {
+          value: "k",
+          hidden: false
+        },
+        {
+          value: "j",
+          hidden: false
+        },
+        {
+          value: "h",
+          hidden: false
+        },
+        {
+          value: "g",
+          hidden: false
+        },
+        {
+          value: "f",
+          hidden: false
+        },
+        {
+          value: "d",
+          hidden: false
+        },
+        {
+          value: "s",
+          hidden: false
+        },
+        {
+          value: "a",
+          hidden: false
+        },
+        {
+          value: "z",
+          hidden: false
+        },
+        {
+          value: "x",
+          hidden: false
+        },
+        {
+          value: "c",
+          hidden: false
+        },
+        {
+          value: "v",
+          hidden: false
+        },
+        {
+          value: "b",
+          hidden: false
+        },
+        {
+          value: "n",
+          hidden: false
+        },
+        {
+          value: "m",
+          hidden: false
+        }
+      ]
     };
   }
-
+  checkLength(newLength){ 
+    // salvo la vecchia length e poi la controllo con quellaa nuova
+    // se la nuova eèè minore di quella vecchia allora devo cambiare lo stato della ultima lettera
+    if (newLength !== this.state.length && newLength < this.state.length) {
+      console.log('elemento cancellato')
+    }
+  }
+  setVisible(j) {
+    let arrayLocal = this.state.letters;
+    for (let i = 0; i < this.state.letters.length; i++) {
+      if (this.state.letters[i].value == j) {
+        // arrayLocal[i].hidden = true;
+        arrayLocal[i].hidden =  !arrayLocal[i].hidden;
+        this.setState({
+          letters: arrayLocal
+        });
+        break;
+      }
+    }
+  }
   componentDidUpdate() {
     if (this.state.value !== this.props.value) {
+      this.setVisible(this.props.value);
+      // let lunghezza = this.state.length;
+      this.checkLength(this.props.length);
+      // let lettera = this.props.value.split("");
+      // lettera.map(i => this.setVisible(i));
       this.setState(
         {
-          value: this.props.value
+          value: this.props.value,
+          length: this.props.length
         },
         () => console.log(this.state)
       );
     }
   }
 
-// io
-handleChange(event) {
-  // console.log(event.currentTarget);
-  let lettera = event.currentTarget.value.split("");
-  // console.log(lettera);
-  this.setState({
-    value: event.currentTarget.value,
-    letters: lettera
-  });
-  console.log(this.state.letters)
-  
-}
-//
+  // io
+  handleChange(event) {
+    // console.log(event.currentTarget);
+    // let lettera = event.currentTarget.value.split("");
+    // console.log(lettera);
+    // lettera.map(i => console.log(i))
+    this.setState({
+      value: event.currentTarget.value
+    });
+    console.log(this.state.letters);
+  }
+  //
 
   render() {
     return (
@@ -72,7 +178,7 @@ handleChange(event) {
           <g
             id="e"
             style={{
-              visibility: this.state.e.visibility ? "hidden" : "visible"
+               'visibility': this.state.letters[2].hidden ? "visible" : "hidden"
             }}
             ref="e"
           >
@@ -90,7 +196,7 @@ handleChange(event) {
           <g
             id="d"
             style={{
-              visibidlity: this.state.d ? "hidden" : "visible"
+              visibility: this.state.d ? "hidden" : "visible"
             }}
             ref="d"
           >
