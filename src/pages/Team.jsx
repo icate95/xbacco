@@ -14,30 +14,44 @@ class Team extends React.Component {
   render() {
     return (
       <>
+        <h2>Il nostro Team</h2>
         <section className="padding">
-          <h2>Il nostro Team</h2>
-          <div className="padding">
-            <div className="">
+            <div className="larghezza">
               <img src={allegra} alt="Allegra Graziani"/>
+              <p>Allegra Graziani</p>
+              <p>Graphic Designer</p>
+              <p>tel. 339 6687475</p>
             </div>
-            <div>
+            <div className="larghezza">
               <img src={alessia} alt="Alessia Porro"/>
+              <p>Alessia Porro</p>
+              <p>Graphic Designer</p>
+              <p>tel. 345 4616076</p>
             </div>
-            <div>
+            <div className="larghezza">
               <img src={sofia} alt="Sofia Bani"/>
+              <p>Sofia Bani</p>
+              <p>Graphic Designer</p>
+              <p>tel. 380 4317599</p>
             </div>
-          </div>
-          <div className="padding">
-            <div>
+            <div className="larghezza">
               <img src={cate} alt="Caterina Ianeselli"/>
+              <p>Caterina Ianeselli</p>
+              <p>Web Developer</p>
+              <p>tel. 349 6327898</p>
             </div>
-            <div>
+            <div className="larghezza">
               <img src={silvia_foto} alt="Silvia Monzani"/>
+              <p>Silvia Monzani</p>
+              <p>Graphic Designer</p>
+              <p>tel. 334 9294331</p>
             </div>
-            <div>
+            <div className="larghezza">
               <img src={foto_CV} alt="Fabio Pergami"/>
+              <p>Fabio Pergami Feroldi</p>
+              <p>Web Designer</p>
+              <p>tel. 346 6194101</p>
             </div>
-          </div>
         </section>
       </>
     );

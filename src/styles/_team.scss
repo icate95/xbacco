@@ -1,6 +1,10 @@
 body{
     text-align: center;
 }
+h2{
+    text-align: center;
+    padding-top: 6em
+}
 .padding{
     padding-top: 6em;
     display: flex;
@@ -8,6 +12,15 @@ body{
     flex-wrap: wrap;
 }
 .padding img{
-    width: 20%;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
+}
+.larghezza{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+.larghezza img{
+    width: 100%;
 }
