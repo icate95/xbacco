@@ -77,7 +77,7 @@ class App extends React.Component {
     return (
       <ScrollManager history={this.history}>
         <Router onUpdate={this.history}>
-          <div>
+          {/* <div> */}
             <div id="sliders"></div>
             <nav id="main-nav">
               <div className="nav-bar">
@@ -159,8 +159,7 @@ class App extends React.Component {
               <Route path="/registrati" component={Registrati} />
               <Route path="/accedi" component={Accedi} />
             </div>
-<<<<<<< HEAD
-          </nav>
+        
 
           <div className="main">
             <Route exact path="/" component={Home} />
@@ -176,9 +175,6 @@ class App extends React.Component {
             />
             <Route path="/registrati" component={Registrati} />
             <Route path="/accedi" component={Accedi} />
-=======
-            {/* <Footer /> */}
->>>>>>> 8beae27ef12497a7c0f75f5476e88ccaf6433354
           </div>
         </Router>
       </ScrollManager>
