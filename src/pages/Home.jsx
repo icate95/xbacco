@@ -67,60 +67,6 @@ class Home extends React.Component {
           </div>
         </section>
 
-        {/*         
-        <section id="due" className="text-area-bandiera">
-          <div className="left">
-          <h1> <span>X</span>Bacco</h1>
-          <h3>è un generative wine</h3>
-          </div>
-          <div className="right">
-          <p>
-            Genera emozioni irripetibili, grazie ad un sistema di generative
-            type design. Ci siamo ispirati a questa idea originale per offrire
-            momenti indimenticabili e per dar vita ad un nuovo concetto di
-            esperienza regalo e consumo del vino...
-          </p>
-          </div>
-        </section> */}
-
-        {/* <section id="slogan">
-          <div className="content">
-            <h3>vino</h3>
-            <h3>unicità</h3>
-            <h3>innovazione</h3>
-            <h3>design</h3>
-          </div>
-        </section> */}
-
-        {/* <section className="center">
-          <div className="buble">
-            <div className="crea">
-              <div className="bg-img" />
-              <SVG value="crea" />
-              <div className="content">
-                <h2>Crea</h2>
-                <p>Fai un regalo personalizzato</p>
-                <Link to="/crea" className="link-light">
-                  Crea il tuo messaggio <i className="fas fa-chevron-right" />{" "}
-                </Link>
-              </div>
-            </div>
-
-            <div className="vivi">
-              <div className="bg-img" />
-
-              <SVG value="vivi" />
-              <div className="content">
-                <h2>Vivi</h2>
-                <p>Hai ricevuto una bottiglia XBACCO?</p>
-                <Link to="/vivi" className="link-light">
-                  Vivi l'esperienza <i className="fas fa-chevron-right" />{" "}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         <section className="center">
           <div className="card-etichette">
             <div className="card">
@@ -140,20 +86,62 @@ class Home extends React.Component {
           </div>
         </section>
 
+        <section className="center">
+          <div className="card-etich\ette">
+            <div className="card">
+              <SVG value="crea" />
+              <h2>Crea</h2>
+              <p>Fai un regalo personalizzato</p>
+              <button className="btn-light-small">Scopri di più</button>
+            </div>
+
+            <div className="card">
+              <SVG value="vivi" />
+
+              <h2>Vivi</h2>
+              <p>Hai ricevuto una bottiglia XBACCO?</p>
+              <button className="btn-light-small">Scopri di più</button>
+            </div>
+          </div>
+        </section>
+
+        {/* <section className="flex two-column info-home">
+          <div className="half " >
+          <div className="card-etichette">
+            <div className="card">
+              <SVG value="crea" />
+              <h2>Crea</h2>
+              <p>Fai un regalo personalizzato</p>
+              <button className="btn-light-small">Scopri di più</button>
+            </div>
+
+            <div className="card">
+              <SVG value="vivi" />
+
+              <h2>Vivi</h2>
+              <p>Hai ricevuto una bottiglia XBACCO?</p>
+              <button className="btn-light-small">Scopri di più</button>
+            </div>
+          </div>
+
+
+            </div>
+          <div className="half text-area-big">
+          <div className="card-etichette">
+            <div className="card">
+              <SVG value="crea" />
+              <h2>Crea</h2>
+              <p>Fai un regalo personalizzato</p>
+              <button className="btn-light-small">Scopri di più</button>
+        
+            </div>
+          </div>
+          </div>
+        </section> */}
+
         <section>*Video*</section>
 
-        {/* <section className="text-area tac">
-          <p>
-            Ad ogni occasione, con XBACCO hai la possibilità di acquistare il
-            nostro vino generare il proprio logo e dedicare un messaggio
-            personalizzato, abbinandolo a delle attività da vivere
-            nell’immediato.
-          </p>
-          <p>
-            Oppure acquista subito e scegli tra le quattro differenti avventure:
-            relax, cultura del vino, ristorazione, arte e design.
-          </p>
-        </section> */}
+      
 
         <Footer />
       </>
