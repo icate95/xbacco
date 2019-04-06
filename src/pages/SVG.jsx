@@ -8,107 +8,136 @@ class SVG extends React.Component {
       value: props.value,
       length: 0,
       letters: [
+        //0 --
         {
           value: "q",
           hidden: false
         },
-
+        //1 --
         {
           value: "w",
           hidden: false
         },
+
+        //2 --
         {
           value: "e",
           hidden: false
         },
+
+        // 3 --
         {
           value: "r",
           hidden: false
         },
+        //4 --
         {
           value: "t",
           hidden: false
         },
+
+        // 5 --
         {
           value: "y",
           hidden: false
         },
+
+        // 6
         {
           value: "u",
           hidden: false
         },
+        //7 --
         {
           value: "i",
           hidden: false
         },
+        //8 --
         {
           value: "o",
           hidden: false
         },
+        //9 --
         {
           value: "p",
           hidden: false
         },
+        //10 --
         {
           value: "l",
           hidden: false
         },
+        //11 --
         {
           value: "k",
           hidden: false
         },
+        //12 --
         {
           value: "j",
           hidden: false
         },
+        //13 --
         {
           value: "h",
           hidden: false
         },
+        //14 --
         {
           value: "g",
           hidden: false
         },
+        //15 --
         {
           value: "f",
           hidden: false
         },
+        //16 --
         {
           value: "d",
           hidden: false
         },
+        //17 --
         {
           value: "s",
           hidden: false
         },
+        //18 --
         {
           value: "a",
           hidden: false
         },
+        //19 --
         {
           value: "z",
           hidden: false
         },
+        //20 --
         {
           value: "x",
           hidden: false
         },
+        //21 --
         {
           value: "c",
           hidden: false
         },
+        //22 --
         {
           value: "v",
           hidden: false
         },
+        //23 --
         {
           value: "b",
           hidden: false
         },
+        //24 --
         {
           value: "n",
           hidden: false
         },
+        //25 --
         {
           value: "m",
           hidden: false
@@ -116,31 +145,51 @@ class SVG extends React.Component {
       ]
     };
   }
-  checkLength(newLength){ 
-    // salvo la vecchia length e poi la controllo con quellaa nuova
-    // se la nuova eèè minore di quella vecchia allora devo cambiare lo stato della ultima lettera
+  checkLength(newLength, vecchio ) {
     if (newLength !== this.state.length && newLength < this.state.length) {
-      console.log('elemento cancellato')
+      // console.log(vecchio + " elemento cancellato");
+      this.setInvisible(vecchio);
     }
   }
+
+  setInvisible(x) {
+    let arrayLocal = this.state.letters;
+    for (let i = 0; i < this.state.letters.length; i++) {
+      if (this.state.letters[i].value == x) {
+        arrayLocal[i].hidden = false;
+        // arrayLocal[i].hidden = !arrayLocal[i].hidden;
+        this.setState({
+          letters: arrayLocal
+        });
+        // break;
+      }
+    }
+  }
+
   setVisible(j) {
     let arrayLocal = this.state.letters;
     for (let i = 0; i < this.state.letters.length; i++) {
       if (this.state.letters[i].value == j) {
-        // arrayLocal[i].hidden = true;
-        arrayLocal[i].hidden =  !arrayLocal[i].hidden;
+        arrayLocal[i].hidden = true;
+        // arrayLocal[i].hidden = !arrayLocal[i].hidden;
         this.setState({
           letters: arrayLocal
         });
-        break;
+        // break;
       }
     }
   }
+
   componentDidUpdate() {
+    var vecchio = this.state.value;
+    console.log(vecchio)
     if (this.state.value !== this.props.value) {
+
+    // console.log(this.state.parola)
       this.setVisible(this.props.value);
+
       // let lunghezza = this.state.length;
-      this.checkLength(this.props.length);
+      this.checkLength(this.props.length, vecchio);
       // let lettera = this.props.value.split("");
       // lettera.map(i => this.setVisible(i));
       this.setState(
@@ -164,7 +213,6 @@ class SVG extends React.Component {
     });
     console.log(this.state.letters);
   }
-  //
 
   render() {
     return (
@@ -178,7 +226,7 @@ class SVG extends React.Component {
           <g
             id="e"
             style={{
-               'visibility': this.state.letters[2].hidden ? "visible" : "hidden"
+              visibility: this.state.letters[2].hidden ? "visible" : "hidden"
             }}
             ref="e"
           >
@@ -187,16 +235,16 @@ class SVG extends React.Component {
           <g
             id="u"
             style={{
-              u: this.state.u ? "hidden" : "visible"
+              visibility: this.state.letters[6].hidden ? "visible" : "hidden"
             }}
             ref="u"
           >
             <path d="M708.76,1097.84v-25c202.88,0,367.93-165,367.93-367.92S911.64,337,708.76,337V312c216.66,0,392.93,176.27,392.93,392.93S925.42,1097.84,708.76,1097.84Z" />
           </g>
           <g
-            id="d"
+            id="d" 
             style={{
-              visibility: this.state.d ? "hidden" : "visible"
+               'visibility': this.state.letters[16].hidden ? "visible" : "hidden"
             }}
             ref="d"
           >
@@ -206,7 +254,7 @@ class SVG extends React.Component {
           <g
             id="l"
             style={{
-              l: this.state.l ? "hidden" : "visible"
+               'visibility': this.state.letters[10].hidden ? "visible" : "hidden"
             }}
             ref="l"
           >
@@ -219,20 +267,29 @@ class SVG extends React.Component {
             <rect x="1105.43" y="645.66" width="60.91" height="5" />
             <rect x="1105.41" y="667.53" width="60.92" height="5" />
           </g>
-          <g id="t" style={{ t: this.state.t ? "hidden" : "visible" }} ref="t">
+          <g id="t"  
+          style={{
+               'visibility': this.state.letters[4].hidden ? "visible" : "hidden"
+            }} 
+            ref="t">
             <path d="M708.76,911.7v-2.5c111.94,0,203-91.07,203-203s-91.06-203-203-203v-2.5c113.32,0,205.5,92.18,205.5,205.5S822.08,911.7,708.76,911.7Z" />
           </g>
-          <g id="o" style={{ o: this.state.o ? "hidden" : "visible" }} ref="o">
+          <g id="o" 
+          style={{
+               'visibility': this.state.letters[8].hidden ? "visible" : "hidden"
+            }} ref="o">
             <path d="M708.76,1238.48c-293.5,0-532.29-238.78-532.29-532.29S415.26,173.91,708.76,173.91s532.29,238.78,532.29,532.28S1002.26,1238.48,708.76,1238.48Zm0-1059.57c-290.75,0-527.29,236.53-527.29,527.28S418,1233.48,708.76,1233.48s527.29-236.54,527.29-527.29S999.51,178.91,708.76,178.91Z" />
             <path d="M445.46,704.54h-80c0-189.57,154.23-343.79,343.8-343.79v80C563.8,440.75,445.46,559.09,445.46,704.54Z" />
           </g>
-          <g id="n" style={{ n: this.state.n ? "hidden" : "visible" }} ref="n">
+          <g id="n"  style={{
+               'visibility': this.state.letters[24].hidden ? "visible" : "hidden"
+            }} ref="n">
             <path d="M711.31,1324.92c-167.37,0-324.24-65.68-441.71-184.94l28.49-28.06c109.9,111.56,256.65,173,413.22,173,153.17,0,297.64-59.16,406.8-166.58l28.05,28.5C1029.48,1261.68,875,1324.92,711.31,1324.92Z" />
           </g>
           <g
             id="p"
             style={{
-              p: this.state.p ? "hidden" : "visible"
+               'visibility': this.state.letters[9].hidden ? "visible" : "hidden"
             }}
             ref="p"
           >
@@ -242,7 +299,7 @@ class SVG extends React.Component {
           <g
             id="r"
             style={{
-              r: this.state.r ? "hidden" : "visible"
+               'visibility': this.state.letters[3].hidden ? "visible" : "hidden"
             }}
             ref="r"
           >
@@ -253,16 +310,16 @@ class SVG extends React.Component {
           <g
             id="c"
             style={{
-              c: this.state.c ? "hidden" : "visible"
+               'visibility': this.state.letters[21].hidden ? "visible" : "hidden"
             }}
             ref="c"
           >
             <path d="M711.31,575.77a128.72,128.72,0,1,1,0,257.44Z" />
           </g>
           <g
-            id="w"
+            id="w" 
             style={{
-              w: this.state.w ? "hidden" : "visible"
+               'visibility': this.state.letters[1].hidden ? "visible" : "hidden"
             }}
             ref="w"
           >
@@ -272,7 +329,7 @@ class SVG extends React.Component {
           <g
             id="v"
             style={{
-              v: this.state.v ? "hidden" : "visible"
+               'visibility': this.state.letters[22].hidden ? "visible" : "hidden"
             }}
             ref="v"
           >
@@ -281,7 +338,7 @@ class SVG extends React.Component {
           <g
             id="x"
             style={{
-              x: this.state.x ? "hidden" : "visible"
+               'visibility': this.state.letters[20].hidden ? "visible" : "hidden"
             }}
             ref="x"
           >
@@ -291,7 +348,7 @@ class SVG extends React.Component {
           <g
             id="a"
             style={{
-              a: this.state.a ? "hidden" : "visible"
+               'visibility': this.state.letters[18].hidden ? "visible" : "hidden"
             }}
             ref="a"
           >
@@ -301,7 +358,7 @@ class SVG extends React.Component {
           <g
             id="b"
             style={{
-              b: this.state.b ? "hidden" : "visible"
+               'visibility': this.state.letters[23].hidden ? "visible" : "hidden"
             }}
             ref="b"
           >
@@ -337,7 +394,7 @@ class SVG extends React.Component {
           <g
             id="g"
             style={{
-              g: this.state.g ? "hidden" : "visible"
+               'visibility': this.state.letters[14].hidden ? "visible" : "hidden"
             }}
             ref="g"
           >
@@ -348,7 +405,7 @@ class SVG extends React.Component {
           <g
             id="f"
             style={{
-              f: this.state.f ? "hidden" : "visible"
+               'visibility': this.state.letters[15].hidden ? "visible" : "hidden"
             }}
             ref="f"
           >
@@ -358,7 +415,7 @@ class SVG extends React.Component {
           <g
             id="q"
             style={{
-              q: this.state.q ? "hidden" : "visible"
+               'visibility': this.state.letters[0].hidden ? "visible" : "hidden"
             }}
             ref="q"
           >
@@ -369,7 +426,7 @@ class SVG extends React.Component {
           <g
             id="m"
             style={{
-              m: this.state.m ? "hidden" : "visible"
+               'visibility': this.state.letters[25].hidden ? "visible" : "hidden"
             }}
             ref="m"
           >
@@ -386,7 +443,7 @@ class SVG extends React.Component {
           <g
             id="z"
             style={{
-              z: this.state.z ? "hidden" : "visible"
+               'visibility': this.state.letters[19].hidden ? "visible" : "hidden"
             }}
             ref="z"
           >
@@ -400,7 +457,7 @@ class SVG extends React.Component {
           <g
             id="k"
             style={{
-              k: this.state.k ? "hidden" : "visible"
+               'visibility': this.state.letters[11].hidden ? "visible" : "hidden"
             }}
             ref="k"
           >
@@ -411,7 +468,7 @@ class SVG extends React.Component {
           <g
             id="i"
             style={{
-              i: this.state.i ? "hidden" : "visible"
+               'visibility': this.state.letters[7].hidden ? "visible" : "hidden"
             }}
             ref="i"
           >
@@ -420,7 +477,7 @@ class SVG extends React.Component {
           <g
             id="y"
             style={{
-              y: this.state.y ? "hidden" : "visible"
+               'visibility': this.state.letters[5].hidden ? "visible" : "hidden"
             }}
             ref="y"
           >
@@ -430,7 +487,7 @@ class SVG extends React.Component {
           <g
             id="j"
             style={{
-              j: this.state.j ? "hidden" : "visible"
+               'visibility': this.state.letters[12].hidden ? "visible" : "hidden"
             }}
             ref="j"
           >
@@ -441,7 +498,7 @@ class SVG extends React.Component {
           <g
             id="s"
             style={{
-              s: this.state.s ? "hidden" : "visible"
+               'visibility': this.state.letters[17].hidden ? "visible" : "hidden"
             }}
             ref="s"
           >
@@ -451,7 +508,7 @@ class SVG extends React.Component {
           <g
             id="h"
             style={{
-              h: this.state.h ? "hidden" : "visible"
+               'visibility': this.state.letters[13].hidden ? "visible" : "hidden"
             }}
             ref="h"
           >
