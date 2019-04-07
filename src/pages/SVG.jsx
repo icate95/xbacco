@@ -182,7 +182,7 @@ class SVG extends React.Component {
 
   componentDidUpdate() {
     var vecchio = this.state.value;
-    console.log(vecchio)
+    // console.log(vecchio)
     if (this.state.value !== this.props.value) {
 
     // console.log(this.state.parola)

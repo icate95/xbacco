@@ -31,9 +31,9 @@ class AreaPersonale extends React.Component {
               className="logo-home"
             />
             <h3>Mario Rossi</h3>
-            <div className="info-user">
+            <div className="info-user tac">
               <p className="strong">DATA DI NASCITA:</p>
-              <p>26/05/1965</p>
+              <p>26/05/1956</p>
               <br />
 
               <p className="strong">INDIRIZZO:</p>
@@ -103,7 +103,7 @@ class AreaPersonale extends React.Component {
 function Elemento(props) {
   return (
     <div className="elem">
-      <img src={props.img} alt="" />
+      <img src={props.img} alt="immagine bottiglia" />
       <div className="text-area-elem">
         <div className="text">
           <p className="nome-elem">{props.vino}</p>

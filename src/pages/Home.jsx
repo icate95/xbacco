@@ -12,10 +12,12 @@ import React from "react";
 // import bottigliaR from "../img/bottiglia_RELAX.png";
 // import bottigliaRI from "../img/bottiglia_RISTORAZIONE.png";
 // import bottigliaX from "../img/bottiglia_XBACCO.png";
+import vivi from "../img/vivi.png";
+import crea from "../img/crea.png";
 
 import Footer from "./components/Footer";
 
-import SVG from "./SVG";
+// import SVG from "./SVG";
 
 // import logoColore from "../img/logo1.png";
 import animazione from "../img/animazione.gif";
@@ -30,7 +32,7 @@ class Home extends React.Component {
     return (
       <>
         <section id="hero-home" className="flex">
-          <img src={animazione} alt="" />
+          <img src={animazione} alt="animazione introduttiva xbacco" />
         </section>
 
         <section className="flex two-column info-home">
@@ -40,7 +42,7 @@ class Home extends React.Component {
               <h1>
                 {" "}
                 <span className="grassetto">X</span>Bacco
-            </h1>
+              </h1>
               <h3>è un generative wine</h3>
               <br />
               <Link to="/chisiamo" className="link-light">
@@ -57,9 +59,12 @@ class Home extends React.Component {
           <div className="half text-area-big">
             <h2>Vini xbacco</h2>
             <p>
-              XBACCO è il nome del vino che nasce dai vitigni coltivati nella nostra azienda presso Verona.
-  È il risultato del lavoro e dall’utilizzo di tecniche e metodologie moderne, nonostante i terreni siano coltivati da tradizioni.
-  Il vino si presenta di colore rossastro, con aromi fruttati ma intensi, che rendono un gusto armonio e vellutato
+              XBACCO è il nome del vino che nasce dai vitigni coltivati nella
+              nostra azienda presso Verona. È il risultato del lavoro e
+              dall’utilizzo di tecniche e metodologie moderne, nonostante i
+              terreni siano coltivati da tradizioni. Il vino si presenta di
+              colore rossastro, con aromi fruttati ma intensi, che rendono un
+              gusto armonio e vellutato
             </p>
             <Link to="/chisiamo" className="link-dark">
               scopri di più <i className="fas fa-chevron-right" />
@@ -70,18 +75,23 @@ class Home extends React.Component {
         <section className="center">
           <div className="card-etichette">
             <div className="card">
-              <SVG value="crea" />
+              {/* <SVG value="crea" /> */}
+              <img src={crea} alt="Crea" />
               <h2>Crea</h2>
               <p>Fai un regalo personalizzato</p>
-              <button className="btn-light-small">Scopri di più</button>
+              <Link to="/crea" className="btn-light-small">
+                Scopri di più
+              </Link>
             </div>
 
             <div className="card">
-              <SVG value="vivi" />
-
+              {/* <SVG value="vivi" /> */}
+              <img src={vivi} alt="vivi" />
               <h2>Vivi</h2>
               <p>Hai ricevuto una bottiglia XBACCO?</p>
-              <button className="btn-light-small">Scopri di più</button>
+              <Link to="/vivi" className="btn-light-small">
+                Scopri di più
+              </Link>
             </div>
           </div>
         </section>

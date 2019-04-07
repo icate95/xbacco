@@ -116,7 +116,7 @@ class App extends React.Component {
                   </li>
                 </ul>
                 <ul className="menu-container">
-                  <li>
+                  <li onClick={this.addActiveClass}>
                     <Link className="menu-item" to="/areapersonale">
                       <i className="fas fa-user" />
                       Area personale
