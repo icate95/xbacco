@@ -1,6 +1,6 @@
 .center {
     display: flex;
-  
+
 }
 
 
@@ -12,13 +12,14 @@
 
     .card {
         &:nth-child(1) {
-            margin-right: 2px; 
+            margin-right: 2px;
         }
+
         &:nth-child(2) {
-            margin-left: 2px; 
+            margin-left: 2px;
         }
+
         padding: 1em;
-        // padding: 10vh 3em;
         background-color: $bgc-blue;
         text-align: center;
         color: white;
@@ -37,6 +38,17 @@
             width: 150px;
             background-color: #fff;
             border-radius: 50%;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .card-etichette {
+        flex-direction: column;
+        .card {
+            width: 100%;
+            margin: 2px 0;
+            
         }
     }
 }

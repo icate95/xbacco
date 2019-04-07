@@ -35,12 +35,9 @@ class App extends React.Component {
     }
   }
 
-
   addActiveClass() {
-    // console.log("click");
     this.handleUpdate();
     this.setState({ active: !this.state.active });
-    // console.log(this.state.active);
     if (this.state.active) {
       document
         .getElementsByClassName("hamburger")[0]
@@ -66,12 +63,6 @@ class App extends React.Component {
       );
     }
   }
-  // Sliders(){
-  //   let sliders = document.getElementsById('sliders');
-  //   setTimeout( 
-  //     sliders.style.height = "100vh"
-  //   ), 5000;
-  // }
 
   render() {
     return (
@@ -125,7 +116,7 @@ class App extends React.Component {
                   </li>
                 </ul>
                 <ul className="menu-container">
-                  <li className="has-children">
+                  <li>
                     <Link className="menu-item" to="/areapersonale">
                       <i className="fas fa-user" />
                       Area personale
@@ -153,10 +144,10 @@ class App extends React.Component {
             <Route exact path="/crea" component={PageGenerator} />
             <Route exact path="/areapersonale" component={AreaPersonale} />
             <Route exact path="/team" component={Team} />
-            <Route
+            {/* <Route
               path="/inseriscicodice"
               component={SelezionaEsperienza}
-            />
+            /> */}
             <Route path="/registrati" component={Registrati} />
             <Route path="/accedi" component={Accedi} />
             {/* <Footer /> */}
