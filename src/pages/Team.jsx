@@ -22,13 +22,13 @@ class Team extends React.Component {
               <p>Graphic Designer</p>
               <p>tel. 339 6687475</p>
             </div>
-            <div className="larghezza">
+            <div className="larghezza stretch">
               <img src={alessia} alt="Alessia Porro"/>
               <p>Alessia Porro</p>
               <p>Graphic Designer</p>
               <p>tel. 345 4616076</p>
             </div>
-            <div className="larghezza">
+            <div className="larghezza stretch">
               <img src={sofia} alt="Sofia Bani"/>
               <p>Sofia Bani</p>
               <p>Graphic Designer</p>
@@ -40,7 +40,7 @@ class Team extends React.Component {
               <p>Web Developer</p>
               <p>tel. 349 6327898</p>
             </div>
-            <div className="larghezza">
+            <div className="larghezza stretch">
               <img src={silvia_foto} alt="Silvia Monzani"/>
               <p>Silvia Monzani</p>
               <p>Graphic Designer</p>

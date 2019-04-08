@@ -16,7 +16,7 @@ class Registrati extends React.Component {
             <label htmlFor="nome">Nome</label>
             <input type="text" name='name' placeholder='nome'/>
             <label htmlFor="data">Data di nascita <br/><small>devi essere maggiorenne per iscriverti al nostro servizio</small></label>
-            <input type="date" name='data'/>
+            <input type="text" name='data' placeholder="gg/mm/aaaa"/>
             <label htmlFor="indirizzo">Indirizzo</label>
             <input type="text" name='indirizzo' placeholder='Indirizzo'/>
             <label htmlFor="password">Password</label>
