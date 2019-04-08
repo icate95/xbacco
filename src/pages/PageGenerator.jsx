@@ -3,8 +3,12 @@ import React from "react";
 
 import Generator from "./Generator";
 // import 'function.js';
+import relax from "../img/relax.png";
+import ristorazione from "../img/ristorazione.png";
+import culturadelvino from "../img/culturadelvino.png";
+import artedesign from "../img/artedesign.png";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // import logoColore from "../img/logo1.png";
 import bottigliaX from "../img/bottiglia_XBACCO.png";
@@ -32,100 +36,101 @@ class PageGenerator extends React.Component {
           </p>
         </section>
         <section className="crea">
-          <div className="half-30 primopasso">
-            <div className="info">
-              <p>
-                <span>1</span>
-                <span>COMPONI</span> inserisci una parola chiave
-              </p>
-            </div>
+          <div className="half-30">
+            <h3>
+              <span>Primo passo:</span>
+              <br /> COMPONI
+            </h3>
+            <p>Inserisci una parola chiave</p>
           </div>
-
-          {/* <div className="half-70 tac"> */}
-          <div className="fascia">
-            <div className="in-fascia">
+          <div className="half-70">
             <Generator />
-            </div>
-           
           </div>
         </section>
 
         {/* secondo passo */}
         <section className="crea">
-          <div className="half-30 secondopasso">
-            <div className="info">
-              <p>
-                <span>2</span>
-                <span>dedica</span> inserisci un messaggio personale
-              </p>
-            </div>
+          <div className="half-30">
+            <h3>
+              <span>Secondo passo:</span>
+              <br /> DEDICA
+            </h3>
+            <p>Inserisci un messaggio personale</p>
           </div>
-
-          {/* <div className="half-70 secondopasso"> */}
-          <div className="fascia secondopasso">
-            <div className='in-fascia'>
-              <textarea
+          <div className="half-70">
+            <textarea
               name=""
               id=""
               placeholder="Inserisci qui la tua dedica..."
             />
             <button className="btn-light-small">Conferma dedica</button>
-       
-            </div>
-
           </div>
         </section>
         {/* terzo passo  */}
 
         <section className="crea">
-          <div className="half-30 terzopasso">
-            <div className="info">
-              <p>
-                <span>3</span>
-                <span>Esperienza</span> scegli una esperienza
-              </p>
-            </div>
+          <div className="half-30">
+            <h3>
+              <span>Terzo passo:</span>
+              <br /> ESPERIENZA
+            </h3>
+            <p>Scegli una esperienza da allegare al tuo regalo</p>
           </div>
-
-          {/* <div className="half-70 terzopasso"> */}
-          <div className="fascia terzopasso">
-            <div className="in-fascia">
-               {/* scelte  */}
-              <RelaxChoice />
-              <CulturaChoice />
-              <RistorazioneChoice />
-              <ArteChoice />
-            </div>
-           
+          <div className="half-70">
+            <Scelta
+              titolo="Relax"
+              img={relax}
+              descrizione="lorem"
+              color="#88abae"
+              classElement="relax"
+            />
+            <Scelta
+              titolo="Cultura"
+              img={culturadelvino}
+              descrizione="lorem"
+              color="#690e3b"
+              classElement="cultura"
+            />
+            <Scelta
+              titolo="Ristorazione"
+              img={ristorazione}
+              descrizione="lorem"
+              color="#d49e55"
+              classElement="risto"
+            />
+            <Scelta
+              titolo="Arte e design"
+              img={artedesign}
+              descrizione="lorem"
+              color="#667384"
+              classElement=""
+            />
           </div>
         </section>
         {/* quarto passo  */}
+
         <section className="crea">
-          <div className="half-30 quartopasso">
-            <div className="info">
+          <div className="half-30">
+            <h3>
+              <span>ANTEPRIMA:</span>
+              <br />
+            </h3>
+            <p>Riepilogo fino ad ora</p>
+          </div>
+          <div className="half-70" id="quartopasso">
+            <img src={bottigliaX} alt="bottiglia" className="bottiglia" />
+            <div className='testo'>
               <p>
-                <span>4</span>
-                <span>Anteprima</span> ecco un riepilogo
+                <span>Dedica: </span> <span className="font-messaggio">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Rerum, natus.</span> 
+              </p>
+              <p>
+                <span>Esperienza allegata: </span> Relax
               </p>
             </div>
-          </div>
-
-          {/* <div className="half-70 quartopasso"> */}
-          <div className="fascia quartopasso">
-            <div className="in-fascia">
-            <div className="riepilogo">
-              <img src={bottigliaX} alt="bottiglia" className="" />
-            </div>
-            </div>
-           
+            <button>Conferma l'ordine</button>
           </div>
         </section>
-{/* 
-        <section className="tac">
-          <Link to="/areapersonale" className="btn-dark">
-            Conferma
-          </Link>
-        </section> */}
 
         <Footer />
       </>
@@ -133,66 +138,35 @@ class PageGenerator extends React.Component {
   }
 }
 
-class RelaxChoice extends React.Component {
+class Scelta extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       active: false
     };
   }
-  render() {
+  // active() {
+
+  //    document.getElementById().classList.add('active')
+  //    document.getElementById().siblings().classList.remove('active')
+
+  // }
+  render(props) {
     return (
-      <div className="scelta">
-        <label htmlFor="relax">Relax</label>
-        <input type="checkbox" name="relax" id="relax" />
-      </div>
-    );
-  }
-}
-class CulturaChoice extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false
-    };
-  }
-  render() {
-    return (
-      <div className="scelta">
-        <label htmlFor="cultura">Cultura</label>
-        <input type="checkbox" name="cultura" id="cultura" />
-      </div>
-    );
-  }
-}
-class RistorazioneChoice extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false
-    };
-  }
-  render() {
-    return (
-      <div className="scelta">
-        <label htmlFor="ristoriazione">Ristoriazione</label>
-        <input type="checkbox" name="ristorazione" id="ristorazione" />
-      </div>
-    );
-  }
-}
-class ArteChoice extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false
-    };
-  }
-  render() {
-    return (
-      <div className="scelta">
-        <label htmlFor="arte">Arte e Design</label>
-        <input type="checkbox" name="arte" id="arte" />
+      <div
+        className="scelta"
+        id={this.props.classElement}
+        style={{ backgroundColor: this.props.color }}
+      >
+        <div className="split-30">
+          <h4>{this.props.titolo}</h4>
+          <img src={this.props.img} alt="" />
+        </div>
+        <div className="split-70">
+          <p>{this.props.descrizione}</p>
+        </div>
+        {/* <button onClick={this.active.bind(this)}> Scegli</button> */}
+        <button> Scegli</button>
       </div>
     );
   }

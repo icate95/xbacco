@@ -1,103 +1,140 @@
-
-
-.hero-vivi,
-.custom,
-.custommessage
-// .crea 
-{
-  
-    display: flex;
-    padding: 6em 1em 0;
-    color: $bgc-blue-dark;
-
-    .half-30 {
-        width: 30%;
-
+.primopasso {
+    .hero-vivi {
+        background-image: url(./img/vivi.jpg);
+        background-size: cover;
+        height: 50vh;
+        background-position: center center;
     }
 
-    .half-70 {
-        width: 70%;
-        background-color: $bgc-blue;
-        margin-bottom: 1em;
-        padding: 1em;
+    h1 {
+        padding-top: 3em;
+        padding-bottom: 1em;
+        font-size: 3em;
+        z-index: 100;
+        color: white;
 
-        svg {
-            width: 55%;
-            margin: 1em auto;
-            background-color: #fff;
-            border-radius: 50%
+        span {
+            font-size: 1.5em;
         }
     }
-    max-width: 52em;
-    margin: 0 auto;
-}
-.custom {
-    padding-top: 0;
-    display: block;
-}
-// .crea {
-//     max-width: 52em;
-//     margin: 0 auto;
-// }
-.fascia {
-    background-color: $bgc-blue;
-    .in-fascia {
-        max-width: 48em;
-        padding: 2em 3em;
-        margin: 0 auto;
-        min-height: 40em;
+
+    #inserisciCodice {
+        transform: translateY(-40px);
+        display: flex;
+        margin: 1em 0;
+        background-color: $bgc-blue;
+
+        .half-30 {
+            width: 40%;
+            color: white;
+            padding: 2em 3em;
+            text-align: left;
+            line-height: 2em;
+
+            p span {
+                font-weight: 500;
+                ;
+            }
+        }
+
+        .half-70 {
+            width: 60%;
+            margin-bottom: 1em;
+            padding: 1em;
+
+            svg,
+            img {
+                width: 30%;
+                margin: 1em auto;
+                background-color: #fff;
+                border-radius: 50%
+            }
+        }
     }
 }
-.custommessage {
+@media(max-width: 48em) {
+    body {
+        background-color: red;
+    }
+    .primopasso {
+        .hero-vivi {
+            height: 50vh;
+        }
     
-   .message {
-       width: 100%;
-       padding: 2em 3em;
-       margin: 6em 4em;
-       border: 1px solid $bgc-relax;
-    background-color: #fff;
-    box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
-   }
-}
-span.big-title {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 800;
-    font-size: 1.8em;
+        h1 {
+            padding-top: 3em;
+            padding-bottom: 1em;
+            font-size: 3em;
+            z-index: 100;
+            color: white;
+    
+            span {
+                font-size: 1.5em;
+            }
+        }
+    
+        #inserisciCodice {
+            display: flex;
+           flex-direction: column;
+    
+            .half-30 {
+                width: 100%;
+                text-align: center;
+                padding: 1em 1.5em;
+            }
+    
+            .half-70 {
+                width: 100%;
+            }
+        }
+    }
 }
 
-.slogan {
-    color: $bgc-ristorazione;
-    transform: translate(80px, -20px);
-    padding: 4em 2em 0;
-    line-height: 2em;
-    font-size: 1.5em;
-    width: 500px;
+.custom,
+.custommessage {
+    transform: translateY(-50px);
 
-    &:before {
-        content: '';
-        position: absolute;
-        width: 200px;
-        border: 1px solid $bgc-cultura;
-        bottom: 0;
-        left: 100px;
+    h1 {
+        font-size: 3em;
+        z-index: 100;
+        color: black;
+
+        span {
+            font-size: 1.5em;
+        }
     }
 
 }
 
-.custom {
-    // background-color: $bgc-relax;
+.custommessage {
+    padding: 1em;
+    .message {
+        text-align: left;
+        width: 100%;
+        padding: 1em 3em;
+        border: 1px solid $bgc-relax;
+        background-color: #fff;
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
+
+        span.font-messaggio {
+            font-size: 1.5em;
+            font-family: 'Dancing Script', cursive;
+        }
+    }
 }
 
-// .not-active {
-//     display: none;
-// }
+form {
+    height: 50px;
+    // margin: 4em 0 ;
+}
 
-// .active {
-//     display: block
-// }
+label {
+    color: white;
+    margin: auto .5em;
+}
 
 input[type=text] {
-    width: 100%;
+    width: 50%;
     padding: .2em;
     font-size: 1em;
     background-color: transparent;
@@ -106,6 +143,7 @@ input[type=text] {
     color: white;
     text-transform: uppercase;
     letter-spacing: 1em;
+
     &.ok {
         box-shadow: 2px 2px 20px rgb(44, 114, 53);
     }
@@ -116,16 +154,12 @@ input[type=text] {
 
     .hero-vivi,
     .custom {
-        // background-color: red;
         display: flex;
-        // padding: 6em 1em 0;
         color: $bgc-blue-dark;
         flex-direction: column;
 
-
         .half-30 {
             width: 100%;
-
         }
 
         .half-70 {
@@ -162,9 +196,12 @@ input[type=text] {
 
 .buble-quattro {
     display: flex;
-    padding: 4em 1em;
-
-
+    padding: 1em .5em;
+    img {
+        width: 50%;
+        border-radius: 50%;
+        margin-bottom: 1em;
+    }
 }
 
 .libro,
@@ -194,11 +231,12 @@ input[type=text] {
     .buble-quattro {
         flex-direction: column;
         padding: .5em;
-
+        img {
+            width: 20%;
+        }
         .card {
             margin: 1em;
         }
-
     }
 
     .libro,
@@ -212,12 +250,10 @@ div[id*='info-select'] {
     display: none;
 
     &.active {
-
         width: 80%;
         display: flex;
         background-color: #fff;
         position: absolute;
-        // padding: 3em 2em;
         margin: 4em 10%;
         top: 5em;
         left: 0;
@@ -225,11 +261,12 @@ div[id*='info-select'] {
         box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
 
         .img {
-            width: 40%;
+            width: 50%;
             height: 100%;
             overflow: hidden;
 
             img {
+                width: auto;
                 height: 100%;
                 transform: scale(1.1)
             }
@@ -251,6 +288,7 @@ div[id*='info-select'] {
             right: 1em;
             margin: 1em;
         }
+
         a {
             color: black;
         }
@@ -269,25 +307,25 @@ div[id*='info-select'] {
             position: absolute;
             // padding: 3em 2em;
             margin: 2em 5%;
-            top: 5em;
+            top: 7em;
             left: 0;
             z-index: 4;
             box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
 
             .img {
                 width: 100%;
-                height: 25vh;
+                height: 40vh;
                 overflow: hidden;
 
                 img {
-                    height: 130%;
+                    width: 100%;
+                    height: auto;
                     transform: scale(1.1)
                 }
             }
 
             .text {
                 width: 100%;
-                // height: 100%;
                 padding: 1.5em 1em;
 
                 span {
@@ -306,6 +344,7 @@ div[id*='info-select'] {
         }
     }
 }
+
 .hero-crea {
     color: white;
     background-image: url(./img/puntivendita.png);
@@ -313,6 +352,7 @@ div[id*='info-select'] {
     height: 60vh;
     background-position: center center;
 }
+
 p.come-funziona {
     text-align: center;
     padding: 3em 6em;
@@ -321,7 +361,8 @@ p.come-funziona {
     font-size: 1em;
     margin: 1em auto;
     max-width: 52em;
+
     span {
-      font-weight: 800;
+        font-weight: 800;
     }
-  }
+}

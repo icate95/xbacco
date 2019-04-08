@@ -6,8 +6,12 @@ import imglibro from "../img/libro.jpg";
 import imgpoesia from "../img/poesia.jpg";
 import imgmusica from "../img/Musica.jpg";
 import audio from "../audio/You_Never_Can_Tell.mp3";
+import vivi from "../img/vivi.png";
+import musica from "../img/musica.png";
+import poesia from "../img/poesia.png";
+import libro from "../img/libro.png";
 
-import SVG from "./SVG";
+// import SVG from "./SVG";
 
 import Footer from "./components/Footer";
 
@@ -38,14 +42,19 @@ class Esperienze extends React.Component {
             setInterval(
             this.setState({
               ...this.state,
-              SecondoPassoCustomMessage: true
+              SecondoPassoCustomMessage: true,
+              SecondoPassoRelax: false
+
             }), 1000 )
           } else if (this.state.data[i].tipe == "default") {
-            alert('codice valido per relax')
-            this.setState({
-              ...this.state,
-              SecondoPassoRelax: true
-            });
+            // alert('codice valido per relax')
+            setInterval(
+              this.setState({
+                ...this.state,
+                SecondoPassoCustomMessage: false,
+                SecondoPassoRelax: true
+  
+              }), 1000 )
           }
           
       } else {
@@ -59,35 +68,32 @@ class Esperienze extends React.Component {
     return (
       <>
         <section className="primopasso">
-          <h1 className="big-title tac">
+          <div className="hero-vivi">
+          <h1 >
             <span>Vivi</span> <br />
             Lorem, ipsum dolor.
           </h1>
+          </div>
+         
           <div id="inserisciCodice" className="active">
-            <section className="hero-vivi">
               <div className="half-30">
-                {/* <div className="slogan"> */}
-                <p>
-                  <span className="big-title tac">Come funziona</span>
-                </p>
-                <div className="info">
-                  <p>
-                    <span>1</span>
-                    <span>Inserisci il codice</span>
-                  </p>
-                </div>
+                <h3>Come funziona:</h3>
+                <p><span> Hai ricevuto una bottiglia XBACCO?</span></p>
+                <p>Inserisci il codice che trovi sul biglietto allegato e vivi l'esperienza collegata!</p>
               </div>
 
-              <div className="half-70 tac">
-                <SVG />
+              <div className="half-70">
+                {/* <SVG /> */}
+                <img src={vivi} alt=""/>
                 <form action="" method="get">
+                  <label htmlFor="input-code">Inserisci il codice:</label>
                   <input
                     type="text"
                     id="input-code"
                     name="input-code"
                     className="text"
                     onChange={this.handleChange}
-                  />{" "}
+                  />
                   <br />
                   {/* <button
                     disabled
@@ -100,7 +106,6 @@ class Esperienze extends React.Component {
                   </button> */}
                 </form>
               </div>
-            </section>
           </div>
         </section>
         {this.state.SecondoPassoRelax && <SecondoPassoRelax />}
@@ -111,82 +116,7 @@ class Esperienze extends React.Component {
     );
   }
 }
-// class PrimoPasso extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       data: [
-//         { value: 87654321, tipe: "custom" },
-//         { value: 12345678, tipe: "default" }
-//       ]
-//     };
-//     this.handleChange = this.handleChange.bind(this);
-//     // this.xbaccoVivi = this.xbaccoVivi.bind(this);
-//   }
 
-//   handleChange() {
-//     var valoreInput = document.getElementById("input-code").value;
-
-//     for (let i = 0; i < this.state.data.length; i++) {
-
-//       if (valoreInput == this.state.data[i].value ) {
-//         document.getElementById("input-code").classList.add("ok");
-//         if (this.state.data[i].tipe == 'custom') {
-
-//         } else  if (this.state.data[i].tipe == 'default') {
-
-//         }
-//       } else {
-//         document.getElementById("input-code").classList.remove("ok");
-//       }
-//   }
-//   }
-
-//   render() {
-//     return (
-//       <>
-//         <h1 className="big-title tac">
-//           <span>Vivi</span> <br />
-//           Lorem, ipsum dolor.
-//         </h1>
-//         <div id="inserisciCodice" className="active">
-//           <section className="hero-vivi">
-//             <div className="half-30">
-//               {/* <div className="slogan"> */}
-//               <p>
-//                 <span className="big-title tac">Come funziona</span>
-//               </p>
-//               <div className="info">
-//                 <p>
-//                   <span>1</span>
-//                   <span>Inserisci il codice</span>
-//                 </p>
-//               </div>
-//             </div>
-
-//             <div className="half-70 tac">
-//               <SVG />
-//               <form action="" method="get">
-//                 <input
-//                   type="text"
-//                   id="input-code"
-//                   name="input-code"
-//                   className="text"
-//                   onChange={this.handleChange}
-//                 />{" "}
-//                 <br />
-//                 <button className="btn-light-small" onClick={this.checkCode}>
-//                   Inserisci codice e procedi
-//                   <i className="fas fa-chevron-right" />
-//                 </button>
-//               </form>
-//             </div>
-//           </section>
-//         </div>
-//       </>
-//     );
-//   }
-// }
 class SecondoPassoRelax extends React.Component {
   constructor(props) {
     super(props);
@@ -230,13 +160,14 @@ class SecondoPassoRelax extends React.Component {
     return (
       <>
         <div className="custom" id="passo2">
-          <h1 className="big-title tac">
+          <h1>
             <span>Relax</span> <br />
             scegli
           </h1>
 
           <div className="buble-quattro">
             <div className="libro" onClick={this.modallibro.bind(this)}>
+              <img src={libro} alt="img xbacco libro"/>
               <h3>Libro</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
@@ -245,6 +176,8 @@ class SecondoPassoRelax extends React.Component {
             </div>
 
             <div className="musica" onClick={this.modalmusica.bind(this)}>
+
+            <img src={musica} alt="img xbacco musica"/>
               <h3>Musica</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
@@ -253,6 +186,8 @@ class SecondoPassoRelax extends React.Component {
             </div>
 
             <div className="poesia" onClick={this.modalpoesia.bind(this)}>
+
+            <img src={poesia} alt="img xbacco poesia"/>
               <h3>Poesia</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
@@ -406,13 +341,16 @@ class SecondoPassoCustomMessage extends React.Component {
       <>
         <div className="custommessage">
           <div className="message">
-            <p> Questo messaggio è stato creato da: _____________</p>
-            <p>per : _________________</p>
+            <p> Questo messaggio è stato creato da: <span className="font-messaggio">Mario Rossi</span></p>
+            <p>per : <span className="font-messaggio">
+              Lampa Dina</span></p>
+              <p><span className="font-messaggio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique facilis quos autem magni provident ipsum in delectus impedit, libero quia officiis quod veritatis natus, id dolore dolorem et vitae at illum sit, mollitia nesciunt consectetur ea. Illum, officia earum! Odit nemo nam itaque optio, doloribus pariatur accusamus quos quidem animi!</span></p>
+              <br/>
+            
+              <p>In allegato a questo regalo le esperienze proposte da XBACCO:</p>
           </div>
         </div>
-        <div className="">
-          <p>In allegato a questo regalo le esperienze proposte da XBACCO:</p>
-        </div>
+       
         <SecondoPassoRelax />
       </>
     );

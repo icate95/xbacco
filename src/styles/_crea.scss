@@ -1,0 +1,140 @@
+.crea {
+    margin: .5em 0;
+    width: 100%;
+    background-color: $bgc-blue;
+    display: flex;
+    color: white;
+
+    .half-30 {
+        text-align: left;
+        width: 40%;
+        padding: 5em 2em;
+        vertical-align: middle;
+
+        h3>span {
+            font-size: 2em;
+            position: absolute;
+            opacity: .2;
+            transform: translate(0, -20px);
+        }
+    }
+
+    .half-70 {
+        width: 60%;
+        padding: 2em;
+
+        // secondo passaggio
+        textarea {
+            padding: 1em;
+            width: 95%;
+            height: 40%;
+            font-size: 1em;
+            margin: 2em 1em;
+            background-color: #fff;
+            border: 2px solid $bgc-blue-dark;
+            color: #444;
+            resize: none;
+        }
+
+        //terzo passaggio
+        .scelta {
+            // border: 1px solid lightgray;
+            text-align: left;
+            position: relative;
+            padding: 1em;
+            display: flex;
+            border-radius: 5px;
+            margin-bottom: .5em;
+
+            &.active {
+                box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .split-30 {
+                width: 20%;
+            }
+
+            .split-70 {
+                width: 80%;
+                padding: 1em 2em;
+            }
+
+            h4 {
+                text-align: center;
+                padding-bottom: .5em;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 50%
+            }
+
+            button {
+                position: absolute;
+                padding: 1em 3em;
+                right: 1em;
+                bottom: 1em;
+                background-color: #fff;
+                text-transform: uppercase;
+            }
+        }
+
+        // quarto passaggio
+        &#quartopasso {
+            display: flex;
+            position: relative;
+
+            img {
+                height: 300px;
+            }
+
+            button {
+                position: absolute;
+                padding: 1em 3em;
+                right: 3em;
+                bottom: 2em;
+                background-color: #fff;
+                text-transform: uppercase;
+            }
+
+            .testo {
+                text-align: left;
+
+                p {
+                    padding-top: 2em;
+                    ;
+                }
+
+                span.font-messaggio {
+                    font-size: 1.5em;
+                    font-family: 'Dancing Script', cursive;
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 48em) {
+
+    .crea {
+        margin: .5em 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .half-30 {
+            text-align: left;
+            width: 100%;
+            padding: 3em 1em ;
+            padding-bottom: .5em;
+          
+        }
+
+        .half-70 {
+            width: 100%;
+            padding: 1em;
+        }
+    }
+}
