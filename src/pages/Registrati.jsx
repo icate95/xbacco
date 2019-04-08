@@ -11,7 +11,7 @@ class Registrati extends React.Component {
         <section className='bgc-img-registrati'>
             <h1>--</h1>
         </section>
-        <div className="modal">
+        <div className="registrati">
             <h2>Registrati</h2>
             <label htmlFor="nome">Nome</label>
             <input type="text" name='name' placeholder='nome'/>
