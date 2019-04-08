@@ -1,34 +1,173 @@
 .areapersonale {
     padding-top: 6em;
     display: flex;
+
     .utente {
         width: 30%;
         text-align: center;
         background-color: $bgc-blue;
         color: white;
         padding: 1em;
+
         img {
             margin: 1em;
         }
+
         .info-user {
             text-align: left;
             padding: 1em 2em;
-        } 
+
+            p.strong {
+                font-weight: 400;
+            }
+
+            margin-bottom: 4em;
+        }
+
+        .info-buro {
+            padding: 1em;
+            border-top: 1px solid lightgray;
+            text-align: left;
+
+            a {
+                font-size: .7em;
+                line-height: 2em;
+                padding: 15px auto;
+            }
+        }
     }
+
     .content {
         width: 70%;
-       
+
+        h2 {
+            text-align: left;
+        }
+
         .elem {
-            
+            // border: 1px solid lightgray;
             display: flex;
+            margin: 1em;
+            box-shadow: 0px 7px 20px rgba(0, 0, 0, .1);
+
             img {
                 width: auto;
                 height: 200px;
             }
-            .text {
-                width: 100%;
+
+            .text-area-elem {
+                width: 70%;
             }
-           
+
+            .text {
+                padding-top: 1em;
+                width: 100%;
+                text-align: left;
+                line-height: 1.7em;
+                min-height: 120px;
+
+                .nome-elem {
+                    font-weight: 500;
+                    font-size: 1.13em;
+                }
+            }
+
+            .icone {
+                width: 100%;
+                margin-top: .5em;
+                display: flex;
+                border-top: 1px solid lightgray;
+
+                i {
+                    padding: .2em;
+                    cursor: pointer;
+                }
+
+                p {
+                    padding: .2em .8em;
+                    margin: 1em .2em;
+                    border-right: 1px solid lightgray;
+
+                    &:last-child {
+                        border-right: 1px solid transparent;
+                    }
+                }
+
+                .rimuovi:hover {
+                    background-color: red;
+                    color: white;
+                }
+
+                .quantita {
+
+                    .fa-plus:hover,
+                    .fa-minus:hover {
+                        background-color: $bgc-blue;
+                        color: white;
+                        border-radius: 50%;
+                    }
+                }
+
+            }
+
+            &:hover {
+
+                box-shadow: 0px 7px 20px rgba(0, 0, 0, .2);
+            }
         }
+    }
+}
+
+.riepilogo {
+    margin: 3em 1em;
+    text-align: left;
+
+    p {
+        margin: .5em 1em;
+    }
+}
+
+.somma,
+.somma-elem {
+    font-weight: 800;
+}
+
+@media (max-width: 50em) {
+    .areapersonale {
+        flex-direction: column;
+        .utente {
+            width: 100%;
+            img {
+                width: 100px;
+            }
+        }
+
+        .content {
+            width: 100%;
+            margin: 2em 0;
+        }
+    }
+}
+
+@media (max-width: 42em) {
+    .content {
+        .elem {
+            .text-area-elem {
+                .icone {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    p {
+                        border: transparent;
+                        margin: .2em 0;
+                    }
+                }
+            }
+            img {
+                margin: auto 0;
+                height: 150px !important; 
+             }
+        }
+       
+       
     }
 }

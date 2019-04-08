@@ -2,7 +2,7 @@
 
 .hero-vivi,
 .custom,
-.custommessage,
+.custommessage
 // .crea 
 {
   
@@ -106,7 +106,9 @@ input[type=text] {
     color: white;
     text-transform: uppercase;
     letter-spacing: 1em;
-
+    &.ok {
+        box-shadow: 2px 2px 20px rgb(44, 114, 53);
+    }
 }
 
 
@@ -249,7 +251,9 @@ div[id*='info-select'] {
             right: 1em;
             margin: 1em;
         }
-
+        a {
+            color: black;
+        }
     }
 }
 

@@ -8,6 +8,7 @@ class Generator extends React.Component {
     super(props);
 
     this.state = {
+      parola: '',
       value: '',
       letters: [],
     }
@@ -34,14 +35,16 @@ class Generator extends React.Component {
   //   });
   // }
   handleChange(event) {
-    // console.log(event.currentTarget);
+    // console.log(event);
     let lettera = event.currentTarget.value.split("");
     // console.log(lettera);
+
     this.setState({
       value: event.currentTarget.value,
+      parola: event.currentTarget.parola,
       letters: lettera
     });
-    console.log(this.state.letters)
+    // console.log(this.state.parola)
     
   }
 
@@ -49,11 +52,11 @@ class Generator extends React.Component {
     return (
       <div className="container">
         <div className="gruppo-svg">
-          <SVG value={this.state.value} />
+          <SVG value={this.state.value[this.state.value.length - 1]} length={this.state.value.length}/>
+          {/* <SVG value={this.state.value[this.state.value.length - 1]} lenght={this.state.value.length + 1} /> */}
         </div>
         <input
           onChange={this.handleChange}
-
           defaultValue={this.state.value}
         />
       </div>

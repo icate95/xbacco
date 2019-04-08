@@ -32,7 +32,7 @@ h2 {
 }
 
 h6 {
-    padding: .357em 1em;
+    padding: .357em .5em;
     font-size: 1.6em;
 }
 
@@ -75,87 +75,87 @@ i.fa-star {
     margin: .3em
 }
 
-.btn-dark,
-a.btn-dark {
-    text-transform: uppercase;
-    font-size: 1em;
-    padding: 1em 1.5em;
-    border: 1px solid transparent;
-    color: white !important;
-    background-color: $bgc-blue;
-    cursor: pointer;
-    margin: 0.5em;
+// .btn-dark,
+// a.btn-dark {
+//     text-transform: uppercase;
+//     font-size: 1em;
+//     padding: 1em 1.5em;
+//     border: 1px solid transparent;
+//     color: white !important;
+//     background-color: $bgc-blue;
+//     cursor: pointer;
+//     margin: 0.5em;
 
-    &:hover {
-        background-color: white;
-        color: $bgc-blue-dark !important;
-        border: 1px solid $bgc-blue-dark
-    }
-}
+//     &:hover {
+//         background-color: white;
+//         color: $bgc-blue-dark !important;
+//         border: 1px solid $bgc-blue-dark
+//     }
+// }
 
-.btn-dark-small,
-a.btn-dark-small {
-    text-transform: uppercase;
-    font-size: .9em;
-    padding: .5em 1.2em;
-    border: .5px solid transparent;
-    color: white !important;
-    background-color: $bgc-blue;
-    cursor: pointer;
-    margin: 0.3em;
+// .btn-dark-small,
+// a.btn-dark-small {
+//     text-transform: uppercase;
+//     font-size: .9em;
+//     padding: .5em 1.2em;
+//     border: .5px solid transparent;
+//     color: white !important;
+//     background-color: $bgc-blue;
+//     cursor: pointer;
+//     margin: 0.3em;
 
-    &:hover {
-        background-color: white;
-        color: $bgc-blue-dark !important;
-        border: .5px solid $bgc-blue-dark
-    }
-}
+//     &:hover {
+//         background-color: white;
+//         color: $bgc-blue-dark !important;
+//         border: .5px solid $bgc-blue-dark
+//     }
+// }
 
-Link.btn-light,
-a.btn-light,
-.btn-light {
-    text-transform: uppercase;
-    font-size: 1em;
-    padding: 1em 1.5em;
-    border: 1px solid transparent;
-    color: $bgc-blue;
-    background-color: white;
-    cursor: pointer;
-    margin: 0.5em;
+// Link.btn-light,
+// a.btn-light,
+// .btn-light {
+//     text-transform: uppercase;
+//     font-size: 1em;
+//     padding: 1em 1.5em;
+//     border: 1px solid transparent;
+//     color: $bgc-blue;
+//     background-color: white;
+//     cursor: pointer;
+//     margin: 0.5em;
 
-    &:hover {
-        background-color: $bgc-blue-dark;
-        color: white;
-        border: 1px solid white;
-    }
-}
+//     &:hover {
+//         background-color: $bgc-blue-dark;
+//         color: white;
+//         border: 1px solid white;
+//     }
+// }
 
-Link.btn-light-small,
-a.btn-light-small,
-.btn-light-small {
-    text-transform: uppercase;
-    font-size: .9em;
-    padding: .5em 1.2em;
-    border: .5px solid transparent;
-    color: $bgc-blue;
-    background-color: white;
-    cursor: pointer;
-    margin: 0.3em;
+// Link.btn-light-small,
+// a.btn-light-small,
+// .btn-light-small {
+//     text-transform: uppercase;
+//     font-size: .9em;
+//     padding: .5em 1.2em;
+//     border: .5px solid transparent;
+//     color: $bgc-blue;
+//     background-color: white;
+//     cursor: pointer;
+//     margin: 0.3em;
 
-    &:hover {
-        background-color: $bgc-blue-dark;
-        color: white;
-        border: .5px solid white;
-    }
-}
+//     &:hover {
+//         background-color: $bgc-blue-dark;
+//         color: white;
+//         border: .5px solid white;
+//     }
+// }
 
-a {
-    text-decoration: none;
+// a {
+//     text-decoration: none;
 
-    &:hover {
-        text-decoration: underline;
-    }
-}
+//     &:hover {
+//         text-decoration: underline;
+//     }
+// }
 
 // input
 .center-input {
@@ -237,7 +237,7 @@ a {
     background-image: url(./img/1fotogenerale.png);
     background-size: cover;
     // height: 40vh;
-    background-position: center ;
+    background-position: center;
 }
 
 /* index.html */
@@ -247,45 +247,8 @@ a {
     color: #fff;
     height: 100vh;
     overflow: hidden;
-    // text-align: center;
     display: flex;
 
-    // .half-30 {
-    //     width: 40%;
-    //     padding: 3em;
-
-    //     h1 {
-    //         margin: 6em 0 0;
-    //         font-family: 'Comfortaa';
-    //         font-size: 3em;
-
-    //         span {
-    //             font-weight: 800;
-    //         }
-    //     }
-
-    //     h3 {
-    //         text-transform: uppercase;
-    //         font-style: 2em;
-    //     }
-    // }
-
-    // .half-70 {
-    //     width: 60%;
-
-    //     img {
-    //         // margin: 9em;
-    //         width: 100%;
-    //         background-color: #fff;
-    //         // border-radius: 50%;
-    //         margin-bottom: 0;
-    //         max-width: 650px;
-    //     }
-    // }
-}
-
-// prova hero 
-#hero-home {
     img {
         width: 100vh;
         height: 100vh;
@@ -293,7 +256,17 @@ a {
     }
 }
 
-
+@media (max-width: 48em) {
+    #hero-home {
+        img {
+            top: 20vh;
+            position: absolute;
+            // left: -200px;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 
 .text-area {
     padding: 4em;
@@ -303,9 +276,7 @@ a {
     h2,
     p {
         padding: 1em 2em;
-        // color: #2d2d2d;
         line-height: 1.5em;
-
     }
 
     a {
@@ -364,9 +335,10 @@ a {
 .text-area-big {
     padding: 4em;
     color: #000;
-        span.grassetto {
-            font-weight: 800;
-        }
+
+    span.grassetto {
+        font-weight: 800;
+    }
 
     h1,
     p {
@@ -407,9 +379,12 @@ a {
 }
 
 .info-bot {
-    margin-top: 2em;
+    padding-top: 6em ;
+    // margin-top: 2em;
     margin-bottom: 2em;
-
+    .text-info-bot {
+        transform: translateX(10%);
+    }
     p {
         font-weight: 100;
     }
@@ -420,36 +395,48 @@ a {
     }
 
     div {
-        width: 50%;
+        width: 42%;
+        &:last-child {
+            width: 58%;
+        }
     }
 
     .bottiglia-centro {
         z-index: 50;
         width: 135px;
         overflow: visible;
-        transform: translateX(-50%);
+        transform: translateX(-60%);
         margin: 0;
         padding: 0;
 
         img {
-            width: 400px;
+            width: 420px;
+            // height: 90vh;
         }
 
     }
 
-    .text-area {
-        padding: .5em
+    h2, p {
+        padding: .5em 1em 
     }
 
     .info-wine {
-        padding-left: 3em;
+        padding-left: 4em;
+        text-align: left;
+        padding: 0 auto;
+        p{
+            padding: .2em 1em;
+        }
     }
 }
 
 @media (max-width: 48em) {
     .info-bot {
+        .text-info-bot {
+            transform: translateX(0);
+        }
         div {
-            width: 100%;
+            width: 100% !important;
         }
 
         .bottiglia-centro {
@@ -457,8 +444,12 @@ a {
         }
     }
 
+    .text-info-bot,
     .info-wine {
-        padding: 2em !important;
+        padding: 2em 3em !important;
+    }
+    .info-wine {
+        margin-bottom: 1em;
     }
 }
 
@@ -486,7 +477,6 @@ section a {
     border-radius: 10px;
     cursor: pointer;
 }
-
 
 .logo-home {
     // padding: .5em;
@@ -521,7 +511,6 @@ section a {
         content: "";
         width: 110%;
         height: 8px;
-
         background-color: #fff;
         opacity: .1;
         position: absolute;
@@ -537,7 +526,6 @@ section a {
             content: "";
             width: 115%;
             height: 12px;
-
             background-color: #fff;
             opacity: .2;
             position: absolute;
@@ -583,13 +571,10 @@ section a {
     }
 }
 
-// buble
-
 .immagini {
     max-width: 100%;
     height: auto;
 }
-
 
 .half-hover {
     width: 50%;
@@ -656,7 +641,6 @@ section a {
             overflow: hidden;
         }
     }
-
 }
 
 @keyframes upto45 {
@@ -702,6 +686,7 @@ section a {
     .text-area-big {
         padding: 1em;
     }
+   
 }
 
 .bottiglie {
@@ -729,9 +714,7 @@ section a {
 }
 
 #hero-chisiamo {
-    background-image: url(./img/pattern-sfondo.png);
-    background-size: cover;
-    height: 80vh;
+    padding: 8em 1em 1em;
 }
 
 .info-chisiamo {
@@ -758,9 +741,6 @@ section a {
     line-height: 30px;
 }
 
-
-
-
 .orizzontale {
     width: 100%;
     height: 25vh;
@@ -772,7 +752,6 @@ section a {
     align-items: center;
 }
 
-// solgan home
 #slogan {
     background-image: url(./img/pattern-sfondo.png);
     background-position: center center;
@@ -788,24 +767,32 @@ section a {
         text-align: left;
     }
 
-    h1, h3 {
+    h1,
+    h3 {
         margin: 0;
         padding: 0;
         text-transform: uppercase;
-        color: white; 
+        color: white;
     }
+
     h1 {
         font-size: 3em;
     }
+
     h3 {
         font-size: 2em;
     }
+
     a {
         color: white
     }
 }
+@media (max-width: 48em) {
+    #slogan {
+        width: 100%;
+    }
+}
 
-// punti vendita
 #hero-puntivendita {
     background-image: url(./img/puntivendita.png);
     background-size: cover;
@@ -846,13 +833,11 @@ section a {
 .bottoniorrizzontali {
     display: flex;
     flex-direction: column;
-    // align-content: stretch;
     align-items: center;
 
     a {
         width: 100%;
         height: 25%;
-
         padding: 4em;
         color: white;
         text-transform: uppercase;
@@ -883,7 +868,6 @@ section a {
             opacity: .8;
         }
     }
-
 }
 
 table {
@@ -966,7 +950,6 @@ table {
             }
         }
     }
-
 }
 
 #hero-esperienze {
@@ -1015,7 +998,6 @@ table {
 }
 
 .section-select {
-
     background-image: url(./img/pattern-sfondo.png);
     padding: 2em 0;
 
@@ -1024,7 +1006,6 @@ table {
         width: 100%;
 
         .line {
-
             max-width: 46em;
             margin: 0 auto;
             display: flex;

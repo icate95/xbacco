@@ -41,6 +41,21 @@ $bgc-arte: #667384;
         }
     }
 }
+@media (max-width: 48em) {
+    .nav-bar {
+        .logo {
+            img {
+                margin-right: 10px;
+            }
+            h1 {
+                display: none;
+            }
+        }
+        .hamburger {
+            margin: 10px;
+        }
+    }
+}
 
 .hamburger {
     margin: 1em;
@@ -239,6 +254,18 @@ $bgc-arte: #667384;
 
     }
 }
+@media (max-width: 48em ) {
+    .menu-expanded {
+        flex-direction: column;
+        .menu-container {
+            max-width: 100% !important;
+            padding: 0;
+            li {
+                text-align: center;
+            }
+        }
+    }
+}
 
 @keyframes fadeInUp {
     from {
@@ -265,11 +292,9 @@ $bgc-arte: #667384;
 /* footer */
 #footer {
     color: white;
-    //     height: 50vh;
     background-image: url(./img/pattern-sfondo.png);
     background-position: center center;
     background-size: cover;
-
     font-size: 1em;
     line-height: 2em;
 
@@ -349,15 +374,9 @@ $bgc-arte: #667384;
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    // width: 50%;
 
     li {
         margin: 1.5em .2em;
-
-        //     width: 25px;
-        // height: 25px;
-        // background-color: #fff;
-        // border-radius: 50%;
         &:nth-child(1) {
             margin-left: 0;
         }
@@ -369,4 +388,34 @@ $bgc-arte: #667384;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     padding: .5em 0;
     opacity: .6;
+}
+
+@media (max-width: 48em) {
+    #footer {
+        .menu-flex {
+            flex-direction: column;
+            justify-content: center;
+            &:nth-child(2) {
+                padding: 1.357em;
+                padding-top: 0;
+            }
+           
+            div {
+                width: 100%;
+                text-align: center;
+            }
+            img {
+                margin-top: 2em;
+                margin-bottom: 2em;
+            }
+        }
+        .contatti p {
+            text-align: center;
+            
+        }
+        ul.social {
+            padding: 0;
+            justify-content: center;
+        }
+    }
 }
