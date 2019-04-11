@@ -350,16 +350,11 @@ class SecondoPassoCustomMessage extends React.Component {
               <span className="font-messaggio">Mario Rossi</span>
             </p>
             <p>
-              per : <span className="font-messaggio">Lampa Dina</span>
+              per : <span className="font-messaggio">Francesca Bianchi</span>
             </p>
             <p>
               <span className="font-messaggio">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Similique facilis quos autem magni provident ipsum in delectus
-                impedit, libero quia officiis quod veritatis natus, id dolore
-                dolorem et vitae at illum sit, mollitia nesciunt consectetur ea.
-                Illum, officia earum! Odit nemo nam itaque optio, doloribus
-                pariatur accusamus quos quidem animi!
+                Tanti auguri di buon complenanno!
               </span>
             </p>
             <br />

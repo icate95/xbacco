@@ -197,7 +197,7 @@ class SVG extends React.Component {
           value: this.props.value,
           length: this.props.length
         },
-        () => console.log(this.state)
+        //() => console.log(this.state)
       );
     }
   }
@@ -211,7 +211,7 @@ class SVG extends React.Component {
     this.setState({
       value: event.currentTarget.value
     });
-    console.log(this.state.letters);
+    // console.log(this.state.letters);
   }
 
   render() {

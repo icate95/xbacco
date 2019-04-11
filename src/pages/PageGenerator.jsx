@@ -123,8 +123,7 @@ class PageGenerator extends React.Component {
             <img src={bottigliaX} alt="bottiglia" className="bottiglia" />
             <div className='testo'>
               <p>
-                <span>Dedica: </span> <span className="font-messaggio">Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Rerum, natus.</span> 
+                <span>Dedica: </span> <span className="font-messaggio">Tanti auguri di buon compleanno!</span> 
               </p>
               <p>
                 <span>Esperienza allegata: </span> Relax

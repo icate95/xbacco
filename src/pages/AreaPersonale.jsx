@@ -70,14 +70,14 @@ class AreaPersonale extends React.Component {
               <i className="fas fa-shopping-cart" /> Il tuo ordine
             </h2>
             <Elemento
-              vino="vino xbacco"
+              vino="Vino XBACCO"
               tipoOrdine="Etichetta standard: pacchetto ristorazione"
               prezzo="30"
               quantita="1"
               img={bottigliaRI}
             />
             <Elemento
-              vino="vino xbacco"
+              vino="Vino XBACCO"
               tipoOrdine="Etichetta personalizzata"
               prezzo="25"
               quantita="2"

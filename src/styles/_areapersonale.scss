@@ -14,7 +14,7 @@
         }
 
         .info-user {
-            text-align: left;
+            text-align: center;
             padding: 1em 2em;
 
             p.strong {
@@ -79,7 +79,7 @@
                 border-top: 1px solid lightgray;
 
                 i {
-                    padding: .2em;
+                    padding: .1em;
                     cursor: pointer;
                 }
 
@@ -120,9 +120,9 @@
 
 .riepilogo {
     margin: 3em 1em;
-    text-align: left;
+    text-align: right;
 
-    p {
+    p, h3 {
         margin: .5em 1em;
     }
 }
