@@ -4,7 +4,7 @@ import logoColore from "../img/logo1.png";
 import bottigliaX from "../img/bottiglia_XBACCO.png";
 
 
-import { BrowserRouter as  Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Footer from "./components/Footer";
 
