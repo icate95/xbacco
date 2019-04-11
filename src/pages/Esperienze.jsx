@@ -233,6 +233,7 @@ class SecondoPassoRelax extends React.Component {
                 href="http://www.enotecaletteraria.it/il-vino-in-versi/stephane-mallarme-brindisi"
                 className="link-dark"
                 target="_blank"
+                rel="noopener noreferrer" 
               >
                 Leggi la poesia: Stephane Mallarmé - Brindisi{" "}
               </a>
@@ -322,6 +323,7 @@ class SecondoPassoRelax extends React.Component {
                 href="http://it.feedbooks.com/book/6291/jane-eyre"
                 className="link-dark"
                 target="_blank"
+                rel="noopener noreferrer" 
               >
                 Leggi il libro: Charlotte Brontë, Jane Eyre{" "}
               </a>

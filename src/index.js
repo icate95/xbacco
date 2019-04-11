@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-manager';
+import { ScrollManager } from 'react-scroll-manager';
 import { createBrowserHistory as createHistory } from 'history';
 import "./styles.scss";
 
@@ -13,7 +13,7 @@ import ChiSiamo from "./pages/ChiSiamo";
 import Esperienze from "./pages/Esperienze";
 import PageGenerator from "./pages/PageGenerator";
 import AreaPersonale from "./pages/AreaPersonale";
-import SelezionaEsperienza from "./pages/SelezionaEsperienza";
+// import SelezionaEsperienza from "./pages/SelezionaEsperienza";
 import Registrati from "./pages/Registrati";
 import Accedi from "./pages/Accedi";
 import Team from "./pages/Team";

@@ -1,7 +1,7 @@
 import React from "react";
 // import ReactDOM from "react-dom";
 
-import logoColore from "../img/logo1.png";
+// import logoColore from "../img/logo1.png";
 
 class Registrati extends React.Component {
   render() {

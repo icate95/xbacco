@@ -4,7 +4,7 @@ import logoColore from "../img/logo1.png";
 import bottigliaX from "../img/bottiglia_XBACCO.png";
 
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as  Link } from "react-router-dom";
 
 import Footer from "./components/Footer";
 
@@ -107,6 +107,7 @@ class ChiSiamo extends React.Component {
             height="450"
             frameborder="0"
             allowfullscreen
+            title='map'
           />
         </section>
         <Footer />

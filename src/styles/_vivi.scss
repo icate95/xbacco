@@ -92,6 +92,8 @@
     transform: translateY(-50px);
 
     h1 {
+        text-align: center;
+        padding: .5em;
         font-size: 3em;
         z-index: 100;
         color: black;
@@ -194,6 +196,7 @@ label {
 }
 
 .buble-quattro {
+    text-align: center;
     display: flex;
     padding: 1em .5em;
     img {

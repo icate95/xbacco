@@ -82,28 +82,28 @@ class PageGenerator extends React.Component {
             <Scelta
               titolo="Relax"
               img={relax}
-              descrizione="lorem"
+              descrizione="Scegliendo l’esperienza relax avrai accesso a musica, libri e poesie consigliate da noi."
               color="#88abae"
               classElement="relax"
             />
             <Scelta
-              titolo="Cultura"
+              titolo="Cultura del vino"
               img={culturadelvino}
-              descrizione="lorem"
+              descrizione="Se sei appassionato di vino ma vorresti saperne di più, ti offriamo l’accesso alla cultura del vino: concediti un calice di vino, mentre guardi i nostri mini corsi da sommelier."
               color="#690e3b"
               classElement="cultura"
             />
             <Scelta
               titolo="Ristorazione"
               img={ristorazione}
-              descrizione="lorem"
+              descrizione="Per la ristorazione abbiamo selezionato delle prelibate ricette abbinate al nostro vino."
               color="#d49e55"
               classElement="risto"
             />
             <Scelta
               titolo="Arte e design"
               img={artedesign}
-              descrizione="lorem"
+              descrizione="Per gli appassionati del vino che non vogliono rinunciare nemmeno alla bellezza dell’arte, abbiamo ideato arte e design: nozioni sul type design e sugli artisti più famosi."
               color="#667384"
               classElement=""
             />
