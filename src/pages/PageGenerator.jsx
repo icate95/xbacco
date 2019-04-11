@@ -26,17 +26,19 @@ class PageGenerator extends React.Component {
         <section className="hero-crea">
           <h1 className="big-title tac">
             <span>Crea</span> <br />
-            Lorem, ipsum dolor.
+            il regalo perfetto
           </h1>
-          <p className="come-funziona">
-            Se vuoi rendere ancora più unico il tuo regalo, realizza l’etichetta
-            con dei messaggi personali... ti basterà scrivere una messaggio ed
-            acquistare ciò che hai appena generato! <br />{" "}
-            <span>Come funziona?</span>
-          </p>
         </section>
         <section className="crea">
           <div className="half-30">
+            <p>Se vuoi rendere ancora più unico il tuo regalo, realizza l’etichetta
+            con dei messaggi personali... ti basterà scrivere una messaggio ed
+            acquistare ciò che hai appena generato! <br />{" "}
+            <span>Come funziona?</span> </p>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <h3>
               <span>Primo passo:</span>
               <br /> COMPONI
@@ -115,7 +117,7 @@ class PageGenerator extends React.Component {
               <span>ANTEPRIMA:</span>
               <br />
             </h3>
-            <p>Riepilogo fino ad ora</p>
+            <p>Riepilogo</p>
           </div>
           <div className="half-70" id="quartopasso">
             <img src={bottigliaX} alt="bottiglia" className="bottiglia" />

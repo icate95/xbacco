@@ -5,21 +5,27 @@ import { Link } from "react-router-dom";
 import ImgLogo from "../../img/logo_trasparente.png";
 
 class Footer extends React.Component {
+  toTop() {
+    if (this.state.location === 'PUSH') {
+      window.scrollTo(0, 0);
+    }
+  }
+
   render() {
     return (
       <section id="footer">
         <div className="menu-flex">
           <div className="menu">
             <div className="left">
-              <Link className="link-light" to="/">Home</Link>
+              <Link onClick={this.toTop.bind(this)}  className="link-light" to="/">Home</Link>
               <br />
 
-              <Link className="link-light" to="/pagegenerator">Crea</Link> <br />
-              <Link className="link-light" to="/esperienze">Vivi</Link> <br />
+              <Link onClick={this.toTop.bind(this)}  className="link-light" to="/crea">Crea</Link> <br />
+              <Link onClick={this.toTop.bind(this)}  className="link-light" to="/vivi">Vivi</Link> <br />
               {/* <Link className="link-light" to="/puntivendita">Punti vendita</Link> <br /> */}
               {/* <Link className="link-light" to="/selezionaesperienza">Inserisci codice</Link> <br/> */}
-              <Link className="link-light" to="/chisiamo">Chi siamo</Link> <br />
-              <Link className="link-light" to="/team">Team</Link> <br />
+              <Link onClick={this.toTop.bind(this)}  className="link-light" to="/chisiamo">Chi siamo</Link> <br />
+              <Link onClick={this.toTop.bind(this)}  className="link-light" to="/team">Team</Link> <br />
               {/* <Link to="/areapersonale">Area personale</Link> <br /> */}
             </div>
           </div>
@@ -51,43 +57,6 @@ class Footer extends React.Component {
             </ul>
           </div>
         </div>
-
-        {/* <div className="menu-flex">
-         
-          <div className="form">
-          <h4>Rimaniamo in conttatto!</h4>
-            <input
-              type="text"
-              className="center-input"
-              id="nome"
-              placeholder="nome"
-            />
-            <label className="center-label" htmlFor="nome">
-              Nome
-            </label>
-            <br />
-
-            <input
-              type="text"
-              className="center-input"
-              id="email"
-              placeholder="Email"
-            />
-            <label className="center-label" htmlFor="nome">
-              Email
-            </label>
-            <br />
-            <input
-              type="textarea"
-              className="center-input"
-              id="center-input"
-              placeholder="il tuo messaggio"
-            />
-            <label className="center-label" htmlFor="center-input">
-              Il tuo messaggio:
-            </label>
-          </div>
-        </div> */}
 
         <div className="menu-flex">
           <div className="bt">

@@ -6,7 +6,7 @@ import imglibro from "../img/libro.jpg";
 import imgpoesia from "../img/poesia.jpg";
 import imgmusica from "../img/Musica.jpg";
 import audio from "../audio/You_Never_Can_Tell.mp3";
-import vivi from "../img/vivi.png";
+import vivi from "../img/relax.png";
 import musica from "../img/musica.png";
 import poesia from "../img/poesia.png";
 import libro from "../img/libro.png";
@@ -37,26 +37,26 @@ class Esperienze extends React.Component {
         document.getElementById("input-code").classList.add("ok");
         // document.getElementById("button").disabled = false;
 
-
-          if (this.state.data[i].tipe == "custom") {
-            setInterval(
+        if (this.state.data[i].tipe == "custom") {
+          setInterval(
             this.setState({
               ...this.state,
               SecondoPassoCustomMessage: true,
               SecondoPassoRelax: false
-
-            }), 1000 )
-          } else if (this.state.data[i].tipe == "default") {
-            // alert('codice valido per relax')
-            setInterval(
-              this.setState({
-                ...this.state,
-                SecondoPassoCustomMessage: false,
-                SecondoPassoRelax: true
-  
-              }), 1000 )
-          }
-          
+            }),
+            1000
+          );
+        } else if (this.state.data[i].tipe == "default") {
+          // alert('codice valido per relax')
+          setInterval(
+            this.setState({
+              ...this.state,
+              SecondoPassoCustomMessage: false,
+              SecondoPassoRelax: true
+            }),
+            1000
+          );
+        }
       } else {
         document.getElementById("input-code").classList.remove("ok");
         // document.getElementById("button").disabled = true;
@@ -68,34 +68,40 @@ class Esperienze extends React.Component {
     return (
       <>
         <section className="primopasso">
-          <div className="hero-vivi">
-          <h1 >
-            <span>Vivi</span> <br />
-            Lorem, ipsum dolor.
-          </h1>
+          <div className="hero-vivi tac">
+            <h1>
+              <span>Vivi</span> <br />
+              un'esperienza unica
+            </h1>
           </div>
-         
-          <div id="inserisciCodice" className="active">
-              <div className="half-30">
-                <h3>Come funziona:</h3>
-                <p><span> Hai ricevuto una bottiglia XBACCO?</span></p>
-                <p>Inserisci il codice che trovi sul biglietto allegato e vivi l'esperienza collegata!</p>
-              </div>
 
-              <div className="half-70">
-                {/* <SVG /> */}
-                <img src={vivi} alt=""/>
-                <form action="" method="get">
-                  <label htmlFor="input-code">Inserisci il codice:</label>
-                  <input
-                    type="text"
-                    id="input-code"
-                    name="input-code"
-                    className="text"
-                    onChange={this.handleChange}
-                  />
-                  <br />
-                  {/* <button
+          <div id="inserisciCodice" className="active">
+            <div className="half-30">
+              <h3>Come funziona:</h3>
+              <p>
+                <span> Hai ricevuto una bottiglia XBACCO?</span>
+              </p>
+              <p>
+                Inserisci il codice che trovi sul biglietto allegato e vivi
+                l'esperienza collegata!
+              </p>
+            </div>
+
+            <div className="half-70 tac">
+              {/* <SVG /> */}
+              <img src={vivi} alt="" />
+              <form action="" method="get">
+                <label htmlFor="input-code">Inserisci il codice:</label>
+                <br/>
+                <input
+                  type="text"
+                  id="input-code"
+                  name="input-code"
+                  className='input'
+                  onChange={this.handleChange}
+                />
+                <br />
+                {/* <button
                     disabled
                     id="button"
                     className="btn-light-small"
@@ -104,8 +110,8 @@ class Esperienze extends React.Component {
                     Inserisci codice e procedi
                     <i className="fas fa-chevron-right" />
                   </button> */}
-                </form>
-              </div>
+              </form>
+            </div>
           </div>
         </section>
         {this.state.SecondoPassoRelax && <SecondoPassoRelax />}
@@ -167,31 +173,26 @@ class SecondoPassoRelax extends React.Component {
 
           <div className="buble-quattro">
             <div className="libro" onClick={this.modallibro.bind(this)}>
-              <img src={libro} alt="img xbacco libro"/>
+              <img src={libro} alt="img xbacco libro" />
               <h3>Libro</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
-                omnis?
+                Cosa c’è di meglio che un buon bicchiere di vino e un bel
+                romanzo?
               </p>
             </div>
 
             <div className="musica" onClick={this.modalmusica.bind(this)}>
-
-            <img src={musica} alt="img xbacco musica"/>
+              <img src={musica} alt="img xbacco musica" />
               <h3>Musica</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
-                omnis?
-              </p>
+              <p>Ascolta un brano da noi selezionato e gusta il nostro vino</p>
             </div>
 
             <div className="poesia" onClick={this.modalpoesia.bind(this)}>
-
-            <img src={poesia} alt="img xbacco poesia"/>
+              <img src={poesia} alt="img xbacco poesia" />
               <h3>Poesia</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
-                omnis?
+                Il vino, un soggetto da sempre decantato nelle poesie: ricco di
+                storia e sapore.
               </p>
             </div>
           </div>
@@ -341,16 +342,30 @@ class SecondoPassoCustomMessage extends React.Component {
       <>
         <div className="custommessage">
           <div className="message">
-            <p> Questo messaggio è stato creato da: <span className="font-messaggio">Mario Rossi</span></p>
-            <p>per : <span className="font-messaggio">
-              Lampa Dina</span></p>
-              <p><span className="font-messaggio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique facilis quos autem magni provident ipsum in delectus impedit, libero quia officiis quod veritatis natus, id dolore dolorem et vitae at illum sit, mollitia nesciunt consectetur ea. Illum, officia earum! Odit nemo nam itaque optio, doloribus pariatur accusamus quos quidem animi!</span></p>
-              <br/>
-            
-              <p>In allegato a questo regalo le esperienze proposte da XBACCO:</p>
+            <p>
+              {" "}
+              Questo messaggio è stato creato da:{" "}
+              <span className="font-messaggio">Mario Rossi</span>
+            </p>
+            <p>
+              per : <span className="font-messaggio">Lampa Dina</span>
+            </p>
+            <p>
+              <span className="font-messaggio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique facilis quos autem magni provident ipsum in delectus
+                impedit, libero quia officiis quod veritatis natus, id dolore
+                dolorem et vitae at illum sit, mollitia nesciunt consectetur ea.
+                Illum, officia earum! Odit nemo nam itaque optio, doloribus
+                pariatur accusamus quos quidem animi!
+              </span>
+            </p>
+            <br />
+
+            <p>In allegato a questo regalo le esperienze proposte da XBACCO:</p>
           </div>
         </div>
-       
+
         <SecondoPassoRelax />
       </>
     );

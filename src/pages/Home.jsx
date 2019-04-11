@@ -21,6 +21,7 @@ import Footer from "./components/Footer";
 
 // import logoColore from "../img/logo1.png";
 import animazione from "../img/animazione.gif";
+import videoFondo from "../img/xbacco-home.gif";
 
 import { Link } from "react-router-dom";
 
@@ -40,7 +41,6 @@ class Home extends React.Component {
             {/* <div className="half two-columns title"> */}
             <div className="content">
               <h1>
-                {" "}
                 <span className="grassetto">X</span>Bacco
               </h1>
               <h3>è un generative wine</h3>
@@ -57,17 +57,12 @@ class Home extends React.Component {
         <section className="flex two-column info-home">
           <div className="half cover-bottiglie" />
           <div className="half text-area-big">
-            <h2>Vini xbacco</h2>
+            <h2>il team</h2>
             <p>
-              XBACCO è il nome del vino che nasce dai vitigni coltivati nella
-              nostra azienda presso Verona. È il risultato del lavoro e
-              dall’utilizzo di tecniche e metodologie moderne, nonostante i
-              terreni siano coltivati da tradizioni. Il vino si presenta di
-              colore rossastro, con aromi fruttati ma intensi, che rendono un
-              gusto armonio e vellutato
+            Xbacco è un progetto creato è sviluppato nel corso di metaprogetto. Analizzando una personas iniziale si è raggiunto il bisogno di fidelizzazione del cliente.
             </p>
-            <Link to="/chisiamo" className="link-dark">
-              scopri di più <i className="fas fa-chevron-right" />
+            <Link to="/team" className="link-dark">
+              Vieni a scoprire il team <i className="fas fa-chevron-right" />
             </Link>
           </div>
         </section>
@@ -96,7 +91,9 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section>*Video*</section>
+        <section className='video-fondo'>
+          <img src={videoFondo} alt="Video di presentazione xbacco"/>
+        </section>
 
         <Footer />
       </>

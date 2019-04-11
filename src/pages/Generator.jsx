@@ -16,24 +16,6 @@ class Generator extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount() {
-    // this.myInput.current.focus()
-    // console.log(this.state.value);
-  }
-
-  // handleChange(event) {
-  //   console.log(event.currentTarget);
-  //   this.setState({
-  //     value: event.currentTarget.value,
-  //     letters: {
-  //       ...this.state.letters,
-  //       [event.currentTarget.value]: {
-  //         visibility: ![event.currentTarget.value].visibility
-  //       }
-  //     }
-
-  //   });
-  // }
   handleChange(event) {
     // console.log(event);
     let lettera = event.currentTarget.value.split("");

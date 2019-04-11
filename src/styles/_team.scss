@@ -1,22 +1,87 @@
-body{
+.hero-team {
+    background-image: url(./img/team-hero.jpg);
+    background-size: cover;
+    height: 50vh;
+    background-position: top center;
     text-align: center;
+
+    h1 {
+        padding-top: 5em;
+        padding-bottom: 1em;
+        font-size: 3em;
+        z-index: 100;
+        color: white;
+
+        span {
+            font-size: 1.5em;
+        }
+    }
 }
-h2{
-    text-align: center;
-    padding-top: 6em;
+section.team {
+    background-color: $bgc-blue;
 }
-.padding{
-    padding-top: 6em;
+
+section .group {
+    padding: 3em 0;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.larghezza{
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-}
-.larghezza img{
     width: 100%;
-    border-radius: 50%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.persona {
+    text-align: center;
+    padding: 1em 0;
+    height: 337px;
+    width: 200px;
+    * {transition: all .5s ease-in-out;}
+
+    img {
+        // margin: 1em;
+        width: 100%;
+        // border-radius: 50%; 
+        filter: grayscale(50%); 
+    }
+
+    h3 {
+        font-size: 2em;
+        color: white;
+    }
+
+    p {
+        // display: none;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 1.5em;
+    }
+
+    &:hover {
+        * {transition: all .5s ease-in-out;}
+
+        img {
+            // transform: scale(1.1);
+            border-radius: 0;
+            filter: blur(2px) grayscale(50%);
+        }
+
+        h3 {
+            font-size: 2.3em;
+            // color: white;
+            transform: translateY(-85px)
+        }
+
+        p {
+            // 85
+            transform: translateY(-85px);
+            // display: block;
+            visibility: visible;
+            opacity: 1;
+            color: white;
+        }
+    }
+}
+.persona:last-child:hover p,
+.persona:last-child:hover h3 {
+    transform: translateY(-125px)
 }

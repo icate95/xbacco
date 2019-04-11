@@ -130,7 +130,9 @@ label {
     margin: auto .5em;
 }
 
-input[type=text] {
+// input[type=text] 
+.input
+{
     width: 50%;
     padding: .2em;
     font-size: 1em;
@@ -353,7 +355,7 @@ div[id*='info-select'] {
 p.come-funziona {
     text-align: center;
     padding: 3em 6em;
-    background-color: $bgc-ristorazione;
+    background-color: rgba($bgc-ristorazione, 0.5);
     color: white;
     font-size: 1em;
     margin: 1em auto;
